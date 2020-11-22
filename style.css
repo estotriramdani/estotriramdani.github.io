@@ -30,7 +30,8 @@ body {
 #hero {
   height: 100vh;
   background-color: #2A9D8F;
-  transition: .5s;
+  animation: home;
+  animation-duration: 1s;
 }
 
 #hero .container  {
@@ -111,7 +112,46 @@ body {
 
 /* about page */
 
+.header {
+  /* height: 60px; */
+  background-color: #2A9D8F;
+  width: 100%;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  animation-name: header-animation;
+  animation-duration: 1s;
+  position: sticky;
+}
 
+.header p {
+  line-height: 60px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+.isi {
+  transition: .3s;
+}
+
+
+@keyframes header-animation {
+  from {
+    height: 500px;
+  }
+  to {
+    height: 60px;
+  }
+} 
+
+@keyframes home {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} 
 
 @media (min-width: 992px) {
 
