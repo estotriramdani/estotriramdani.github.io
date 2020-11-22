@@ -15,4 +15,4 @@ $('.menu').click(function () {
   }
 });
 
-$('.content').load('about.html');
+$('.content').load('home.html');
