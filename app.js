@@ -10,7 +10,9 @@ $('.menu').click(function () {
     $('.content').load('completions.html');
   } else if (menu == "start") {
     $('.content').load('about.html');
+  } else if (menu == "portfolios") {
+    $('.content').load('portfolios.html');
   }
 });
 
-$('.content').load('experiences.html');
+$('.content').load('home.html');
