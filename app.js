@@ -16,4 +16,4 @@ $('.menu').click(function () {
 });
 
 // halaman yang di load default pertama kali
-$('.content').load('experiences.html');
+$('.content').load('home.html');
