@@ -200,8 +200,6 @@ body {
   font-weight: 600;
 }
 
-
-
 .img-edu img {
   opacity: 0.5;
   width: 250px;
@@ -209,6 +207,29 @@ body {
   bottom: 20px;
   right: 0;
   z-index: -5;
+}
+
+/* about programming */
+.tools {
+  margin-bottom: 15px;
+}
+
+.logo-tools {
+  display: inline-block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.logo-tools img {
+  height: 50px;
+  margin-right: 9px;
+}
+
+.logo-tools img:hover {
+  opacity: 1;
+  filter: grayscale(0);
 }
 
 
@@ -230,7 +251,7 @@ body {
   transition: .2s;
   padding: 10px;
   border-radius: 10px;
-  height: 130px;
+  height: 135px;
   position: relative;
   color: #2A9D8F;
 }
