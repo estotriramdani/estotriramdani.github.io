@@ -14,9 +14,20 @@
         +62896-5728-5153
       </p>
       <center>
-        <a href="#about" class="btn btn-start rounded-pill mt-3">More</a>
+        <a class="menu btn btn-start rounded-pill mt-3" id="start">More</a>
       </center>
     </div>
 
   </div>
 </section>
+
+<script>
+  $('.menu').click(function () {
+    var menu = $(this).attr('id');
+    if (menu == "home") {
+      $('.content').load('home.html');
+    } else if (menu == "start") {
+      $('.content').load('about.html');
+    }
+  });
+</script>
