@@ -1,0 +1,188 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* navbar */
+#nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #E9C46A;
+  padding: 5px 20px 5px 20px;
+  color: #2A9D8F;
+  text-align: center;
+}
+
+.btn {
+  padding: 5px 20px 5px 20px;
+}
+
+.btn-download {
+  background-color: #2A9D8F;
+  color: #E9C46A;
+}
+
+.sub-menu{
+    display: none;
+} 
+
+/* hero */
+#hero {
+  height: 100vh;
+  background-color: #2A9D8F;
+  transition: .5s;
+}
+
+#hero .container  {
+  position: relative;
+  top: 20vh;
+}
+
+.name {
+  background-color: #264653;
+  width: 300px;
+  height: 100px;
+  margin: auto auto;
+  color: #E9E9E9;
+  text-align: center!important;
+  position: relative;
+  z-index: 99;
+}
+
+.name-layer {
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  background-color: #E9E9E9;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: rotate(6deg);
+  transition: .3s;
+}
+
+
+#hero h1 {
+  font-size: 24px;
+  line-height: 100px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.desc-hero {
+  text-align: center;
+  color: #E9E9E9;
+  margin-top: 5vh;
+}
+
+.desc-hero h1 {
+  line-height: normal!important;
+  font-size: 32px!important;
+}
+
+
+.contact-hero p {
+  font-size: 16px;
+  color: #E9E9E9;
+  text-align: center;
+}
+
+.btn-start  {
+  background-color: #264653;
+  color: #E9E9E9;
+  padding-right: 30px!important; 
+  padding-left: 30px!important; 
+  margin: auto;
+}
+
+.btn-start:hover  {
+  background-color: #E9C46A;
+  color: #264653;
+}
+
+.contact-hero a {
+  text-align: center!important;
+  margin: auto;
+}
+
+
+
+/* about page */
+
+
+
+@media (min-width: 992px) {
+
+  #nav {
+    padding: 5px 20px 5px 20px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+  }
+
+  .btn-download {
+    background-color: #2A9D8F;
+    color: #E9C46A;
+  }
+
+  .sub-menu {
+    display: inline;
+  }
+
+
+  /* hero */
+  #hero .container  {
+    top: 15vh;
+  }
+
+  .name {
+    background-color: #264653;
+    width: 475px;
+    height: 135px;
+    margin: auto auto;
+    color: #E9E9E9;
+    z-index: 99;
+    position: relative;
+    transform: rotate(0);
+  }
+
+  .name-layer {
+    width: 475px;
+    height: 135px;
+    position: absolute;
+    background-color: #E9E9E9;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transform: rotate(0);
+    transition: .3s;
+  }
+
+  #hero .container:hover .name-layer{
+    transform: rotate(10deg);
+  } 
+  
+
+  #hero h1 {
+    font-size: 34px;
+    line-height: 135px;
+    text-align: center;
+  }
+
+  .desc-hero {
+    text-align: center;
+    color: #E9E9E9;
+    margin-top: 7vh;
+  }
+
+  .contact-hero p {
+    font-size: 16px;
+    color: #E9E9E9;
+    text-align: center;
+  }
+
+}
