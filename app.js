@@ -15,4 +15,4 @@ $('.menu').click(function () {
   }
 });
 
-$('.content').load('portfolios.html');
+$('.content').load('home.html');
