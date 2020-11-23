@@ -224,7 +224,7 @@ body {
 
 .logo-tools img {
   height: 50px;
-  margin-right: 9px;
+  margin-right: 5px;
 }
 
 .logo-tools img:hover {
@@ -329,6 +329,35 @@ body {
 .comp-card:hover a {
   color: #E9E9E9;
   opacity: 1;
+}
+
+/* portfolios */
+.box {
+  position: relative;
+  padding: 8px;
+  border: solid 2px #2A9D8F;
+  border-radius: 20px;
+  height: 330px;
+  transition: .2s;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.box:hover {
+  background-color: #2A9D8F;
+  color: #E9E9E9;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.box:hover a {
+  color: #E9E9E9;
+  text-decoration: underline;
+}
+
+.box p {
+  font-size: 11px;
+  line-height: normal;
 }
 
 
@@ -466,6 +495,11 @@ body {
   /*comp  */
   .comp-card {
     height: 150px;
+  }
+
+  /* portfolios */
+  .box {
+    height: 275px;
   }
 
 }

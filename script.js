@@ -5,5 +5,3 @@ $(".name").click(function () {
 $(".name").mouseleave(function () {
   $(".name-layer").css("transform", "rotate(0deg)");
 });
-
-console.log('HALOOOOO');
