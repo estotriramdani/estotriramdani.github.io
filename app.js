@@ -16,12 +16,3 @@ $('.menu').click(function () {
 });
 
 $('.content').load('home.html');
-
-
-Pure JS
-const gambar = document.getElementsByClassName('gambar');
-const tentang = document.getElementById('tentang');
-
-jQuery
-$('.gambar');
-$('#tentang');
