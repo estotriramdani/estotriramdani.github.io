@@ -396,6 +396,16 @@ body {
   } 
 } 
 
+@media (min-width: 768px) {
+  .exp-card {
+    height: 230px;
+  }
+
+  .comp-card {
+    height: 205px;
+  }
+}
+
 @media (min-width: 992px) {
 
   #nav {
