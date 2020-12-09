@@ -15,13 +15,14 @@ body {
   padding: 10px 0 10px 0;
 }
 
-.btn {
-  padding: 5px 20px 5px 20px;
-}
-
 .btn-download {
+  width: 15%;
   color: #2A9D8F;
   background-color: #E9E9E9;
+}
+
+a span {
+  font-size: 10px;
 }
 
 .menu {
@@ -177,6 +178,7 @@ body {
 
 .about-content {
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 
@@ -188,7 +190,7 @@ body {
 }
 
 .roadmap {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .roadmap h2 {
@@ -340,7 +342,7 @@ body {
   height: 330px;
   transition: .2s;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .box:hover {
@@ -408,6 +410,18 @@ body {
 
 @media (min-width: 992px) {
 
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  ::-webkit-scrollbar-track {      
+      background: #E9E9E9;    
+  }
+  
+  ::-webkit-scrollbar-thumb {
+      background: #2A9D8F;
+  }
+
   #nav {
     padding: 5px 20px 5px 20px;
     position: fixed;
@@ -416,6 +430,7 @@ body {
   }
 
   .btn-download {
+    width: 80px;
     color: #2A9D8F;
     background-color: #E9E9E9;
   }
