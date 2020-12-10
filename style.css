@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* navbar */
@@ -8,17 +8,17 @@ body {
   bottom: 0;
   z-index: 99;
   width: 100%;
-  background-color: #2A9D8F;
+  background-color: #2a9d8f;
   padding: 5px 20px 5px 20px;
-  color: #E9C46A;
+  color: #e9c46a;
   text-align: center;
   padding: 10px 0 10px 0;
 }
 
 .btn-download {
   width: 15%;
-  color: #2A9D8F;
-  background-color: #E9E9E9;
+  color: #2a9d8f;
+  background-color: #e9e9e9;
 }
 
 a span {
@@ -32,12 +32,12 @@ a span {
 /* hero */
 #hero {
   height: 100vh;
-  background-color: #2A9D8F;
+  background-color: #2a9d8f;
   animation: home;
   animation-duration: 0.7s;
 }
 
-#hero .container  {
+#hero .container {
   position: relative;
   top: 20vh;
 }
@@ -47,8 +47,8 @@ a span {
   width: 300px;
   height: 100px;
   margin: auto auto;
-  color: #E9E9E9;
-  text-align: center!important;
+  color: #e9e9e9;
+  text-align: center !important;
   position: relative;
   z-index: 99;
 }
@@ -57,16 +57,15 @@ a span {
   width: 300px;
   height: 100px;
   position: absolute;
-  background-color: #E9E9E9;
+  background-color: #e9e9e9;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   text-align: center;
   transform: rotate(6deg);
-  transition: .3s;
+  transition: 0.3s;
 }
-
 
 #hero h1 {
   font-size: 24px;
@@ -77,41 +76,38 @@ a span {
 
 .desc-hero {
   text-align: center;
-  color: #E9E9E9;
+  color: #e9e9e9;
   margin-top: 5vh;
 }
 
 .desc-hero h1 {
-  line-height: normal!important;
-  font-size: 32px!important;
+  line-height: normal !important;
+  font-size: 32px !important;
 }
-
 
 .contact-hero p {
   font-size: 16px;
-  color: #E9E9E9;
+  color: #e9e9e9;
   text-align: center;
 }
 
-.btn-start  {
+.btn-start {
   background-color: #264653;
-  color: #E9E9E9;
-  padding-right: 30px!important; 
-  padding-left: 30px!important; 
+  color: #e9e9e9;
+  padding-right: 30px !important;
+  padding-left: 30px !important;
   margin: auto;
 }
 
-.btn-start:hover  {
-  background-color: #E9C46A;
+.btn-start:hover {
+  background-color: #e9c46a;
   color: #264653;
 }
 
 .contact-hero a {
-  text-align: center!important;
+  text-align: center !important;
   margin: auto;
 }
-
-
 
 /* about page */
 #about {
@@ -120,7 +116,7 @@ a span {
 
 .header {
   /* height: 60px; */
-  background-color: #2A9D8F;
+  background-color: #2a9d8f;
   width: 100%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -157,10 +153,10 @@ a span {
 
 .profile-img-layer {
   position: absolute;
-  top:0px;
+  top: 0px;
   height: 200px;
   width: 200px;
-  background-color: #2A9D8F;
+  background-color: #2a9d8f;
   border-radius: 50%;
   z-index: 1;
   margin-left: auto;
@@ -168,10 +164,10 @@ a span {
   left: 0;
   right: 0px;
   text-align: center;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.profile-img:hover .profile-img-layer{
+.profile-img:hover .profile-img-layer {
   top: 10px;
   right: 17px;
 }
@@ -181,12 +177,11 @@ a span {
   margin-bottom: 40px;
 }
 
-
 /* about - edu */
 .subtitle {
   font-size: 23px;
   font-weight: 600;
-  color: #2A9D8F;
+  color: #2a9d8f;
 }
 
 .roadmap {
@@ -234,7 +229,6 @@ a span {
   filter: grayscale(0);
 }
 
-
 /* experiences */
 .exp-row-1 {
   position: relative;
@@ -250,17 +244,17 @@ a span {
 }
 
 .exp-card {
-  transition: .2s;
+  transition: 0.2s;
   padding: 10px;
   border-radius: 10px;
   height: 135px;
   position: relative;
-  color: #2A9D8F;
+  color: #2a9d8f;
 }
 
 .exp-card:hover {
-  color: #E9E9E9;
-  background-color: #2A9D8F;
+  color: #e9e9e9;
+  background-color: #2a9d8f;
 }
 
 .arrow i {
@@ -271,7 +265,7 @@ a span {
   position: absolute;
   bottom: 5px;
   opacity: 0;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .exp-card:hover .arrow {
@@ -281,17 +275,17 @@ a span {
 
 /* completions */
 .comp-card {
-  transition: .2s;
+  transition: 0.2s;
   padding: 10px;
   border-radius: 10px;
   height: 125px;
   position: relative;
-  color: #2A9D8F;
+  color: #2a9d8f;
 }
 
 .comp-card:hover {
-  color: #E9E9E9!important;
-  background-color: #2A9D8F;
+  color: #e9e9e9 !important;
+  background-color: #2a9d8f;
 }
 
 .arrow-comp i {
@@ -303,7 +297,7 @@ a span {
   bottom: 10px;
   right: 10px;
   opacity: 0;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .comp-card:hover .arrow-comp {
@@ -319,7 +313,7 @@ a span {
 .comp-card a {
   color: #264653;
   opacity: 0;
-  transition: .3s;
+  transition: 0.3s;
   font-size: 14px;
   text-decoration: underline;
 }
@@ -329,7 +323,7 @@ a span {
 }
 
 .comp-card:hover a {
-  color: #E9E9E9;
+  color: #e9e9e9;
   opacity: 1;
 }
 
@@ -337,23 +331,23 @@ a span {
 .box {
   position: relative;
   padding: 8px;
-  border: solid 2px #2A9D8F;
+  border: solid 2px #2a9d8f;
   border-radius: 20px;
   height: 330px;
-  transition: .2s;
+  transition: 0.2s;
   box-sizing: border-box;
   margin-bottom: 40px;
 }
 
 .box:hover {
-  background-color: #2A9D8F;
-  color: #E9E9E9;
+  background-color: #2a9d8f;
+  color: #e9e9e9;
   border-radius: 15px;
   box-sizing: border-box;
 }
 
 .box:hover a {
-  color: #E9E9E9;
+  color: #e9e9e9;
   text-decoration: underline;
 }
 
@@ -361,7 +355,6 @@ a span {
   font-size: 11px;
   line-height: normal;
 }
-
 
 /* animations */
 
@@ -372,9 +365,9 @@ a span {
   to {
     height: 60px;
     margin-bottom: 20px;
-    transition: .3s;
+    transition: 0.3s;
   }
-} 
+}
 
 @keyframes text-opacity {
   0% {
@@ -389,14 +382,13 @@ a span {
 }
 
 @keyframes home {
- 
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
-  } 
-} 
+  }
+}
 
 @media (min-width: 768px) {
   .exp-card {
@@ -409,17 +401,16 @@ a span {
 }
 
 @media (min-width: 992px) {
-
   ::-webkit-scrollbar {
     width: 4px;
   }
-  
-  ::-webkit-scrollbar-track {      
-      background: #E9E9E9;    
+
+  ::-webkit-scrollbar-track {
+    background: #e9e9e9;
   }
-  
+
   ::-webkit-scrollbar-thumb {
-      background: #2A9D8F;
+    background: #2a9d8f;
   }
 
   #nav {
@@ -431,17 +422,16 @@ a span {
 
   .btn-download {
     width: 80px;
-    color: #2A9D8F;
-    background-color: #E9E9E9;
+    color: #2a9d8f;
+    background-color: #e9e9e9;
   }
 
   .sub-menu {
     display: inline;
   }
 
-
   /* hero */
-  #hero .container  {
+  #hero .container {
     top: 15vh;
   }
 
@@ -450,7 +440,7 @@ a span {
     width: 475px;
     height: 135px;
     margin: auto auto;
-    color: #E9E9E9;
+    color: #e9e9e9;
     z-index: 99;
     position: relative;
     transform: rotate(0);
@@ -460,20 +450,19 @@ a span {
     width: 475px;
     height: 135px;
     position: absolute;
-    background-color: #E9E9E9;
+    background-color: #e9e9e9;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
     text-align: center;
     transform: rotate(0);
-    transition: .3s;
+    transition: 0.3s;
   }
 
-  #hero .container:hover .name-layer{
+  #hero .container:hover .name-layer {
     transform: rotate(10deg);
-  } 
-  
+  }
 
   #hero h1 {
     font-size: 34px;
@@ -483,13 +472,13 @@ a span {
 
   .desc-hero {
     text-align: center;
-    color: #E9E9E9;
+    color: #e9e9e9;
     margin-top: 7vh;
   }
 
   .contact-hero p {
     font-size: 16px;
-    color: #E9E9E9;
+    color: #e9e9e9;
     text-align: center;
   }
 
@@ -526,5 +515,4 @@ a span {
   .box {
     height: 275px;
   }
-
 }
