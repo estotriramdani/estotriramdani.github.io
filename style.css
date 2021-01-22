@@ -333,10 +333,14 @@ a span {
   padding: 8px;
   border: solid 2px #2a9d8f;
   border-radius: 20px;
-  height: 330px;
+  height: 350px;
   transition: 0.2s;
   box-sizing: border-box;
   margin-bottom: 40px;
+}
+
+.box a {
+  text-decoration: underline !important;
 }
 
 .box:hover {
