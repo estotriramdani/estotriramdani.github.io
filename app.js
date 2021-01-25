@@ -16,3 +16,7 @@ $(".menu").click(function () {
 });
 
 $(".content").load("home.html");
+
+fetch("http://penerbit-ejbooks.my.id/ejbooks-backend/api/")
+  .then((res) => res.json())
+  .then((res) => console.log(res));
