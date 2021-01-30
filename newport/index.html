@@ -7,30 +7,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="assets/css/profile.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body ng-app="myApp">
     <div ng-view class="screen"></div>
 
     <div class="mockup">
       <a href="#!" class="home-button"></a>
+      <div class="top">
+        <div class="dot"></div>
+        <div class="speaker">
+          <div class="circle"></div>
+          <div class="long"></div>
+        </div>
+      </div>
       <div class="navigation">
-        <a href="">M1</a>
-        <a href="">M2</a>
-        <a href="">M3</a>
-        <a href="">M4</a>
-        <a href="">M5</a>
+        <a href="#!/profile"><i class="fas fa-user"></i><br /></a>
+        <a href=""><i class="fas fa-walking"></i></a>
+        <a href=""><i class="fas fa-certificate"></i></a>
+        <a href=""><i class="fas fa-laptop"></i></a>
       </div>
     </div>
     <div class="navigation-mobile">
-      <a href="">M1</a>
-      <a href="">M2</a>
-      <a href="">M3</a>
-      <a href="">M4</a>
-      <a href="">M5</a>
+      <a href="#!/profile"><i class="fas fa-user"></i><br /></a>
+      <a href=""><i class="fas fa-walking"></i></a>
+      <a href=""><i class="fas fa-certificate"></i></a>
+      <a href=""><i class="fas fa-laptop-code"></i></a>
     </div>
 
     <div class="splash">
       <h3>Esto Triramdani N</h3>
+      <p>My Online CV</p>
     </div>
 
     <script src="assets/js/router.js"></script>

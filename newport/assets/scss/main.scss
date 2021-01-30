@@ -1,43 +1,30 @@
-$dark: #212529;
-$dark2: #343a40;
-$dark3: #495057;
-$white: #f8f9fa;
-$white2: #e9ecef;
-$white3: #dee2e6;
-$white4: #adb5bd;
+@import "variables";
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Space Mono", monospace;
 }
 
 ::-webkit-scrollbar {
   width: 4px;
 }
 
+::-webkit-scrollbar:horizontal {
+  width: 1px;
+}
+
 ::-webkit-scrollbar-track {
-  background: $white2;
+  background: $dark2;
 }
 
 ::-webkit-scrollbar-thumb {
   background: $dark3;
 }
 
-::-moz-scrollbar {
-  width: 4px;
-}
-
-::-moz-scrollbar-track {
-  background: $white2;
-}
-
-::-moz-scrollbar-thumb {
-  background: $dark3;
-}
-
 .body {
-  background-color: $white3;
+  background-color: $white4;
 }
 
 .navigation-mobile {
@@ -45,10 +32,11 @@ $white4: #adb5bd;
 }
 
 .splash {
-  padding: 10px;
+  padding-left: 20px;
   width: 320px;
   height: 518px;
-  background-color: $white;
+  background-color: $dark2;
+  color: $white2;
   position: absolute;
   left: 0;
   right: 0;
@@ -58,6 +46,12 @@ $white4: #adb5bd;
   z-index: 1;
   overflow: hidden;
   transition: 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h3 {
+    margin-top: -80px;
+  }
 }
 
 .mockup {
@@ -74,6 +68,42 @@ $white4: #adb5bd;
   margin: auto;
   z-index: 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+  .top {
+    margin-top: 12px;
+    .dot {
+      display: flex;
+      right: 0;
+      left: 0;
+      margin: auto;
+      height: 9px;
+      width: 9px;
+      border-radius: 50%;
+      background-color: $white2;
+      margin-bottom: 10px;
+    }
+    .speaker {
+      display: flex;
+      width: 320px;
+      right: 0;
+      left: 0;
+      justify-content: center;
+      align-items: center;
+      .circle {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $white2;
+        margin-right: 8px;
+      }
+      .long {
+        height: 5px;
+        width: 100px;
+        background-color: $white2;
+        border-radius: 8px;
+      }
+    }
+  }
 
   .home-button {
     display: inline-block;
@@ -96,7 +126,8 @@ $white4: #adb5bd;
 
   .navigation {
     width: 320px;
-    height: 50px;
+    height: 45px;
+    padding-top: 2px;
     background-color: $dark2;
     position: absolute;
     right: 0;
@@ -106,15 +137,22 @@ $white4: #adb5bd;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
     a {
       color: $white;
       display: inline-block;
+      text-decoration: none;
+      span {
+        font-size: 11px;
+      }
+      &:hover {
+        color: $white4;
+      }
     }
   }
 }
 
 .screen {
-  padding: 10px;
   width: 320px;
   height: 518px;
   background-color: $white;
