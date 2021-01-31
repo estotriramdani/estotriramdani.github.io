@@ -8,6 +8,10 @@ setTimeout(() => {
   splash.style.display = "none";
 }, 3000);
 
+document.addEventListener("DOMContentLoaded", function () {
+  splash.style.display = "none";
+  // splash.style.opacity = "0";
+});
 // icon menu
 const profile = document.querySelectorAll(".profile");
 const exp = document.querySelectorAll(".exp");
