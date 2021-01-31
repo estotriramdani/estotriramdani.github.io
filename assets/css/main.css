@@ -39,6 +39,11 @@ body {
   cursor: pointer;
 }
 
+.menu:hover {
+  background-color: #e9ecef;
+  color: #343a40 !important;
+}
+
 .splash {
   padding-left: 20px;
   width: 320px;
