@@ -1,16 +1,18 @@
 const splash = document.querySelector(".splash");
 
-setTimeout(() => {
-  splash.style.opacity = "0";
-}, 2000);
+// setTimeout(() => {
+//   splash.style.opacity = "0";
+// }, 2000);
 
-setTimeout(() => {
-  splash.style.display = "none";
-}, 3000);
+// setTimeout(() => {
+//   splash.style.display = "none";
+// }, 3000);
 
 document.addEventListener("DOMContentLoaded", function () {
   splash.style.display = "none";
-  // splash.style.opacity = "0";
+  setTimeout(() => {
+    splash.style.display = "none";
+  }, 3000);
 });
 // icon menu
 const profile = document.querySelectorAll(".profile");
