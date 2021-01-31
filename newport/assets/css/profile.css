@@ -108,6 +108,18 @@
   margin-top: 23px;
 }
 
+.more-profile .about p {
+  font-size: 10px;
+}
+
+.more-profile .about p a {
+  color: #212529;
+}
+
+.more-profile .about p a:hover {
+  color: #343a40;
+}
+
 .more-profile .education {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,6 +127,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 7px;
 }
 
 .more-profile .education .year {
@@ -123,6 +136,7 @@
 }
 
 .more-profile .education .institute p {
+  text-align: right;
   font-size: 12px;
 }
 

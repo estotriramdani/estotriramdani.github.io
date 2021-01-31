@@ -173,6 +173,12 @@
   color: #f8f9fa;
   display: inline-block;
   text-decoration: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .mockup .navigation a span {
@@ -231,6 +237,12 @@
   }
   .navigation-mobile a {
     color: #f8f9fa;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
   }
   .mockup {
     display: none;

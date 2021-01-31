@@ -142,6 +142,12 @@
       color: $white;
       display: inline-block;
       text-decoration: none;
+      height: 30px;
+      width: 30px;
+      border-radius: 15px;
+      line-height: 30px;
+      text-align: center;
+      text-decoration: none;
       span {
         font-size: 11px;
       }
@@ -196,6 +202,12 @@
 
     a {
       color: $white;
+      height: 30px;
+      width: 30px;
+      border-radius: 15px;
+      line-height: 30px;
+      text-align: center;
+      text-decoration: none;
     }
   }
 

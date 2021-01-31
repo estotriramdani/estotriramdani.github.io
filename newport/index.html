@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- meta tag -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TryAngularOldVersion</title>
+    <meta name="theme-color" content="#212529" />
+    <!-- end meta tag -->
+
+    <title>Esto Triramdani N</title>
+    <!-- script angular 1..6 -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <!-- end script angular -->
+    <!-- assets -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/fontawesome/css/all.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -14,6 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- end assets -->
   </head>
   <body ng-app="myApp">
     <div ng-view class="screen"></div>
@@ -28,23 +36,29 @@
         </div>
       </div>
       <div class="navigation">
-        <a href="#!/profile"><i class="fas fa-user"></i><br /></a>
-        <a href=""><i class="fas fa-walking"></i></a>
-        <a href=""><i class="fas fa-certificate"></i></a>
-        <a href=""><i class="fas fa-laptop"></i></a>
+        <a href="#!/profile" class="profile"
+          ><i class="fas fa-user"></i><br
+        /></a>
+        <a href="#!/experiences" class="exp"><i class="fas fa-walking"></i></a>
+        <a href="#!/certificates" class="cert"
+          ><i class="fas fa-certificate"></i
+        ></a>
+        <a href="#!/portfolios" class="port"><i class="fas fa-laptop"></i></a>
       </div>
     </div>
     <div class="navigation-mobile">
-      <a href="#!/profile"><i class="fas fa-user"></i><br /></a>
-      <a href=""><i class="fas fa-walking"></i></a>
-      <a href=""><i class="fas fa-certificate"></i></a>
-      <a href=""><i class="fas fa-laptop-code"></i></a>
+      <a href="#!/profile" class="profile"><i class="fas fa-user"></i><br /></a>
+      <a href="#!/experiences" class="exp"><i class="fas fa-walking"></i></a>
+      <a href="#!/certificates" class="cert"
+        ><i class="fas fa-certificate"></i
+      ></a>
+      <a href="#!/portfolios" class="port"><i class="fas fa-laptop"></i></a>
     </div>
 
-    <div class="splash">
+    <!-- <div class="splash">
       <h3>Esto Triramdani N</h3>
       <p>My Online CV</p>
-    </div>
+    </div> -->
 
     <script src="assets/js/router.js"></script>
     <script src="assets/js/script.js"></script>
