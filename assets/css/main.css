@@ -7,7 +7,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar:horizontal {
@@ -36,14 +36,15 @@ body {
   border-radius: 17.5px;
   text-align: center;
   line-height: 30px;
+  cursor: pointer;
 }
 
 .splash {
   padding-left: 20px;
   width: 320px;
   height: 518px;
-  background-color: #343a40;
-  color: #e9ecef;
+  color: #343a40;
+  background-color: #e9ecef;
   position: absolute;
   left: 0;
   right: 0;
@@ -254,6 +255,9 @@ body {
   }
   .mockup {
     display: none;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
   }
 }
 /*# sourceMappingURL=main.css.map */

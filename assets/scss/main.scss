@@ -8,7 +8,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar:horizontal {
@@ -39,14 +39,15 @@ body {
   text-align: center;
   // background-color: saddlebrown;
   line-height: 30px;
+  cursor: pointer;
 }
 
 .splash {
   padding-left: 20px;
   width: 320px;
   height: 518px;
-  background-color: $dark2;
-  color: $white2;
+  color: $dark2;
+  background-color: $white2;
   position: absolute;
   left: 0;
   right: 0;
@@ -222,5 +223,9 @@ body {
 
   .mockup {
     display: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
   }
 }
