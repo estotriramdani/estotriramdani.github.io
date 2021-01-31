@@ -1,0 +1,110 @@
+@import "variables";
+
+input {
+  font-size: 10px;
+  &:focus {
+    border-color: royalblue;
+  }
+}
+
+.header {
+  background-color: $dark2;
+  height: 160px;
+  width: 100%;
+  z-index: -1;
+  position: relative;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  h1 {
+    font-size: 19px;
+    color: $white;
+    line-height: 120px;
+    padding-left: 20px;
+  }
+}
+.gap {
+  height: 20px;
+  top: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 2;
+  background-color: $dark2;
+}
+.container {
+  overflow-y: scroll;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: $whitebg;
+  margin-top: -20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  z-index: 1;
+  padding: 20px;
+  height: 95%;
+}
+
+.card {
+  position: relative;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  .card-main {
+    color: $white2;
+    background-color: $dark2;
+    position: relative;
+    min-height: 110px;
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    .when {
+      font-size: 9px;
+    }
+    .what {
+      font-size: 11px;
+    }
+    .who {
+      font-size: 9px;
+    }
+  }
+  .card-desc {
+    min-height: 55px;
+    width: 100%;
+    top: 0;
+    background-color: $white2;
+    color: $dark2;
+    font-size: 10px;
+    padding: 10px;
+    transition: 0.2s;
+    position: absolute;
+    z-index: -12;
+    opacity: 1;
+    a {
+      color: $dark2;
+    }
+  }
+  &:hover {
+    .card-desc {
+      transform: translateY(110px);
+      opacity: 1;
+      z-index: 20;
+      box-shadow: 5px 0 16px rgba(0, 1, 0, 0.3);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .when,
+  .who {
+    font-size: 10px !important  ;
+  }
+  .what {
+    font-size: 15px !important;
+  }
+}

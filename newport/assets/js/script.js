@@ -1,12 +1,12 @@
-// const splash = document.querySelector(".splash");
+const splash = document.querySelector(".splash");
 
-// setTimeout(() => {
-//   splash.style.opacity = "0";
-// }, 2000);
+setTimeout(() => {
+  splash.style.opacity = "0";
+}, 2000);
 
-// setTimeout(() => {
-//   splash.style.display = "none";
-// }, 3000);
+setTimeout(() => {
+  splash.style.display = "none";
+}, 3000);
 
 // icon menu
 const profile = document.querySelectorAll(".profile");
@@ -49,3 +49,5 @@ for (let i = 0; i < 2; i++) {
     port[i].innerHTML = localStorage.getItem("port");
   });
 }
+
+// ==============
