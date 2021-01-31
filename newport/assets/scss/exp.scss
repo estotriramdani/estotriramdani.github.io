@@ -90,6 +90,12 @@ input {
     }
   }
   &:hover {
+    .card-main {
+      color: $dark2 !important;
+      background-color: $white2;
+      z-index: 21;
+      box-shadow: 5px 0 5px rgba(0, 0, 0, 0.3);
+    }
     .card-desc {
       transform: translateY(110px);
       opacity: 1;

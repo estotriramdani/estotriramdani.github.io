@@ -24,7 +24,7 @@
     />
     <!-- end assets -->
   </head>
-  <body ng-app="myApp">
+  <body ng-app="myApp" class="body">
     <div ng-view class="screen"></div>
 
     <div class="mockup">
@@ -37,14 +37,18 @@
         </div>
       </div>
       <div class="navigation">
-        <a href="#!/profile" class="profile"
+        <a href="#!/profile" class="profile menu"
           ><i class="fas fa-user"></i><br
         /></a>
-        <a href="#!/experiences" class="exp"><i class="fas fa-walking"></i></a>
-        <a href="#!/certificates" class="cert"
+        <a href="#!/experiences" class="exp menu"
+          ><i class="fas fa-walking"></i
+        ></a>
+        <a href="#!/certificates" class="cert menu"
           ><i class="fas fa-certificate"></i
         ></a>
-        <a href="#!/portfolios" class="port"><i class="fas fa-laptop"></i></a>
+        <a href="#!/portfolios" class="port menu"
+          ><i class="fas fa-laptop"></i
+        ></a>
       </div>
     </div>
     <div class="navigation-mobile">
@@ -56,10 +60,10 @@
       <a href="#!/portfolios" class="port"><i class="fas fa-laptop"></i></a>
     </div>
 
-    <div class="splash">
+    <!-- <div class="splash">
       <h3>Esto Triramdani N</h3>
       <p>My Online CV</p>
-    </div>
+    </div> -->
 
     <script src="assets/js/router.js"></script>
     <script src="assets/js/script.js"></script>

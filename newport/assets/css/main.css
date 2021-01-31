@@ -22,12 +22,20 @@
   background: #495057;
 }
 
-.body {
-  background-color: #adb5bd;
+body {
+  background-color: #e9ecef;
 }
 
 .navigation-mobile {
   display: none;
+}
+
+.menu {
+  height: 35px;
+  width: 35px;
+  border-radius: 17.5px;
+  text-align: center;
+  line-height: 30px;
 }
 
 .splash {
@@ -173,12 +181,7 @@
   color: #f8f9fa;
   display: inline-block;
   text-decoration: none;
-  height: 30px;
-  width: 30px;
-  border-radius: 15px;
-  line-height: 30px;
-  text-align: center;
-  text-decoration: none;
+  position: relative;
 }
 
 .mockup .navigation a span {
@@ -187,6 +190,11 @@
 
 .mockup .navigation a:hover {
   color: #adb5bd;
+}
+
+.mockup .navigation a i {
+  position: relative;
+  top: 2px;
 }
 
 .screen {

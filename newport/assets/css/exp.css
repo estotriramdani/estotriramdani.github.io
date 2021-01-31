@@ -108,6 +108,14 @@ input:focus {
   color: #343a40;
 }
 
+.card:hover .card-main {
+  color: #343a40 !important;
+  background-color: #e9ecef;
+  z-index: 21;
+  -webkit-box-shadow: 5px 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 0 5px rgba(0, 0, 0, 0.3);
+}
+
 .card:hover .card-desc {
   -webkit-transform: translateY(110px);
           transform: translateY(110px);

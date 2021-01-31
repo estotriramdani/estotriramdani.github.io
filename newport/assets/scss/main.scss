@@ -23,12 +23,22 @@
   background: $dark3;
 }
 
-.body {
-  background-color: $white4;
+body {
+  background-color: $white2;
+  // background-image: url("../img/pattern.jpg");
 }
 
 .navigation-mobile {
   display: none;
+}
+
+.menu {
+  height: 35px;
+  width: 35px;
+  border-radius: 17.5px;
+  text-align: center;
+  // background-color: saddlebrown;
+  line-height: 30px;
 }
 
 .splash {
@@ -142,17 +152,16 @@
       color: $white;
       display: inline-block;
       text-decoration: none;
-      height: 30px;
-      width: 30px;
-      border-radius: 15px;
-      line-height: 30px;
-      text-align: center;
-      text-decoration: none;
+      position: relative;
       span {
         font-size: 11px;
       }
       &:hover {
         color: $white4;
+      }
+      i {
+        position: relative;
+        top: 2px;
       }
     }
   }
