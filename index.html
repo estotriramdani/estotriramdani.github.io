@@ -12,9 +12,13 @@
     <!-- end meta tag -->
 
     <title>Esto Triramdani N</title>
-    <!-- script angular 1..6 -->
-
-    <!-- end script angular -->
+    <style>
+      @media screen and (max-width: 1366px) {
+        .serve {
+          transform: scale(0.8);
+        }
+      }
+    </style>
     <!-- assets -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/fontawesome/css/all.css" />
@@ -28,18 +32,28 @@
     <!-- end assets -->
   </head>
   <body class="body">
-    <div class="screen content"></div>
+    <div class="serve">
+      <div class="screen content"></div>
 
-    <div class="mockup">
-      <a href="#!/home" class="home-button menu" id="home"></a>
-      <div class="top">
-        <div class="dot"></div>
-        <div class="speaker">
-          <div class="circle"></div>
-          <div class="long"></div>
+      <div class="mockup">
+        <a href="#!/home" class="home-button menu" id="home"></a>
+        <div class="top">
+          <div class="dot"></div>
+          <div class="speaker">
+            <div class="circle"></div>
+            <div class="long"></div>
+          </div>
+        </div>
+        <div class="navigation">
+          <a class="profile menu" id="profile"
+            ><i class="fas fa-user"></i><br
+          /></a>
+          <a class="exp menu" id="exp"><i class="fas fa-walking"></i></a>
+          <a class="cert menu" id="cert"><i class="fas fa-certificate"></i></a>
+          <a class="port menu" id="port"><i class="fas fa-laptop"></i></a>
         </div>
       </div>
-      <div class="navigation">
+      <div class="navigation-mobile">
         <a class="profile menu" id="profile"
           ><i class="fas fa-user"></i><br
         /></a>
@@ -47,17 +61,11 @@
         <a class="cert menu" id="cert"><i class="fas fa-certificate"></i></a>
         <a class="port menu" id="port"><i class="fas fa-laptop"></i></a>
       </div>
-    </div>
-    <div class="navigation-mobile">
-      <a class="profile menu" id="profile"><i class="fas fa-user"></i><br /></a>
-      <a class="exp menu" id="exp"><i class="fas fa-walking"></i></a>
-      <a class="cert menu" id="cert"><i class="fas fa-certificate"></i></a>
-      <a class="port menu" id="port"><i class="fas fa-laptop"></i></a>
-    </div>
 
-    <div class="splash">
-      <h3>Esto Triramdani N</h3>
-      <p>My Online CV</p>
+      <div class="splash">
+        <h3>Esto Triramdani N</h3>
+        <p>My Online CV</p>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
