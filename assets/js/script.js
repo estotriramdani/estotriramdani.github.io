@@ -1,5 +1,6 @@
 // const splash = document.querySelector(".splash");
 
+<<<<<<< HEAD
 // // setTimeout(() => {
 // //   splash.style.opacity = "0";
 // // }, 2000);
@@ -7,7 +8,22 @@
 // // setTimeout(() => {
 // //   splash.style.display = "none";
 // // }, 3000);
+=======
+// setTimeout(() => {
+//   splash.style.opacity = "0";
+// }, 2000);
 
+// setTimeout(() => {
+//   splash.style.display = "none";
+// }, 3000);
+>>>>>>> parent of 3a392e8... ganti pake jquery router
+
+document.addEventListener("DOMContentLoaded", function () {
+  splash.style.display = "none";
+  setTimeout(() => {
+    splash.style.display = "none";
+  }, 3000);
+});
 // icon menu
 const profile = document.querySelectorAll(".profile");
 const exp = document.querySelectorAll(".exp");

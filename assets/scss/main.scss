@@ -26,10 +26,15 @@
 body {
   background-color: $white2;
   // background-image: url("../img/pattern.jpg");
+  position: relative;
 }
 
 .navigation-mobile {
   display: none;
+}
+
+.serve {
+  position: relative;
 }
 
 .menu {
@@ -190,7 +195,7 @@ body {
   overflow-y: scroll;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
   .splash {
     width: 100vw;
     height: 100vh;
