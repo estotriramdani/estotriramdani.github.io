@@ -1,0 +1,59 @@
+.do-wrapper {
+  padding: 28px;
+  min-height: 99vh;
+}
+
+.title-do {
+  margin-bottom: 20px;
+}
+
+.title-do h1 {
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.list-wrapper .number {
+  background-color: #f8f9fa;
+  color: #343a40;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  line-height: 30px;
+  text-align: center;
+  margin-left: -15px;
+}
+
+.list-wrapper .list {
+  margin-top: -15px;
+  margin-bottom: 15px;
+  border: 1px solid #f8f9fa;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-wrapper .list:hover {
+  color: #343a40 !important;
+  background-color: #f8f9fa !important;
+}
+
+.list-wrapper .list:hover .number {
+  border: 1px solid #343a40 !important;
+}
+
+.list-wrapper .list .is-checked img {
+  width: 30px;
+}
+
+.list-wrapper .list .what {
+  font-size: 14px;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=do.css.map */

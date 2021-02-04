@@ -203,6 +203,10 @@ body {
   top: 2px;
 }
 
+.navigation-mobile {
+  display: none;
+}
+
 .screen {
   width: 320px;
   height: 518px;
@@ -222,14 +226,15 @@ body {
     width: 100vw;
     height: 100vh;
     position: relative;
-    z-index: 67;
+    z-index: 0;
   }
   .screen {
-    padding-top: 20px;
     padding-bottom: 40px;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow-x: hidden;
+    position: relative;
+    z-index: 60;
   }
   .navigation-mobile {
     -webkit-box-shadow: 0 -5px 16px rgba(0, 0, 0, 0.1);
@@ -260,6 +265,9 @@ body {
   }
   .mockup {
     display: none;
+  }
+  .screen {
+    overflow-y: scroll;
   }
   ::-webkit-scrollbar {
     width: 0px;
