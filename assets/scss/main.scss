@@ -39,6 +39,10 @@ body {
   text-align: center;
   // background-color: saddlebrown;
   line-height: 30px;
+  &:hover {
+    background-color: $white2;
+    color: $dark;
+  }
 }
 
 .splash {

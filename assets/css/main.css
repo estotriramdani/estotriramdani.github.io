@@ -38,6 +38,11 @@ body {
   line-height: 30px;
 }
 
+.menu:hover {
+  background-color: #e9ecef;
+  color: #212529;
+}
+
 .splash {
   padding-left: 20px;
   width: 320px;
