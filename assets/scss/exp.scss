@@ -32,7 +32,7 @@ input {
   background-color: $dark2;
 }
 .container {
-  // overflow-y: scroll;
+  overflow-y: scroll;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
   border-top-left-radius: 20px;
@@ -44,6 +44,7 @@ input {
   top: 20px;
   z-index: 1;
   padding: 20px;
+  height: 95%;
 }
 
 .card {

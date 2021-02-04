@@ -7,7 +7,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 2px;
 }
 
 ::-webkit-scrollbar:horizontal {
@@ -24,15 +24,10 @@
 
 body {
   background-color: #e9ecef;
-  position: relative;
 }
 
 .navigation-mobile {
   display: none;
-}
-
-.serve {
-  position: relative;
 }
 
 .menu {
@@ -41,20 +36,14 @@ body {
   border-radius: 17.5px;
   text-align: center;
   line-height: 30px;
-  cursor: pointer;
-}
-
-.menu:hover {
-  background-color: #e9ecef;
-  color: #343a40 !important;
 }
 
 .splash {
   padding-left: 20px;
   width: 320px;
   height: 518px;
-  color: #343a40;
-  background-color: #e9ecef;
+  background-color: #343a40;
+  color: #e9ecef;
   position: absolute;
   left: 0;
   right: 0;
@@ -208,10 +197,6 @@ body {
   top: 2px;
 }
 
-.navigation-mobile {
-  display: none;
-}
-
 .screen {
   width: 320px;
   height: 518px;
@@ -226,20 +211,22 @@ body {
   overflow-y: scroll;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
   .splash {
     width: 100vw;
     height: 100vh;
     position: relative;
-    z-index: 0;
+    z-index: 67;
   }
   .screen {
+    padding-top: 20px;
     padding-bottom: 40px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
-    position: relative;
-    z-index: 60;
   }
   .navigation-mobile {
     -webkit-box-shadow: 0 -5px 16px rgba(0, 0, 0, 0.1);
@@ -270,12 +257,6 @@ body {
   }
   .mockup {
     display: none;
-  }
-  .screen {
-    overflow-y: scroll;
-  }
-  ::-webkit-scrollbar {
-    width: 0px;
   }
 }
 /*# sourceMappingURL=main.css.map */

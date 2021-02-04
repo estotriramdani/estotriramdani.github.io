@@ -34,6 +34,7 @@ input:focus {
 }
 
 .container {
+  overflow-y: scroll;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -46,6 +47,7 @@ input:focus {
   top: 20px;
   z-index: 1;
   padding: 20px;
+  height: 95%;
 }
 
 .card {

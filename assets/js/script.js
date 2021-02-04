@@ -1,39 +1,23 @@
-// const splash = document.querySelector(".splash");
+const splash = document.querySelector(".splash");
 
-<<<<<<< HEAD
-// // setTimeout(() => {
-// //   splash.style.opacity = "0";
-// // }, 2000);
+setTimeout(() => {
+  splash.style.opacity = "0";
+}, 2000);
 
-// // setTimeout(() => {
-// //   splash.style.display = "none";
-// // }, 3000);
-=======
-// setTimeout(() => {
-//   splash.style.opacity = "0";
-// }, 2000);
-
-// setTimeout(() => {
-//   splash.style.display = "none";
-// }, 3000);
->>>>>>> parent of 3a392e8... ganti pake jquery router
-
-document.addEventListener("DOMContentLoaded", function () {
+setTimeout(() => {
   splash.style.display = "none";
-  setTimeout(() => {
-    splash.style.display = "none";
-  }, 3000);
-});
-// icon menu
-const profile = document.querySelectorAll(".profile");
-const exp = document.querySelectorAll(".exp");
-const port = document.querySelectorAll(".port");
-const cert = document.querySelectorAll(".cert");
+}, 3000);
 
-localStorage.setItem("profile", profile[0].innerHTML);
-localStorage.setItem("exp", exp[0].innerHTML);
-localStorage.setItem("cert", cert[0].innerHTML);
-localStorage.setItem("port", port[0].innerHTML);
+// icon menu
+// const profile = document.querySelectorAll(".profile");
+// const exp = document.querySelectorAll(".exp");
+// const port = document.querySelectorAll(".port");
+// const cert = document.querySelectorAll(".cert");
+
+// localStorage.setItem("profile", profile[0].innerHTML);
+// localStorage.setItem("exp", exp[0].innerHTML);
+// localStorage.setItem("cert", cert[0].innerHTML);
+// localStorage.setItem("port", port[0].innerHTML);
 
 // for (let i = 0; i < 2; i++) {
 //   // profile
