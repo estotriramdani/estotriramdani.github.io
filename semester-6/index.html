@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semester 6</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .pdfobject-container {
+        height: 90vh;
+        width: 600px;
+      }
+      q {
+        opacity: 0.5;
+        transition: 0.3s;
+        text-align: justify;
+      }
+      q:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-2 p-4 shadow">
+      <div class="row">
+        <div class="col-sm">
+          <div id="example1"></div>
+        </div>
+        <div class="col-sm">
+          <div class="desc">
+            <div class="row">
+              <div class="col-sm">
+                <h3 class="mb-4">Assets</h3>
+              </div>
+              <div class="col-sm text-right">
+                <a href="../" class="btn btn-success">Home</a>
+              </div>
+            </div>
+
+            <div class="kolokium">
+              <h4>Kolokium</h4>
+              <table class="table">
+                <tr>
+                  <td>Download .pptx file</td>
+                  <td class="text-right">
+                    <a class="btn btn-primary" href="pptx/Esto_J3D118129.pptx"
+                      >Download</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Download draft .docx <strong> rev[0] </strong>file</td>
+                  <td class="text-right">
+                    <a
+                      class="btn btn-primary"
+                      href="docx/EstoTriramdaniN_Draft Kolokium_Revisi[0].docx"
+                      >Download</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Download draft .docx <strong> rev[0] </strong>file</td>
+                  <td class="text-right">
+                    <a
+                      class="btn btn-primary"
+                      href="docx/EstoTriramdaniN_Draft Kolokium_Revisi[0].docx"
+                      >Download</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Download draft .docx <strong> rev[1] </strong>file</td>
+                  <td class="text-right">
+                    <a
+                      class="btn btn-primary"
+                      href="docx/EstoTriramdaniN_Draft Kolokium_Revisi[1].docx"
+                      >Download</a
+                    >
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <q
+              >Lulus tepat waktu, (kalau bisa) lebih cepat dari teman
+              seangkatan, dan bantu teman yang kesulitan baik secara teknis
+              maupun nonteknis.</q
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.4/pdfobject.min.js"></script>
+    <script>
+      PDFObject.embed("Esto_J3D118129.pdf", "#example1");
+      if (PDFObject.supportsPDFs) {
+        console.log("Yay, this browser supports inline PDFs.");
+      } else {
+        console.log("Boo, inline PDFs are not supported by this browser");
+      }
+    </script>
+  </body>
+</html>
