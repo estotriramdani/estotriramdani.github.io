@@ -25,9 +25,33 @@
       q:hover {
         opacity: 1;
       }
+
+      .kolokium {
+        display: none;
+      }
+      .tugasakhir {
+        display: none;
+      }
+      .pkl {
+        display: none;
+      }
+
+      #logout button {
+        position: fixed;
+        bottom: 5vh;
+        right: 40px;
+        color: white !important;
+      }
     </style>
+    <script>
+      if (!sessionStorage.getItem("id")) {
+        alert("Silakan login");
+        window.location = "login.html";
+      }
+    </script>
   </head>
   <body>
+    <div id="logout"><button class="btn btn-warning">Logout</button></div>
     <div class="container mt-2 p-4 shadow">
       <div class="row">
         <div class="col-sm">
@@ -44,6 +68,12 @@
               </div>
             </div>
 
+            <div class="tombol mb-4">
+              <p>Pilih menu</p>
+              <button id="kolokium" class="btn btn-info">Kolokium</button>
+              <button id="pkl" class="btn btn-info">PKL</button>
+              <button id="tugasakhir" class="btn btn-info">Tugas akhir</button>
+            </div>
             <div class="kolokium">
               <h4>Kolokium</h4>
               <table class="table">
@@ -51,16 +81,6 @@
                   <td>Download .pptx file</td>
                   <td class="text-right">
                     <a class="btn btn-primary" href="pptx/Esto_J3D118129.pptx"
-                      >Download</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td>Download draft .docx <strong> rev[0] </strong>file</td>
-                  <td class="text-right">
-                    <a
-                      class="btn btn-primary"
-                      href="docx/EstoTriramdaniN_Draft Kolokium_Revisi[0].docx"
                       >Download</a
                     >
                   </td>
@@ -87,6 +107,12 @@
                 </tr>
               </table>
             </div>
+            <div class="tugasakhir">
+              <p>Konten untuk tugas akhir belum ada</p>
+            </div>
+            <div class="pkl">
+              <p>Konten PKL belum ada</p>
+            </div>
             <q
               >Lulus tepat waktu, (kalau bisa) lebih cepat dari teman
               seangkatan, dan bantu teman yang kesulitan baik secara teknis
@@ -106,5 +132,6 @@
         console.log("Boo, inline PDFs are not supported by this browser");
       }
     </script>
+    <script src="script.js"></script>
   </body>
 </html>
