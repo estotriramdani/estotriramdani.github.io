@@ -17,7 +17,8 @@ $result = mysqli_query($koneksi, $query);
 
 ?>
 
-<table class="table table-hover">
+<div class="table-responsive">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th scope="col">ID DTKS</th>
@@ -34,28 +35,42 @@ $result = mysqli_query($koneksi, $query);
               <th scope="col">Aksi</th>
             </tr>
           </thead>
-          <tbody> 
-            <?php if (mysqli_num_rows($result) <= 0){?>
-              <tr>
-                <td colspan="12" class="text-center text-danger">Data tidak ditemukan</td>
-              </tr>
-            <?php } else {?>
-            <?php while($row = mysqli_fetch_array($result)){ ?>
-              <tr>
-                <td><?= $row['id_dtks']; ?></td>
+          <tbody>
+            <?php 
+              while($row = mysqli_fetch_array($result)){
+            ?>
+              <tr
+              <?php if ($row['status'] == 'Pengajuan Baru') {
+                echo "class='bg-info text-white'";
+              }?>
+              >
+                <td> 
+                  <a 
+                  style='text-decoration: underline; font-weight: bold;'
+                  <?php if ($row['status'] == 'Pengajuan Baru') {
+                    echo "class='bg-info text-white'";
+                  }?>
+                  href="detail.php?id=<?= $row['id_dtks']; ?>">
+                    <?= $row['id_dtks']; ?>
+                  </a> 
+                </td>
                 <td><?= $row['alamat']; ?></td>
                 <td><?= $row['nik']; ?></td>
                 <td><?= $row['nama_krt']; ?></td>
                 <td><?= $row['jml_kel']; ?></td>
                 <td><?= $row['jml_art']; ?></td>
                 <td><?= $row['perubahan']; ?></td>
-                <td><?= $row['program']; ?></td>
+                <td><?= preg_replace("/[^a-zA-Z]/", " ", $row['program']); ?></td>
                 <td><?= $row['rt']; ?></td>
                 <td><?= $row['rw']; ?></td>
                 <td><?= $row['status']; ?></td>
-                <td><a href="detail.php?id=<?= $row['id_dtks']; ?>">Detail</a></td>
+                <td class="text-center">
+                  <a class="btn btn-danger" href="detail.php?id=<?= $row['id_dtks']; ?>" onclick="return confirm('yakin')">Hapus</a>
+                </td>
               </tr>
-            <?php } ?>
-            <?php } ?>
+            <?php 
+          }
+              // endforeach; 
+            ?>
           </tbody>
         </table>

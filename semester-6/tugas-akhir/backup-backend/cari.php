@@ -9,9 +9,17 @@ include_once 'config/koneksi.php';
   $jumlahData = mysqli_num_rows($result);
   $jumlahHalaman = ceil($jumlahData / $jumlahDataPerhalaman);
   $halamanAktif = (isset($_GET['halaman']) ? $_GET['halaman'] : 1 );
+  
+  // cek kondisi halaman aktif
+  if ($halamanAktif > $jumlahHalaman) {
+    $halamanAktif = $jumlahHalaman;
+  } else if ($halamanAktif <= 0) {
+    $halamanAktif = 1;
+  }
+
   $awalData = ($jumlahDataPerhalaman * $halamanAktif) - $jumlahDataPerhalaman;
 
-  $query = mysqli_query($koneksi, "SELECT * FROM dtks LIMIT $awalData, $jumlahDataPerhalaman"); 
+  $query = mysqli_query($koneksi, "SELECT * FROM dtks  ORDER BY status DESC LIMIT $awalData, $jumlahDataPerhalaman"); 
   $title = 'Cari Data DTKS';
 
 ?>
@@ -47,6 +55,18 @@ include_once 'config/koneksi.php';
         </div>
       </div>
 
+
+        <!--  Pesan sukses hapus -->
+        <?php if ($_SESSION['message'] == true){ ?>
+          <div class="alert alert-success" role="alert">
+            DTKS (<?php echo $_SESSION['whichDTKS']; ?>) Berhasil dihapus!
+          </div>
+        <?php } 
+        $_SESSION['message'] = false;
+        $_SESSION['whichDTKS'] = '';
+        ?>
+
+
       <!-- Tabel Hasil Pencarian -->
       <div class="hasil-pencarian table-responsive">
         <table class="table  table-striped">
@@ -68,7 +88,7 @@ include_once 'config/koneksi.php';
         </table>
       </div>
       <!-- End tabel hasil pencarian -->
-<hr class="mt-5">
+    <hr class="mt-5">
       <!-- Tabel Semua DTKS -->
       <div class="semua mt-3">
         <div class="row">
@@ -85,8 +105,7 @@ include_once 'config/koneksi.php';
             </div>
           </div>
         </div>
-        
-        <!-- Navigasi -->
+
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
@@ -107,24 +126,36 @@ include_once 'config/koneksi.php';
           </thead>
           <tbody>
             <?php 
-            // foreach( $query as $row ) : 
-            ?>
-            <?php 
               while($row = mysqli_fetch_array($query)){
             ?>
-              <tr>
-                <td><?= $row['id_dtks']; ?></td>
+              <tr
+              <?php if ($row['status'] == 'Pengajuan Baru') {
+                echo "class='bg-info text-white'";
+              }?>
+              >
+                <td> 
+                  <a 
+                  style="text-decoration: underline;"
+                  <?php if ($row['status'] == 'Pengajuan Baru') {
+                    echo "class='bg-info text-white'";
+                  }?>
+                  href="detail.php?id=<?= $row['id_dtks']; ?>">
+                    <?= $row['id_dtks']; ?>
+                  </a> 
+                </td>
                 <td><?= $row['alamat']; ?></td>
                 <td><?= $row['nik']; ?></td>
                 <td><?= $row['nama_krt']; ?></td>
                 <td><?= $row['jml_kel']; ?></td>
                 <td><?= $row['jml_art']; ?></td>
                 <td><?= $row['perubahan']; ?></td>
-                <td><?= $row['program']; ?></td>
+                <td><?= preg_replace("/[^a-zA-Z]/", " ", $row['program']); ?></td>
                 <td><?= $row['rt']; ?></td>
                 <td><?= $row['rw']; ?></td>
                 <td><?= $row['status']; ?></td>
-                <td><a href="detail.php?id=<?= $row['id_dtks']; ?>">Detail</a></td>
+                <td class="text-center">
+                  <a class="btn btn-danger" href="action/hapus-dtks.php?id=<?= $row['id_dtks']; ?>" onclick="return confirm('yakin')">Hapus</a>
+                </td>
               </tr>
             <?php 
           }

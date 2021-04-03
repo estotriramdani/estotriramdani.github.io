@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono@1&display=swap");
+.btn-info {
+  background-color: #0a2e36 !important;
+}
+
+.btn-info:hover {
+  background-color: #09a129 !important;
+}
+
+.hasil-pencarian {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar-brand {
+  font-weight: 500;
+}
+
+.navbar-nav {
+  color: #f3ffc6 !important;
+}
+
+.jumbotron {
+  background-color: #09a129;
+  color: #f3ffc6;
+}
+
+.breadcumbs {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background-color: #f3ffc6;
+}
+
+.breadcumbs a {
+  color: #0a2e36;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  text-decoration: underline;
+}
+
+.breadcumbs a:hover {
+  color: #09a129;
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card-header-top {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #09a129;
+}
+
+.card .card-body .card-text {
+  color: #0a2e36;
+}
+
+.card-header-top {
+  min-height: 200px;
+  background-color: #0a2e36;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-header-top p {
+  color: #f3ffc6;
+  font-size: 2em;
+}
+
+.card-header-top p .number {
+  font-family: 'Space Mono', monospace;
+}
+
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  background-color: #0a2e36;
+  color: #f3ffc6;
+  -webkit-box-shadow: -5px 5px 16px rgba(0, 0, 0, 0.05);
+          box-shadow: -5px 5px 16px rgba(0, 0, 0, 0.05);
+  padding: 20px 0;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background: linear-gradient(to right, #212529, #0a2e36);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.hide-preloader {
+  opacity: 0;
+  transition: .3s;
+  z-index: -999;
+}
+
+@media screen and (max-width: 578px) {
+  .card {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    margin-bottom: 15px;
+  }
+}
+
+
+/*# sourceMappingURL=style.css.map */

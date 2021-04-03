@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono@1&display=swap');
+
+$dark: #0a2e36;
+$secondary: #09a129;
+$light: #f3ffc6;
+
+.btn-info {
+  background-color: $dark !important;
+  &:hover {
+    background-color: $secondary !important;
+  }
+}
+
+.hasil-pencarian {
+  transition: 0.3s;
+}
+
+.navbar-brand {
+  font-weight: 500;
+}
+
+.navbar-nav {
+  color: $light !important;
+}
+
+.jumbotron {
+  background-color: $secondary;
+  color: $light;
+}
+
+.breadcumbs {
+  display: inline-block;
+  border-radius: 10px;
+  // width: 40%;
+  padding: 10px 25px;
+  background-color: $light;
+  a {
+    color: $dark;
+    transition: 0.1s;
+    text-decoration: underline;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  transition: 0.25s;
+  a {
+    text-decoration: none;
+  }
+  &:hover {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    .card-header-top {
+      transition: 0.3s;
+      background-color: $secondary;
+    }
+  }
+  .card-body {
+    .card-text {
+      color: $dark;
+    }
+  }
+}
+
+.card-header-top {
+  min-height: 200px;
+  background-color: $dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: $light;
+    font-size: 2em;
+    .number {
+      font-family: 'Space Mono', monospace;
+    }
+  }
+}
+
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  background-color: $dark;
+  color: $light;
+  box-shadow: -5px 5px 16px rgba(0, 0, 0, 0.05);
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 578px) {
+  .card {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    margin-bottom: 15px;
+  }
+}

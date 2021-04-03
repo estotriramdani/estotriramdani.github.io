@@ -11,6 +11,10 @@ keyword.addEventListener('keyup', function (e) {
   }
 });
 
+keyword.addEventListener('click', () => {
+  console.log(keyword.innerHTML)
+});
+
 // tambahkan event ketika keyword ditulis
 tombolCari.addEventListener('click', function () {
   container.innerHTML = `

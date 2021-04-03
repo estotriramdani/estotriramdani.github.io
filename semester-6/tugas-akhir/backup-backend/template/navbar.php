@@ -21,12 +21,15 @@ if (!isset($_SESSION['login'])) {
       rel="stylesheet"
       href="css/bootstrap-icons.css"
     />
+    <link rel="stylesheet" href="css/select2.min.css">
 
     <style>
       .paging-button {
         font-size: 1.5em;
       }
     </style>
+
+  <script type="text/javascript" src="script/jquery.js"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
@@ -38,7 +41,7 @@ if (!isset($_SESSION['login'])) {
       style="background-color: #0a2e36"
     >
       <div class="container">
-        <a class="navbar-brand" href="#">DTKS Langonsari</a>
+        <a class="navbar-brand" href="./">DTKS Langonsari</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -66,7 +69,12 @@ if (!isset($_SESSION['login'])) {
             </li>
             <li class="nav-item" id="ajukanNav">
               <a class="nav-link" href="ajukan.php"
-                ><i class="bi bi-plus-circle"></i> Pengajuan Baru</a
+                ><i class="bi bi-plus-circle"></i> Pengajuan DTKS Baru</a
+              >
+            </li>
+            <li class="nav-item" id="ajukanArt">
+              <a class="nav-link" href="tambah-art.php"
+                ><i class="bi bi-person-plus"></i> Pengajuan ART Baru</a
               >
             </li>
             <li class="nav-item" id="ajukanNav">

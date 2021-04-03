@@ -83,19 +83,21 @@ $result = mysqli_query($koneksi, $query);
             </div>
           </div>
         </div>
-        <div
-          class="col-sm-4"
-          style="
-            background-color: #0a2e36;
-            border-radius: 20px;
-            box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
-          "
-        >
-          <div class="card-header-top text-center" style="height: 100%">
-            <p>Surat-menyurat <br> <span style="font-size: 0.6em;">(akan segera dikembangkan)</span></p>
+        <div class="col-sm-4">
+          <div class="text-white shadow p-2" style="height: 580px; overflow-y: auto; background-color: #0a2e36; border-radius: 20px;">
+            <h4>Perhatian!!</h4>
+
+            <?php include 'config/koneksi.php'; ?>
+            <?php  ?>
+            
+            <div class="perhatian">
+              <p>Kepala Rumah Tangga untuk ID DTKS <b>32020103023</b> belum terdaftar. Segera tambahkan kepala rumah tangga.</p>
+              <div style="background-color: white; height: 2px; width: 100%; margin-top: -5px;"></div>  
+            </div>
+
           </div>
         </div>
-      </div>
+      </div> 
     </div>
     <!-- MAIN CONTENT -->
     <?php include_once 'template/footer.php' ?>
