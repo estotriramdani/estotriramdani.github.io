@@ -1,0 +1,4 @@
+Mengapa pilihnya Ubuntu server 12.04? Kenapa enggak yang versi terbaru, misal 20.04, bukannya itu ketinggalan zaman?
+- karena masih mendukung arsitektur 32bit, dan pemakaiannya pun itu hanya untuk lokal yang artinya tidak akan banyak user yang mengakses. Ini juga masih berhubungan dengan pengalamatan IP, atau lebih tepatnya pemilih DHCP address pool yang hanya dari 100 sampai 253. Selain karena memang saya diizinkan oleh instansi untuk reserve alamat-alamat di range tersebut, saya rasa itu telah cocok untuk infrastruktur di desa langonsari. Sebab ke depannya, infrastruktur ini akan dikembangkan oleh pihak desa: pertama nanti akan menggunakan komputer server fisik, kedua akan digunakan juga untuk saling terhubung antar RW. Rencana kedua tersebut masih lama, sekitar 5 tahun ke depan, begitu pembimbing lapangan saya yang menjabat di desa sebagai kasi pemerintahan sekaligus tenaga IT di Desa Langonsari.
+
+===========

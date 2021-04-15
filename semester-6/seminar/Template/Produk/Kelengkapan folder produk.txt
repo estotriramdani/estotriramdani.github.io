@@ -1,0 +1,4 @@
+Folder ini berisi:
+1. Coding (mikrokontroller, web, aplikasi, dll)
+2. Video alat (di dalamnya terdapat saat pengujian)
+3. Foto- foto alat
