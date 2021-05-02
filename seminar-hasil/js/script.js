@@ -1,5 +1,7 @@
 const grabTicketButton = document.getElementById('grabTicketButton');
 const grabTicketContainer = document.querySelector('.grab-ticket-container');
+const preload = document.querySelector('.preload');
+
 const ticket = `${Math.ceil(Math.random() * 9)}${Math.ceil(
   Math.random() * 8
 )}${Math.ceil(Math.random() * 7)}${Math.ceil(Math.random() * 6)}${Math.ceil(
@@ -12,7 +14,7 @@ grabTicketButton.addEventListener('click', function () {
     grabTicketContainer.innerHTML = `
     <button class="ticketBox">Your Ticket: ${ticket}</button>
           <button class="enterButton" id="${ticket}" onClick="openLink(this.id)">Enter Now</button>`;
-  }, 1500);
+  }, 1200);
 });
 
 function openLink(id) {
@@ -29,7 +31,13 @@ function openLink(id) {
       confirmButtonText: 'Enter Room',
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location = 'https://meet.google.com/uqt-ebqy-rhf';
+        preload.innerHTML = `<div class="preloader">
+          <div id="loading"></div>
+          <h3>Please wait</h3>
+        </div>`;
+        setTimeout(() => {
+          window.location = 'https://meet.google.com/uqt-ebqy-rhf';
+        }, 1500);
       }
     });
     enterButton.innerHTML = 'Enter Now';
