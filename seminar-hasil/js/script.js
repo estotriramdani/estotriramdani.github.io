@@ -37,7 +37,7 @@ function openLink(id) {
         </div>`;
         setTimeout(() => {
           window.location = 'https://meet.google.com/uqt-ebqy-rhf';
-        }, 1500);
+        }, 1700);
       }
     });
     enterButton.innerHTML = 'Enter Now';
