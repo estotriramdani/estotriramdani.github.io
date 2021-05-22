@@ -381,6 +381,10 @@ body {
   .items {
     height: 100vw !important;
   }
+  .items-card {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
 }
 
 @-webkit-keyframes splash2 {
@@ -683,6 +687,26 @@ body {
   .education-and-skills {
     margin-top: -20px;
     padding: 0 40px 30px 40px;
+  }
+  .more {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .personal-info {
+    width: 100%;
+    padding: 0;
+  }
+  .home-page {
+    width: 100%;
+  }
+  .education-and-skills {
+    padding: 0;
+    margin-top: -20px;
+  }
+  .education-and-skills .frameworks p {
+    width: 400px !important;
   }
   .more {
     padding-bottom: 20px;
