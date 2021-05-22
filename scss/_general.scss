@@ -114,6 +114,9 @@ body {
   grid-gap: 10px;
   position: relative;
   .items {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
     &::-webkit-scrollbar {
       background-color: $white;
       width: 10px;

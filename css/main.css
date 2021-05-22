@@ -157,6 +157,9 @@ body {
 }
 
 .double-column .items {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
   padding: 10px 20px;
   height: 78vh;
   overflow-y: auto;
