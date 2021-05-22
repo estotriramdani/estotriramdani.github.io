@@ -283,6 +283,7 @@ body {
   }
 
   .items {
+    padding: 0 !important;
     height: 40vh !important;
     &::-webkit-scrollbar {
       background-color: $white;
@@ -302,9 +303,13 @@ body {
 @media screen and (max-width: 500px) {
   .items {
     height: 100vw !important;
+
     &-card {
       grid-template-columns: 1fr !important;
     }
+  }
+  .container {
+    width: 95vw;
   }
 }
 

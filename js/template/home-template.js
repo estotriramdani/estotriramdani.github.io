@@ -6,7 +6,7 @@ const homeTemplate = `<div class="home-page">
     </div>
     <div class="detail">
       <h2 class="name">Esto Triramdani N</h2>
-      <div class="profession">Web Developer</div>
+      <div class="profession"><i class="bi bi-laptop"></i> Web Developer</div>
       <ul>
         <li>
           <i class="bi bi-gender-male"></i> Bandung, 2 Januari 2000
@@ -26,10 +26,10 @@ const homeTemplate = `<div class="home-page">
     </p>
   </div>
   <div class="social-media">
-    <a href=""><i class="bi bi-linkedin"></i></a>
-    <a href=""><i class="bi bi-facebook"></i></a>
-    <a href=""><i class="bi bi-instagram"></i></a>
-    <a href=""><i class="bi bi-github"></i></a>
+    <a target="_blank" href="https://linkedin.com/in/estotriramdani"><i class="bi bi-linkedin"></i></a>
+    <a target="_blank" href="https://fb.com/estolagi"><i class="bi bi-facebook"></i></a>
+    <a target="_blank" href="https://instagram.com/estotriramdani"><i class="bi bi-instagram"></i></a>
+    <a target="_blank" href="http://github.com/estotriramdani"><i class="bi bi-github"></i></a>
   </div>
 </div>
 <div class="education-and-skills">
@@ -67,27 +67,15 @@ const homeTemplate = `<div class="home-page">
     <h3>Frameworks / Libraries</h3>
   </div>
   <div class="frameworks">
-    <p>
-      React JS • React Native • Bootstrap CSS • Laravel • CodeIgniter
-      • Vue JS • SASS • Angular • jQuery • Node JS • Express JS •
-      MySQL/MariaDB/PostgreSQL
-    </p>
+  React JS • React Native • Bootstrap CSS • Laravel • CodeIgniter • Vue JS • SASS • Angular • jQuery • Node JS • Express JS • MySQL/MariaDB/PostgreSQL 
   </div>
   <div class="subtitle">
     <h3>Design Tools</h3>
   </div>
   <div class="frameworks">
-    <p>
-      <strong>Adobe Photoshop</strong> • Adobe XD • Adobe Illustrator
-      • <strong>Figma</strong>
-    </p>
+  <strong>Adobe Photoshop</strong> • Adobe XD • Adobe Illustrator • <strong>Figma</strong>
   </div>
 </div>
-<div class="div"></div>
-<div class="more">
-  <a href="#/portfolios"
-    >EXPLORE MORE <i class="bi bi-arrow-right"></i
-  ></a>
-</div>
+
 </div>`;
 export default homeTemplate;

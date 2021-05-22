@@ -26,7 +26,8 @@
     padding: 40px;
     .profile {
       margin-bottom: 20px;
-      display: flex;
+      display: grid;
+      grid-template-columns: 170px 1fr;
       align-items: center;
       .photo {
         width: 170px;
@@ -129,10 +130,35 @@
   }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .personal-info {
-    width: 100%;
-    padding: 0;
+    margin-top: 20px;
+    padding: 0 !important;
+    .profile {
+      padding: 0 !important;
+      grid-template-columns: 1fr !important;
+      .photo {
+        margin: auto;
+        margin-bottom: 10px;
+      }
+      .detail {
+        padding-left: 0 !important;
+        margin-left: 0px !important;
+        .name {
+          text-align: center;
+          margin-bottom: 10px;
+          margin-top: 10px;
+        }
+      }
+    }
+    .self-description {
+      text-align: justify;
+    }
+  }
+  .education-and-skills {
+    .education {
+      grid-template-columns: 1fr !important;
+    }
   }
   .home-page {
     width: 100%;
@@ -142,11 +168,15 @@
     margin-top: -20px;
     .frameworks {
       p {
-        width: 400px !important;
+        max-width: 200px !important;
       }
     }
   }
   .more {
     padding-bottom: 20px;
+  }
+
+  .social-media {
+    padding-bottom: 25px !important;
   }
 }

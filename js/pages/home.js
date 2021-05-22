@@ -5,8 +5,7 @@ import homeTemplate from '../template/home-template.js';
 const homePage = () => {
   content.style.overflow = 'auto';
   content.innerHTML = homeSkeleton;
-  setTimeout(() => {
-    content.innerHTML = homeTemplate;
-  }, 1000);
+  setTimeout(() => {}, 1000);
+  content.innerHTML = homeTemplate;
 };
 export default homePage;
