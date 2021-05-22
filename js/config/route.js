@@ -11,6 +11,7 @@ import completionsPage from '../pages/completions.js';
 import experiencesPage from '../pages/experiences.js';
 import homePage from '../pages/home.js';
 import portfoliosPage from '../pages/portfolios.js';
+import tutorialsPage from '../pages/tutorials.js';
 import doubleColumn from '../template/double-column.js';
 import activeNav from '../utils/active-nav.js';
 
@@ -37,6 +38,7 @@ const router = () => {
         case 'tutorials':
           activeNav(tutorialsNavigation);
           doubleColumn();
+          tutorialsPage();
           break;
         default:
           activeNav(homeNavigation);
@@ -68,6 +70,8 @@ const routes = () => {
       break;
     case '/tutorials':
       activeNav(tutorialsNavigation);
+      doubleColumn();
+      tutorialsPage();
       break;
     default:
       activeNav(homeNavigation);
@@ -102,6 +106,7 @@ const hashWatcher = () => {
         break;
       case '/tutorials':
         activeNav(tutorialsNavigation);
+        tutorialsPage();
         doubleColumn();
         break;
       default:
