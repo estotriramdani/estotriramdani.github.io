@@ -37,7 +37,7 @@ const router = () => {
           break;
         case 'tutorials':
           activeNav(tutorialsNavigation);
-          doubleColumn();
+          // doubleColumn();
           tutorialsPage();
           break;
         default:
@@ -70,7 +70,7 @@ const routes = () => {
       break;
     case '/tutorials':
       activeNav(tutorialsNavigation);
-      doubleColumn();
+      // doubleColumn();
       tutorialsPage();
       break;
     default:
@@ -107,7 +107,7 @@ const hashWatcher = () => {
       case '/tutorials':
         activeNav(tutorialsNavigation);
         tutorialsPage();
-        doubleColumn();
+        // doubleColumn();
         break;
       default:
         activeNav(homeNavigation);
