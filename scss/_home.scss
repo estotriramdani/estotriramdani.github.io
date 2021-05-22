@@ -1,0 +1,130 @@
+@import 'variables';
+
+.subtitle {
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    background-color: $green;
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+}
+
+.home-page {
+  color: $green;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  .personal-info {
+    padding: 40px;
+    .profile {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      .photo {
+        width: 170px;
+        overflow: hidden;
+        img {
+          border: 2px solid $dark;
+          height: 100%;
+          border-radius: 85px;
+          width: 100%;
+        }
+      }
+      .detail {
+        margin-top: -15px;
+        margin-left: 20px;
+        .name {
+          font-size: 1.5em;
+          font-weight: 600;
+        }
+        .profession {
+          font-size: 1.05em;
+        }
+        ul {
+          list-style: none;
+        }
+      }
+    }
+    .self-description {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    .social-media {
+      padding: 10px;
+      background-color: $light;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      transition: 0.5s;
+      a {
+        position: relative;
+        z-index: 2;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        border-radius: 22px;
+        line-height: 44px;
+        background-color: $dark;
+        font-size: 20px;
+        color: $light;
+        display: inline-block;
+        text-decoration: none;
+        transition: 0.2s;
+        &:hover {
+          text-decoration: none;
+          color: $dark;
+          background-color: $light;
+          border: 1.5px solid $dark;
+        }
+      }
+    }
+  }
+  .education-and-skills {
+    .education {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      &__detail {
+        &__institution {
+          font-size: 1.3em;
+          font-weight: 600px;
+        }
+      }
+    }
+  }
+  .more {
+    padding-right: 40px;
+    text-align: right;
+
+    a {
+      text-decoration: none;
+      padding: 20px 30px;
+      display: inline-block;
+      color: $light;
+      background-color: $dark;
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .home-page {
+    grid-template-columns: 1fr;
+  }
+  .education-and-skills {
+    margin-top: -20px;
+    padding: 0 40px 30px 40px;
+  }
+  .more {
+    padding-bottom: 20px;
+  }
+}

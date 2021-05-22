@@ -1,0 +1,12 @@
+@import 'variables';
+
+@mixin splash2() {
+  animation-name: splash2;
+  animation-duration: 1s;
+}
+
+@mixin active-card {
+  background-color: $dark !important;
+  color: $white !important;
+  transition: 0.3s;
+}

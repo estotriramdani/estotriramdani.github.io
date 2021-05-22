@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-v4",
+  "version": "1.0.0",
+  "description": "Esto Triramdani N is a web developer who currently work (internship) for PT Amerta Indah Otsuka. He speaks JavaScript, PHP, Python, and, sometimes, Dart.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estotriramdani/portfolio-v4.git"
+  },
+  "author": "estotriramdani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estotriramdani/portfolio-v4/issues"
+  },
+  "homepage": "https://github.com/estotriramdani/portfolio-v4#readme"
+}

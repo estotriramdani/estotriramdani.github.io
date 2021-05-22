@@ -1,77 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- meta tag -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#212529" />
-    <!-- end meta tag -->
-    <meta name="descripstion" content="Esto Triramani is software development enthusiast">
     <title>Esto Triramdani N</title>
-    <!-- script angular 1..6 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-    <!-- end script angular -->
-    <!-- assets -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/fontawesome/css/all.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="assets/css/profile.css" />
-    <link rel="stylesheet" href="assets/css/exp.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Esto Triramdani N is a web developer who currently work for PT Amerta Indah Otsuka. He speaks JavaScript, PHP, Python, and, sometimes, Dart."
     />
-    <!-- end assets -->
+    <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body ng-app="myApp" class="body">
-    <div ng-view class="screen"></div>
-
-    <div class="mockup">
-      <a href="#!/home" class="home-button"></a>
-      <div class="top">
-        <div class="dot"></div>
-        <div class="speaker">
-          <div class="circle"></div>
-          <div class="long"></div>
-        </div>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <a href="#/" class="nav-item" id="home">
+          <i class="bi bi-house"></i> &nbsp; <span>HOME</span>
+        </a>
+        <a href="#/portfolios" class="nav-item" id="portfolios">
+          <i class="bi bi-braces"></i> &nbsp; <span>PORTFOLIOS</span>
+        </a>
+        <a href="#/completions" class="nav-item" id="completions">
+          <i class="bi bi-award"></i> &nbsp; <span>COMPLETIONS</span>
+        </a>
+        <a href="#/experiences" class="nav-item" id="experiences">
+          <i class="bi bi-briefcase"></i> &nbsp; <span>EXPERIENCES</span>
+        </a>
+        <a href="#/tutorials" class="nav-item" id="tutorials">
+          <i class="bi bi-collection-play"></i> &nbsp; <span>TUTORIALS</span>
+        </a>
       </div>
-      <div class="navigation">
-        <a href="#!/profile" class="profile menu"
-          ><i class="fas fa-user"></i><br
-        /></a>
-        <a href="#!/experiences" class="exp menu"
-          ><i class="fas fa-walking"></i
-        ></a>
-        <a href="#!/certificates" class="cert menu"
-          ><i class="fas fa-certificate"></i
-        ></a>
-        <a href="#!/portfolios" class="port menu"
-          ><i class="fas fa-laptop"></i
-        ></a>
-      </div>
-    </div>
-    <div class="navigation-mobile">
-      <a href="#!/profile" class="profile menu"
-        ><i class="fas fa-user"></i><br
-      /></a>
-      <a href="#!/experiences" class="exp menu"
-        ><i class="fas fa-walking"></i
-      ></a>
-      <a href="#!/certificates" class="cert menu"
-        ><i class="fas fa-certificate"></i
-      ></a>
-      <a href="#!/portfolios" class="port menu"
-        ><i class="fas fa-laptop"></i
-      ></a>
+      <div class="content" style="overflow: hidden"></div>
     </div>
 
-    <div class="splash">
-      <h3>Esto Triramdani N</h3>
-      <p>My Online CV</p>
-    </div>
-
-    <script src="assets/js/router.js"></script>
-    <script src="assets/js/script.js"></script>
+    <!-- scripts -->
+    <script src="js/index.js" type="module"></script>
   </body>
 </html>
