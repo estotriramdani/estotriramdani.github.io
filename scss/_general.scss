@@ -23,7 +23,6 @@ button {
 
 body {
   background-color: $green;
-  // font-family: 'Ubuntu', sans-serif;
   font-family: 'Poppins', sans-serif;
 }
 .showItems {
@@ -86,6 +85,10 @@ body {
       &:hover {
         color: $dark;
         background-color: $light;
+      }
+      &:focus {
+        background-color: $light !important;
+        color: $dark !important;
       }
     }
   }

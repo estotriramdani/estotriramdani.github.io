@@ -47,7 +47,7 @@ const expreiences = [
     type: 'Campuss Internal Organization',
     image: 'http://esto.my.id/files/images/experiences/thumb/bem.jpg',
     thumb: 'http://esto.my.id/files/images/experiences/thumb/bem.jpg',
-    description: `Pendidikan dan Keilmuan (Education and Science) is one of BEM (Excetuive Council of Student) Sekolah Vokasi IPB departement. This departement has main focus to develop student potential in education. I was holding a responsible to find student(s) as an indivual or as a group to write their idea(s) into paper for Program Kreativitas Mahasiswa (PKM).`,
+    description: `Pendidikan dan Keilmuan (Education and Science) is one of BEM (Excetuive Council of Student) Sekolah Vokasi IPB departement. This departement has main focus to develop student potential in education. I was holding a responsible to find student(s) as an individual or as a group to write their idea(s) into paper for Program Kreativitas Mahasiswa (PKM).`,
   },
 ];
 

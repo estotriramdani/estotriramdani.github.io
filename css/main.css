@@ -127,6 +127,11 @@ body {
   background-color: #fafafa;
 }
 
+.container .nav .nav-item:focus {
+  background-color: #fafafa !important;
+  color: #303633 !important;
+}
+
 .container .content {
   position: relative;
   height: 100%;
