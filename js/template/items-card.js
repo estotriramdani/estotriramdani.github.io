@@ -1,7 +1,7 @@
 const itemsCardPortfolios = (card) => {
   return `<div class="items-card" id="${card.id}">
   <div class="thumbnail" id="${card.id}">
-    <img src="${card.thumb}" alt="${card.title}" id="${card.id}" />
+    <img class="lazyload" src="img/placeholder.jpg" data-src="${card.thumb}" alt="${card.title}" id="${card.id}" />
   </div>
   <div class="detail" id="${card.id}">
     <p class="title" id="${card.id}">${card.title}</p>
@@ -16,7 +16,7 @@ const itemsCardPortfolios = (card) => {
 const itemsCardCompletions = (card) => {
   return `<div class="items-card" id="${card.id}">
   <div class="thumbnail" id="${card.id}">
-    <img src="${card.thumb}" alt="${card.name}" id="${card.id}" />
+    <img class="lazyload" src="img/placeholder.jpg" data-src="${card.thumb}" alt="${card.name}" id="${card.id}" />
   </div>
   <div class="detail" id="${card.id}">
     <p class="title" id="${card.id}">${card.name}</p>
@@ -31,7 +31,7 @@ const itemsCardCompletions = (card) => {
 const itemsCardExperiences = (card) => {
   return `<div class="items-card" id="${card.id}">
   <div class="thumbnail" id="${card.id}">
-    <img src="${card.thumb}" alt="${card.name}" id="${card.id}" />
+    <img class="lazyload" src="img/placeholder.jpg" data-src="${card.thumb}" alt="${card.name}" id="${card.id}" />
   </div>
   <div class="detail" id="${card.id}">
     <p class="title" id="${card.id}">${card.name}</p>

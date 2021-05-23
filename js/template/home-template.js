@@ -2,7 +2,7 @@ const homeTemplate = `<div class="home-page">
 <div class="personal-info">
   <div class="profile">
     <div class="photo">
-      <img src="img/photo-1x1.jpg" alt="" />
+      <img class="lazyload" src="img/placeholder.jpg" data-src="img/photo-1x1.jpg" alt="" />
     </div>
     <div class="detail">
       <h2 class="name">Esto Triramdani N</h2>

@@ -1,4 +1,5 @@
 import { router, routes, hashWatcher } from './config/route.js';
+import '../node_modules/lazysizes/lazysizes.min.js';
 import {
   navItem,
   navMenu,

@@ -1,7 +1,7 @@
 const detailPortfolio = (p) => {
   return `
   <div class="cover-img">
-    <img src="${p.image}" alt="">
+    <img class="lazyload" src="img/placeholder.jpg" data-src="${p.image}" alt="">
   </div>
   <div class="detail__body" style="padding-left: 10px;">
     <h3 class="detail__body__title">${p.title}</h3>
@@ -23,7 +23,7 @@ const detailPortfolio = (p) => {
 const detailCompletion = (c) => {
   return `
   <div class="cover-img">
-    <img src="${c.image}" alt="">
+    <img class="lazyload" src="img/placeholder.jpg" data-src="${c.image}" alt="">
   </div>
   <div class="detail__body" style="padding-left: 10px;">
     <h3 class="detail__body__title">${c.name}</h3>
@@ -44,7 +44,7 @@ const detailCompletion = (c) => {
 const detailExperience = (e) => {
   return `
   <div class="cover-img">
-    <img src="${e.image}" alt="">
+    <img class="lazyload" src="img/placeholder.jpg" data-src="${e.image}" alt="">
   </div>
   <div class="detail__body" style="padding-left: 10px;">
     <h3 class="detail__body__title">${e.name}</h3>
