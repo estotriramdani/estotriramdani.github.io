@@ -2,14 +2,14 @@ const completions = [
   {
     id: 0,
     image:
-      'http://esto.my.id/files/images/certificates/original-size/bwa-laravel-vue-js.jpg',
+      'http://esto.my.id/files/images/certificates/original-size/dicoding-frontend-expert.jpg',
     thumb:
-      'http://esto.my.id/files/images/certificates/thumb/bwa-laravel-vue-js.jpg',
-    institution: 'BuildWith Angga',
-    name: 'Fullstack Laravel Vue JS',
-    date: '2020',
-    description: `Kali ini, Anda akan membangun website e-commerce menggunakan framework Laravel dan Vue JavaScript agar web tampil mutakhir, dinamis dan interaktif. Selain itu, kita juga akan belajar cara membangun suatu API (App Programming Interface) yang nantinya bisa digunakan di beberapa platform semisal web, smartphone dan tablet. Setelah web berhasil dibuat, kita akan menyimpannya di VPS agar dapat diakses oleh user di seluruh dunia melalui browser yakni Firefox, Google Chrome, Opera dan peramban lainnya.`,
-    link: 'https://buildwithangga.com/cek-sertifikat',
+      'http://esto.my.id/files/images/certificates/thumb/dicoding-frontend-expert.jpg',
+    institution: 'Dicoding Academy',
+    name: 'Front-end Web Developer Expert',
+    date: '2021',
+    description: `Kelas ini ditujukan untuk seorang Front-End Web Developer yang ingin mengembangkan website yang optimal, mudah digunakan, serta canggih ketika diakses oleh seluruh perangkat terutama smartphone. Di akhir kelas, siswa dapat membuat aplikasi front-end web yang responsif, memiliki aksesibilitas yang baik, mudah di-maintenance, memiliki sifat native, dapat diuji, dan memiliki performa yang baik.`,
+    link: 'https://www.dicoding.com/certificates/72ZD2LO0JZYW',
   },
   {
     id: 1,
@@ -118,6 +118,18 @@ const completions = [
     date: '2020',
     description: `No description yet`,
     link: 'https://www.dqlab.id/',
+  },
+  {
+    id: 10,
+    image:
+      'http://esto.my.id/files/images/certificates/original-size/bwa-laravel-vue-js.jpg',
+    thumb:
+      'http://esto.my.id/files/images/certificates/thumb/bwa-laravel-vue-js.jpg',
+    institution: 'BuildWith Angga',
+    name: 'Fullstack Laravel Vue JS',
+    date: '2020',
+    description: `Kali ini, Anda akan membangun website e-commerce menggunakan framework Laravel dan Vue JavaScript agar web tampil mutakhir, dinamis dan interaktif. Selain itu, kita juga akan belajar cara membangun suatu API (App Programming Interface) yang nantinya bisa digunakan di beberapa platform semisal web, smartphone dan tablet. Setelah web berhasil dibuat, kita akan menyimpannya di VPS agar dapat diakses oleh user di seluruh dunia melalui browser yakni Firefox, Google Chrome, Opera dan peramban lainnya.`,
+    link: 'https://buildwithangga.com/cek-sertifikat',
   },
 ];
 

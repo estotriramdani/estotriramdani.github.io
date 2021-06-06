@@ -24,7 +24,7 @@ const completionsPage = () => {
     });
 
     // TO DO: tampilkan detail
-    detail.innerHTML = detailCompletion(completions[3]);
+    detail.innerHTML = detailCompletion(completions[0]);
 
     // seleksi card
     const cards = document.querySelectorAll('.items-card');

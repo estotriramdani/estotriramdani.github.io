@@ -11,7 +11,7 @@ const homeTemplate = `<div class="home-page">
         <li>
           <i class="bi bi-gender-male"></i> Bandung, 2 Januari 2000
         </li>
-        <li><i class="bi bi-phone-fill"></i> +62 896-57285153</li>
+        <li><i class="bi bi-phone-fill"></i> +62 896-5728-5153</li>
         <li><i class="bi bi-geo-alt-fill"></i> Bandung, West Java</li>
       </ul>
     </div>
@@ -41,7 +41,7 @@ const homeTemplate = `<div class="home-page">
       <h4 class="education__detail__institution">IPB University</h4>
       <p class="education__detail__major">Computer Engineering</p>
       <p class="education__detail__grade-and-year">
-        Associate Degree (2018 - Present)
+        Associate Degree (2018 - 2021)
       </p>
     </div>
     <div class="education__detail">

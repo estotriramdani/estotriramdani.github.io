@@ -117,6 +117,20 @@ const portfolios = [
       'http://esto.my.id/files/images/portfolios-mockup/thumbnail/shayna.jpg',
     link: 'https://shayna-esto.netlify.app/',
   },
+  {
+    id: 9,
+    title: 'Login System With Plain JS',
+    role: 'Full-stack Developer',
+    type: 'Web Application / Authentication',
+    description: `This login system was built with plain JavaSript for client-side scripting and Pure CSS to style the whole pages. 
+    This website has registration page, form validation (with JS), and, of course, login page. If someone make an account on this website, the informations (username and password) will be stored on its browser localStorage. Then if he/she log in to website, the information will be stored on browser's sessionStorage. I didn't use any frameworks or external packages to built made this login system. I know this website (this auth system) is not the best one because there are so many tools that I can be embedded into this website to make its auth system more powerful. I made this (plain) website just to make sure that my logics are right when building login system with its form validation system.`,
+    technology: 'Pure CSS, Vanilla JavaScript',
+    image:
+      'http://esto.my.id/files/images/portfolios-mockup/original-size/login-system.jpg',
+    thumb:
+      'http://esto.my.id/files/images/portfolios-mockup/thumbnail/login-system.jpg',
+    link: 'http://esto.my.id/system-login-with-plain-javascript/',
+  },
 ];
 
 export default portfolios;
