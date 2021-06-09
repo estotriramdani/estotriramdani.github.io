@@ -10,7 +10,6 @@ const homeSkeleton = `<div class="home-page">
         height: 170px;
         border-radius: 85px;
       "
-      ;
     ></div>
     <div class="detail">
       <h2
