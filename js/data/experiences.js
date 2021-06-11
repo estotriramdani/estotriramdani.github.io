@@ -2,7 +2,7 @@ const expreiences = [
   {
     id: 0,
     name: 'PT Amerta Indah Otsuka',
-    role: 'Web/System Developer',
+    role: 'Web/System Developer <br> Engineering Departement',
     date: 'April 2021 - Present',
     type: 'Internship',
     image: 'http://esto.my.id/files/images/experiences/original-size/aio.jpg',
