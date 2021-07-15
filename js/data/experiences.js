@@ -44,7 +44,7 @@ const expreiences = [
     image:
       'http://esto.my.id/files/images/experiences/original-size/hardiknas.jpg',
     thumb: 'http://esto.my.id/files/images/experiences/thumb/hardiknas.jpg',
-    description: `I was the head of Design, Decoration, and Publication Division in this event. Me and my team did a regular meetings for brainstorming. The main job desc of this division is to do event branding, create some design (like poster, etc.), and design the stage the event.`,
+    description: `I was the head of Design, Decoration, and Publication Division in this event. Me and my team did a regular meetings for brainstorming. The main job desc of this division is to do event branding, create some design (like poster, etc.), and design the stage of the event.`,
   },
   {
     id: 4,

@@ -6,7 +6,7 @@ const itemsCardPortfolios = (card) => {
   <div class="detail" id="${card.id}">
     <p class="title" id="${card.id}">${card.title.length > 19 ? card.title.substr(0, 20) + "..." : card.title}</p>
     <p class="short-desc" id="${card.id}">
-      ${card.role}
+      ${card.role.length > 19 ? card.role.substr(0, 20) + "..." : card.role}
     </p>
     <p class="type" id="${card.id}">${card.type}</p>
   </div>
@@ -21,7 +21,7 @@ const itemsCardCompletions = (card) => {
   <div class="detail" id="${card.id}">
     <p class="title" id="${card.id}">${card.name.length > 19 ? card.name.substr(0, 20) + "..." : card.name}</p>
     <p class="short-desc" id="${card.id}">
-      ${card.institution}
+      ${card.institution.length > 19 ? card.institution + "..." : card.institution}
     </p>
     <p class="type" id="${card.id}">${card.date}</p>
   </div>
@@ -36,7 +36,7 @@ const itemsCardExperiences = (card) => {
   <div class="detail" id="${card.id}">
     <p class="title" id="${card.id}">${card.name.length > 19 ? card.name.substr(0, 20) + "..." : card.name}</p>
     <p class="short-desc" id="${card.id}">
-      ${card.role}
+      ${card.role.length > 19 ? card.role.substr(0, 20) + "..." : card.role}
     </p>
     <p class="type" id="${card.id}">${card.date}</p>
   </div>
