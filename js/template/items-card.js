@@ -4,7 +4,7 @@ const itemsCardPortfolios = (card) => {
     <img class="lazyload" src="img/placeholder.jpg" data-src="${card.thumb}" alt="${card.title}" id="${card.id}" />
   </div>
   <div class="detail" id="${card.id}">
-    <p class="title" id="${card.id}">${card.title}</p>
+    <p class="title" id="${card.id}">${card.title.length > 19 ? card.title.substr(0, 20) + "..." : card.title}</p>
     <p class="short-desc" id="${card.id}">
       ${card.role}
     </p>
@@ -19,7 +19,7 @@ const itemsCardCompletions = (card) => {
     <img class="lazyload" src="img/placeholder.jpg" data-src="${card.thumb}" alt="${card.name}" id="${card.id}" />
   </div>
   <div class="detail" id="${card.id}">
-    <p class="title" id="${card.id}">${card.name}</p>
+    <p class="title" id="${card.id}">${card.name.length > 19 ? card.name.substr(0, 20) + "..." : card.name}</p>
     <p class="short-desc" id="${card.id}">
       ${card.institution}
     </p>
@@ -34,7 +34,7 @@ const itemsCardExperiences = (card) => {
     <img class="lazyload" src="img/placeholder.jpg" data-src="${card.thumb}" alt="${card.name}" id="${card.id}" />
   </div>
   <div class="detail" id="${card.id}">
-    <p class="title" id="${card.id}">${card.name}</p>
+    <p class="title" id="${card.id}">${card.name.length > 19 ? card.name.substr(0, 20) + "..." : card.name}</p>
     <p class="short-desc" id="${card.id}">
       ${card.role}
     </p>
