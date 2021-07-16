@@ -1,0 +1,4 @@
+untuk membuat pagination/load more, pakai for untuk looping datanya. Di awal masukkan dulu ke localStorage jumlah default itemnya (4), setelah kalau di klik Load More, akan ditambahkan: 
+  item += item, kemudian muat ulang lagi.
+
+TODO: Membuat home page untuk tutorials

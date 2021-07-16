@@ -1,0 +1,180 @@
+@import 'variables';
+.mobile {
+  display: none;
+}
+.btn-change-episode {
+  background-color: $dark;
+  color: $light;
+  display: block;
+  padding: 8px 0;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.15s;
+  text-align: center;
+  &:hover,
+  &:focus {
+    background-color: $green !important;
+    // box-shadow: 2px 2px 0 $dark;
+  }
+}
+
+.tutorial-page-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+  &__left {
+    padding-top: 0px;
+    padding: 10px;
+    &__video {
+      width: 100%;
+      height: 55vh;
+      box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.04);
+      border-radius: 3px;
+      margin-bottom: 8px;
+    }
+    &__video-detail-button {
+      display: flex;
+      // align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      &__video-detail {
+        &__series-name {
+          color: $dark;
+          font-size: 1.9em;
+        }
+        &__episode-title {
+          color: $dark;
+          font-size: 1.3em;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+      }
+      &__button {
+        margin-top: 10px;
+        &__change-episode {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 10px;
+          width: 200px;
+        }
+      }
+    }
+    &__list-episode {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      margin-bottom: 10px;
+      &__episode {
+        border-radius: 4px;
+        position: relative;
+        display: block;
+        text-decoration: none;
+        background-color: $light;
+        color: $dark;
+        border: 1px solid $dark;
+        padding: 10px;
+        transition: 0.15s;
+        &:hover {
+          background-color: $dark;
+          color: $light;
+        }
+        &__episode-title {
+          display: grid;
+          grid-template-columns: 30px 1fr;
+          font-size: 0.9em;
+        }
+      }
+    }
+    .load-more {
+      width: 20%;
+      margin-bottom: 10px;
+    }
+    &__other-series {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      .other-series-item {
+        position: relative;
+        overflow: hidden;
+        border: 2px solid $dark;
+        text-decoration: none;
+        display: block;
+        border-radius: 5px;
+        .series-thumb {
+          width: 100%;
+        }
+        &_name {
+          font-size: 0.8em;
+          color: $dark;
+          padding: 0 5px 5px 10px;
+        }
+      }
+    }
+  }
+  &__right {
+    padding: 5px;
+    &__title {
+      font-size: 1.2em;
+      color: $dark;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    &__editor {
+      padding: 10px;
+      font-family: 'Space Mono', monospace;
+      display: block;
+      width: 100%;
+      height: 55vh;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      outline-color: $green;
+      border: 2px solid $green;
+    }
+    &__button-wrapper {
+      margin-bottom: 13px;
+    }
+    .message {
+      font-size: 0.9em;
+      margin-bottom: 10px;
+      &-success {
+        border: 2px solid $darkgreen;
+        padding: 10px;
+        border-radius: 4px;
+        color: $darkgreen;
+      }
+      &-failed {
+        border-radius: 4px;
+        border: 2px solid $red;
+        padding: 10px;
+        .error-message {
+          display: block;
+          color: $red;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+.output-title {
+  color: $dark;
+  margin-bottom: 5px;
+}
+.console-output {
+  font-size: 0.9em;
+  font-family: 'Space Mono', monospace;
+  display: block;
+  margin-bottom: 5px;
+  .output-index {
+    font-style: italic;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+}

@@ -1,15 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -751,6 +759,227 @@ body {
   }
   .social-media {
     padding-bottom: 25px !important;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+.btn-change-episode {
+  background-color: #303633;
+  color: #fafafa;
+  display: block;
+  padding: 8px 0;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  text-align: center;
+}
+
+.btn-change-episode:hover, .btn-change-episode:focus {
+  background-color: #104547 !important;
+}
+
+.tutorial-page-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+}
+
+.tutorial-page-wrapper__left {
+  padding-top: 0px;
+  padding: 10px;
+}
+
+.tutorial-page-wrapper__left__video {
+  width: 100%;
+  height: 55vh;
+  -webkit-box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.04);
+          box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+.tutorial-page-wrapper__left__video-detail-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.tutorial-page-wrapper__left__video-detail-button__video-detail__series-name {
+  color: #303633;
+  font-size: 1.9em;
+}
+
+.tutorial-page-wrapper__left__video-detail-button__video-detail__episode-title {
+  color: #303633;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.tutorial-page-wrapper__left__video-detail-button__button {
+  margin-top: 10px;
+}
+
+.tutorial-page-wrapper__left__video-detail-button__button__change-episode {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.tutorial-page-wrapper__left__list-episode {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tutorial-page-wrapper__left__list-episode__episode {
+  border-radius: 4px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  background-color: #fafafa;
+  color: #303633;
+  border: 1px solid #303633;
+  padding: 10px;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+}
+
+.tutorial-page-wrapper__left__list-episode__episode:hover {
+  background-color: #303633;
+  color: #fafafa;
+}
+
+.tutorial-page-wrapper__left__list-episode__episode__episode-title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30px 1fr;
+      grid-template-columns: 30px 1fr;
+  font-size: 0.9em;
+}
+
+.tutorial-page-wrapper__left .load-more {
+  width: 20%;
+  margin-bottom: 10px;
+}
+
+.tutorial-page-wrapper__left__other-series {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.tutorial-page-wrapper__left__other-series .other-series-item {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #303633;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+}
+
+.tutorial-page-wrapper__left__other-series .other-series-item .series-thumb {
+  width: 100%;
+}
+
+.tutorial-page-wrapper__left__other-series .other-series-item_name {
+  font-size: 0.8em;
+  color: #303633;
+  padding: 0 5px 5px 10px;
+}
+
+.tutorial-page-wrapper__right {
+  padding: 5px;
+}
+
+.tutorial-page-wrapper__right__title {
+  font-size: 1.2em;
+  color: #303633;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.tutorial-page-wrapper__right__editor {
+  padding: 10px;
+  font-family: 'Space Mono', monospace;
+  display: block;
+  width: 100%;
+  height: 55vh;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  outline-color: #104547;
+  border: 2px solid #104547;
+}
+
+.tutorial-page-wrapper__right__button-wrapper {
+  margin-bottom: 13px;
+}
+
+.tutorial-page-wrapper__right .message {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.tutorial-page-wrapper__right .message-success {
+  border: 2px solid #44bba4;
+  padding: 10px;
+  border-radius: 4px;
+  color: #44bba4;
+}
+
+.tutorial-page-wrapper__right .message-failed {
+  border-radius: 4px;
+  border: 2px solid #ba2d0b;
+  padding: 10px;
+}
+
+.tutorial-page-wrapper__right .message-failed .error-message {
+  display: block;
+  color: #ba2d0b;
+  margin-bottom: 5px;
+}
+
+.output-title {
+  color: #303633;
+  margin-bottom: 5px;
+}
+
+.console-output {
+  font-size: 0.9em;
+  font-family: 'Space Mono', monospace;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.console-output .output-index {
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
