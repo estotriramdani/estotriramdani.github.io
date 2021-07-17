@@ -29,6 +29,31 @@
       </div>
       <div class="content" style="overflow: hidden"></div>
     </div>
+    <div class="history">
+      <div class="learn-history">
+        <button
+          class="btn-change-episode"
+          id="showHideHistory"
+          style="border-radius: 0; height: 100%"
+        >
+          Show/Hide Learn History
+        </button>
+      </div>
+      <div class="learn-history-box hide">
+        <button
+          class="btn-delete-history"
+          id="deleteHistory"
+          onclick="return confirm('Are you sure delete all histories?')"
+        >
+          Delete History
+        </button>
+        <ul
+          class="allEpisodesContainer"
+          id="historyList"
+          style="display: flex; flex-direction: column-reverse"
+        ></ul>
+      </div>
+    </div>
 
     <!-- scripts -->
     <script src="js/index.js" type="module"></script>

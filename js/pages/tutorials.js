@@ -11,7 +11,9 @@ import {
   getEpisodeInfo,
   getSeriesNameByWindowReload,
   isLastVideo,
+  seeLearnHistory,
   updateEpisodeList,
+  updateLatestWatched,
 } from '../utils/tutorials.js';
 
 const tutorialsPage = () => {
@@ -29,31 +31,9 @@ const tutorialsPage = () => {
           <button class="btn-change-episode" id="loadMore">Show/Hide All Episodes</button>
         </div>
         <ul id="allEpisodesContainer" class="allEpisodesContainer hide">
-          
+          <!-- rendered by JS -->
         </ul>
-        <!-- 
-        <p style="margin-bottom: 5px">Other Series</p>
-        <div class="tutorial-page-wrapper__left__other-series">
-          <a class="other-series-item" href="#">
-            <img class="series-thumb" src="img/place-img.jfif" alt="" />
-            <p class="other-series-item_name">Basic JavaScript</p>
-          </a>
-          <a class="other-series-item" href="#">
-            <img class="series-thumb" src="img/place-img.jfif" alt="" />
-            <p class="other-series-item_name">Algoritme JavaScript</p>
-          </a>
-          <a class="other-series-item" href="#">
-            <img class="series-thumb" src="img/place-img.jfif" alt="" />
-            <p class="other-series-item_name">Data Struktur JavaScript</p>
-          </a>
-          <a class="other-series-item" href="#">
-            <img class="series-thumb" src="img/place-img.jfif" alt="" />
-            <p class="other-series-item_name">OOP JavaScript</p>
-          </a>
         </div>
-        -->
-
-      </div>
       <div class="tutorial-page-wrapper__right">
         <!-- <h2 class="tutorial-page-wrapper__right__title">
           Write Your Code Here
@@ -105,13 +85,6 @@ const tutorialsPage = () => {
       komputer/laptop
     </p>
   </div>`);
-};
-const updateLatestWatched = (seriesName, episodeId) => {
-  const latestWatched = {
-    seriesName,
-    episodeId,
-  };
-  window.localStorage.setItem('latestWatched', JSON.stringify(latestWatched));
 };
 
 try {
@@ -191,7 +164,7 @@ try {
     if (e.currentTarget.location.hash.substr(2, 9) == 'tutorials') {
       let series = e.currentTarget.location.hash.substr(2).split('/')[1];
       let episodeId = e.currentTarget.location.hash.substr(2).split('/')[2];
-      
+
       updateLatestWatched(series, episodeId);
 
       const allEpisodes = getAllEpisodesOfSeries(series);
@@ -247,11 +220,13 @@ try {
           document.getElementById('allEpisodesContainer').innerHTML =
             episodesOfSeries;
         }, 1000);
+        seeLearnHistory();
       }, 0.5);
     }
   });
 } catch (error) {
   console.log(error);
+  window.location = '/';
 }
 
 export default tutorialsPage;

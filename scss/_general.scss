@@ -34,6 +34,41 @@ body {
   transition: 0.3s;
 }
 
+.learn-history {
+  position: fixed;
+  left: calc(5vw - 0px);
+  bottom: calc(5vh - 0px);
+  z-index: 999;
+  transform-origin: center;
+  width: 300px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+  height: 40px;
+}
+
+.learn-history-box {
+  position: fixed;
+  left: calc(5vw + 0px);
+  bottom: calc(5vh + 40px);
+  width: 300px;
+  height: 400px;
+  padding: 15px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+  background-color: $white;
+  overflow-y: auto;
+  font-size: 0.9em;
+}
+
+.btn-delete-history {
+  position: fixed;
+  bottom: calc(5vh + 45px);
+  left: calc(5vw + 200px - 20px);
+  cursor: pointer;
+  background-color: $red;
+  color: $white;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
 .container {
   display: flex;
   flex-direction: column;

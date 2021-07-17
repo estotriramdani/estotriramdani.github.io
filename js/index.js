@@ -8,6 +8,7 @@ import {
   portfoliosNavigation,
 } from './dom-elements/index.js';
 import headInnerHTML from './template/head.js';
+import { seeLearnHistory } from './utils/tutorials.js';
 
 navMenu.addEventListener('click', (e) => {
   if (e.target.className == 'nav-item') {
@@ -32,6 +33,20 @@ if (localStorage.getItem('latestWatched') === null) {
     );
 }
 
+window.addEventListener('hashchange', (e) => {
+  if (e.currentTarget.location.hash.substr(2, 9) != 'tutorials') {
+    document.querySelector('.history').style.display = 'none';
+  } else {
+    document.querySelector('.history').style.display = 'block';
+  }
+});
+
+if (location.hash.substr(2, 9) != 'tutorials') {
+  document.querySelector('.history').style.display = 'none';
+} else {
+  document.querySelector('.history').style.display = 'block';
+}
+
 head[0].innerHTML += headInnerHTML;
 
 // open the first page based on hash
@@ -42,6 +57,24 @@ hashWatcher();
 
 // navigate to a page when user click navigation
 router();
+
+if (window.localStorage.getItem('learnHistory') == null) {
+  window.localStorage.setItem('learnHistory', '[]');
+} else {
+  seeLearnHistory();
+}
+
+document.getElementById('deleteHistory').addEventListener('click', () => {
+  window.localStorage.setItem('learnHistory', '[]');
+  document.getElementById('historyList').innerHTML = `
+  <li style="margin-bottom: 10px">
+    History is empty
+  </li>`;
+});
+
+document.getElementById('showHideHistory').addEventListener('click', () => {
+  document.querySelector('.learn-history-box').classList.toggle('hide');
+});
 
 switch (window.location.hash.substr(1)) {
   case '/portfolios':

@@ -71,6 +71,40 @@ const getAllEpisodesOfSeries = (seriesName) => {
   return tutorials[serieIndex].episodes;
 };
 
+const updateLatestWatched = (seriesName, episodeId) => {
+  let learnHistory = JSON.parse(window.localStorage.getItem('learnHistory'));
+  const date = new Date();
+  const latestWatched = {
+    seriesName,
+    episodeId,
+    time: `${date.getFullYear().toString()}-${date.getMonth().toString()}-${date
+      .getDate()
+      .toString()} ${date.getHours().toString()}:${date
+      .getMinutes()
+      .toString()}:${date.getSeconds().toString()}`,
+  };
+  window.localStorage.setItem('latestWatched', JSON.stringify(latestWatched));
+  learnHistory.push(latestWatched);
+  window.localStorage.setItem('learnHistory', JSON.stringify(learnHistory));
+};
+
+const seeLearnHistory = () => {
+  const learnHistory = JSON.parse(window.localStorage.getItem('learnHistory'));
+  let histories = '';
+  learnHistory.forEach((history) => {
+    histories += `<li style="margin-bottom: 10px">
+    <span style="display: block; font-size: 0.7em"
+      >${history.time}</span
+    >
+    <a href="#/tutorials/${history.seriesName}/${history.episodeId}"
+      >${history.seriesName} <br />
+      ep. ${history.episodeId}</a
+    >
+  </li>`;
+  });
+  document.getElementById('historyList').innerHTML = histories;
+};
+
 export {
   getSeriesNameByWindowReload,
   getEpisodeIdByWindowReload,
@@ -78,4 +112,6 @@ export {
   getEpisodeInfo,
   isLastVideo,
   getAllEpisodesOfSeries,
+  updateLatestWatched,
+  seeLearnHistory,
 };
