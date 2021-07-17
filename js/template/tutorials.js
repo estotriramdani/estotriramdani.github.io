@@ -28,7 +28,7 @@ const videoDetail = (
   isLast = false
 ) => {
   return `
-      <!-- 
+      
         <iframe
           class="tutorial-page-wrapper__left__video"
           src="https://www.youtube.com/embed/${episode_video}"
@@ -37,7 +37,7 @@ const videoDetail = (
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-        -->
+      
         <div class="tutorial-page-wrapper__left__video-detail-button">
           <div
             class="
