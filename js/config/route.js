@@ -19,17 +19,20 @@ const router = () => {
   navItem.forEach((item) => {
     item.addEventListener('click', (e) => {
       content.style.overflow = 'hidden';
+      changeTutorialsHref();
       switchPages(e.target.id.substr(0, 7));
     });
   });
 };
 
 const routes = () => {
+  changeTutorialsHref();
   switchPages(window.location.hash.substr(2, 7));
 };
 
 const hashWatcher = () => {
   window.addEventListener('hashchange', (e) => {
+    changeTutorialsHref();
     navItem.forEach((nav) => {
       if (nav.classList.contains('nav-item-active')) {
         nav.classList.remove('nav-item-active');
@@ -60,12 +63,30 @@ const switchPages = (page) => {
     case 'tutoria':
       activeNav(tutorialsNavigation);
       tutorialsPage();
-      // doubleColumn();
       break;
     default:
       activeNav(homeNavigation);
       homePage();
       break;
+  }
+};
+
+const changeTutorialsHref = () => {
+  if (localStorage.getItem('latestWatched') === null) {
+    document
+      .getElementById('tutorials')
+      .setAttribute(
+        'href',
+        '#/tutorials/dasar-bahasa-pemrograman-javascript/2'
+      );
+  } else {
+    const watchHistory = JSON.parse(localStorage.getItem('latestWatched'));
+    document
+      .getElementById('tutorials')
+      .setAttribute(
+        'href',
+        `#/tutorials/${watchHistory.seriesName}/${watchHistory.episodeId}`
+      );
   }
 };
 

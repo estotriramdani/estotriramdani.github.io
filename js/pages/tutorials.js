@@ -1,11 +1,17 @@
 import tutorials from '../data/tutorials.js';
 import { content } from '../dom-elements/index.js';
-import { episodeCard } from '../template/tutorials.js';
+import { allEpisode, videoDetail } from '../template/tutorials.js';
 import {
-  getEpisodeIdByHashChange,
+  episodeCardSkeleton,
+  videoDetailSkeleton,
+} from '../template/tutorialSkeleton.js';
+import {
+  getAllEpisodesOfSeries,
   getEpisodeIdByWindowReload,
-  getSeriesNameByHashChange,
+  getEpisodeInfo,
   getSeriesNameByWindowReload,
+  isLastVideo,
+  updateEpisodeList,
 } from '../utils/tutorials.js';
 
 const tutorialsPage = () => {
@@ -14,61 +20,18 @@ const tutorialsPage = () => {
     <div class="tutorial-page-wrapper">
       <div class="tutorial-page-wrapper__left">
         <!-- -->
-        <iframe
-          class="tutorial-page-wrapper__left__video"
-          src="https://www.youtube.com/embed/8DdHto77744"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <div id="detailVideo">${videoDetail()}</div>
         
-        <div class="tutorial-page-wrapper__left__video-detail-button">
-          <div
-            class="
-              tutorial-page-wrapper__left__video-detail-button__video-detail
-            "
-          >
-            <h2
-              class="
-                tutorial-page-wrapper__left__video-detail-button__video-detail__series-name
-              "
-            >
-              JavaScript Basic
-            </h2>
-            <h3
-              class="
-                tutorial-page-wrapper__left__video-detail-button__video-detail__episode-title
-              "
-            >
-              10 - Memahami Return pada Function
-            </h3>
-          </div>
-          <div
-            class="
-              tutorial-page-wrapper__left__video-detail-button__button
-            "
-          >
-            <div
-              class="
-                tutorial-page-wrapper__left__video-detail-button__button__change-episode
-              "
-            >
-              <div class="button-wrapper">
-                <button class="btn-change-episode">Previous</button>
-              </div>
-              <div class="button-wrapper">
-                <button class="btn-change-episode">Next</button>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="tutorial-page-wrapper__left__list-episode" id="episodes">
-          
+          <!-- Rendered by JS -->
         </div>
         <div class="load-more">
-          <button class="btn-change-episode">Load More Episodes</button>
+          <button class="btn-change-episode" id="loadMore">Show/Hide All Episodes</button>
         </div>
+        <ul id="allEpisodesContainer" class="allEpisodesContainer hide">
+          
+        </ul>
+        <!-- 
         <p style="margin-bottom: 5px">Other Series</p>
         <div class="tutorial-page-wrapper__left__other-series">
           <a class="other-series-item" href="#">
@@ -88,6 +51,8 @@ const tutorialsPage = () => {
             <p class="other-series-item_name">OOP JavaScript</p>
           </a>
         </div>
+        -->
+
       </div>
       <div class="tutorial-page-wrapper__right">
         <!-- <h2 class="tutorial-page-wrapper__right__title">
@@ -141,47 +106,152 @@ const tutorialsPage = () => {
     </p>
   </div>`);
 };
-
-const whenReload = () => {
-  let series = getSeriesNameByWindowReload();
-  const serieIndex = tutorials.findIndex(
-    (tutorial) => tutorial.tutorial_slug == series
-  );
-  let currentSeries = tutorials[serieIndex].episodes;
-
-  let episodeList = '';
-  for (let index = 0; index <= 2; index++) {
-    episodeList += episodeCard(
-      currentSeries[index].tutorial_slug,
-      currentSeries[index].episode_id,
-      currentSeries[index].epsiode_title
-    );
-  }
-  window.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('episodes').innerHTML = episodeList;
-  });
+const updateLatestWatched = (seriesName, episodeId) => {
+  const latestWatched = {
+    seriesName,
+    episodeId,
+  };
+  window.localStorage.setItem('latestWatched', JSON.stringify(latestWatched));
 };
 
-whenReload();
+try {
+  const whenReload = () => {
+    let series;
+    let episodeId;
 
-window.addEventListener('hashchange', (e) => {
-  let series = e.currentTarget.location.hash.substr(2).split('/')[1];
-  const serieIndex = tutorials.findIndex(
-    (tutorial) => tutorial.tutorial_slug == series
-  );
-  let currentSeries = tutorials[serieIndex].episodes;
+    series = getSeriesNameByWindowReload();
+    episodeId = getEpisodeIdByWindowReload();
 
-  let episodeList = '';
-  for (let index = 0; index <= 2; index++) {
-    episodeList += episodeCard(
-      currentSeries[index].tutorial_slug,
-      currentSeries[index].episode_id,
-      currentSeries[index].epsiode_title
-    );
+    const allEpisodes = getAllEpisodesOfSeries(series);
+
+    updateLatestWatched(series, episodeId);
+
+    const currentEpisode = getEpisodeInfo(series, episodeId);
+    let episodeList;
+    try {
+      episodeList = updateEpisodeList(series, episodeId, tutorials);
+    } catch (error) {
+      console.log(error);
+    }
+    const isLast = isLastVideo(series, episodeId);
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('#loadMore').addEventListener('click', () => {
+        document
+          .getElementById('allEpisodesContainer')
+          .classList.toggle('hide');
+      });
+      document.getElementById('episodes').innerHTML =
+        episodeCardSkeleton() +
+        episodeCardSkeleton() +
+        episodeCardSkeleton() +
+        episodeCardSkeleton();
+      document.getElementById('detailVideo').innerHTML = videoDetailSkeleton();
+
+      setTimeout(() => {
+        document.getElementById('episodes').innerHTML = episodeList;
+        document
+          .querySelector('.tutorial-page-wrapper__left__list-episode__episode')
+          .classList.add('current-episode');
+        document.getElementById('detailVideo').innerHTML = videoDetail(
+          currentEpisode.tutorial_name,
+          currentEpisode.episode_id,
+          currentEpisode.epsiode_title,
+          currentEpisode.episode_video,
+          currentEpisode.tutorial_slug,
+          isLast
+        );
+        let episodesOfSeries = '';
+        allEpisodes.forEach((episode) => {
+          if (parseInt(episode.episode_id) === parseInt(episodeId)) {
+            episodesOfSeries += allEpisode(
+              episode.tutorial_slug,
+              episode.episode_id,
+              episode.epsiode_title,
+              true
+            );
+          } else {
+            episodesOfSeries += allEpisode(
+              episode.tutorial_slug,
+              episode.episode_id,
+              episode.epsiode_title,
+              false
+            );
+          }
+        });
+        document.getElementById('allEpisodesContainer').innerHTML =
+          episodesOfSeries;
+      }, 10);
+    });
+  };
+  if (location.hash.substr(2, 9) == 'tutorials') {
+    whenReload();
   }
-  setTimeout(() => {
-    document.getElementById('episodes').innerHTML = episodeList;
-  }, 0.5);
-});
+
+  window.addEventListener('hashchange', (e) => {
+    if (e.currentTarget.location.hash.substr(2, 9) == 'tutorials') {
+      let series = e.currentTarget.location.hash.substr(2).split('/')[1];
+      let episodeId = e.currentTarget.location.hash.substr(2).split('/')[2];
+      
+      updateLatestWatched(series, episodeId);
+
+      const allEpisodes = getAllEpisodesOfSeries(series);
+      const currentEpisode = getEpisodeInfo(series, episodeId);
+      const episodeList = updateEpisodeList(series, episodeId, tutorials);
+      const isLast = isLastVideo(series, episodeId);
+      setTimeout(() => {
+        document.querySelector('#loadMore').addEventListener('click', () => {
+          document
+            .getElementById('allEpisodesContainer')
+            .classList.toggle('hide');
+        });
+        document.getElementById('episodes').innerHTML =
+          episodeCardSkeleton() +
+          episodeCardSkeleton() +
+          episodeCardSkeleton() +
+          episodeCardSkeleton();
+        document.getElementById('detailVideo').innerHTML =
+          videoDetailSkeleton();
+        setTimeout(() => {
+          document.getElementById('episodes').innerHTML = episodeList;
+          document
+            .querySelector(
+              '.tutorial-page-wrapper__left__list-episode__episode'
+            )
+            .classList.add('current-episode');
+          document.getElementById('detailVideo').innerHTML = videoDetail(
+            currentEpisode.tutorial_name,
+            currentEpisode.episode_id,
+            currentEpisode.epsiode_title,
+            currentEpisode.episode_video,
+            currentEpisode.tutorial_slug,
+            isLast
+          );
+          let episodesOfSeries = '';
+          allEpisodes.forEach((episode) => {
+            if (parseInt(episode.episode_id) === parseInt(episodeId)) {
+              episodesOfSeries += allEpisode(
+                episode.tutorial_slug,
+                episode.episode_id,
+                episode.epsiode_title,
+                true
+              );
+            } else {
+              episodesOfSeries += allEpisode(
+                episode.tutorial_slug,
+                episode.episode_id,
+                episode.epsiode_title,
+                false
+              );
+            }
+          });
+          document.getElementById('allEpisodesContainer').innerHTML =
+            episodesOfSeries;
+        }, 1000);
+      }, 0.5);
+    }
+  });
+} catch (error) {
+  console.log(error);
+}
 
 export default tutorialsPage;

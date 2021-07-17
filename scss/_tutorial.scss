@@ -1,5 +1,14 @@
 @import 'variables';
 
+.current-episode {
+  background-color: $dark !important;
+  color: $white !important;
+  &:hover {
+    background-color: $white !important;
+    color: $dark !important;
+  }
+}
+
 .tutorials-main-menu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -41,14 +50,26 @@
   padding: 8px 0;
   width: 100%;
   border-radius: 3px;
-  cursor: pointer;
   transition: 0.15s;
   text-align: center;
+  text-decoration: none;
+  cursor: pointer;
   &:hover,
   &:focus {
     background-color: $green !important;
     // box-shadow: 2px 2px 0 $dark;
   }
+}
+.btn-disabled {
+  color: $dark;
+  background-color: $light;
+  display: block;
+  padding: 8px 0;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid $dark;
+  cursor: not-allowed;
+  height: 100%;
 }
 
 .tutorial-page-wrapper {
@@ -64,6 +85,7 @@
       box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.04);
       border-radius: 3px;
       margin-bottom: 8px;
+      background-color: $gray;
     }
     &__video-detail-button {
       display: flex;
@@ -119,8 +141,9 @@
       }
     }
     .load-more {
-      width: 20%;
+      width: 50%;
       margin-bottom: 10px;
+      margin-top: 20px;
     }
     &__other-series {
       display: grid;
@@ -200,6 +223,21 @@
   .output-index {
     font-style: italic;
   }
+}
+
+ul.allEpisodesContainer {
+  font-family: 'JetBrains Mono', monospace;
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: $green;
+    }
+  }
+}
+
+.hide {
+  display: none !important;
 }
 
 @media (max-width: 768px) {

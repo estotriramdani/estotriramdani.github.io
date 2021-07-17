@@ -18,6 +18,20 @@ navMenu.addEventListener('click', (e) => {
   }
 });
 
+if (localStorage.getItem('latestWatched') === null) {
+  document
+    .getElementById('tutorials')
+    .setAttribute('href', '#/tutorials/dasar-bahasa-pemrograman-javascript/2');
+} else {
+  const watchHistory = JSON.parse(localStorage.getItem('latestWatched'));
+  document
+    .getElementById('tutorials')
+    .setAttribute(
+      'href',
+      `#/tutorials/${watchHistory.seriesName}/${watchHistory.episodeId}`
+    );
+}
+
 head[0].innerHTML += headInnerHTML;
 
 // open the first page based on hash
