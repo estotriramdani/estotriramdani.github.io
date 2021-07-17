@@ -1,4 +1,36 @@
 @import 'variables';
+
+.tutorials-main-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  &-item {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: $dark;
+    border: 2px solid $dark;
+    .tutorial-menu-thumb {
+      background-color: red;
+      width: 100% !important;
+      img {
+        display: block;
+        object-fit: cover;
+      }
+    }
+    .tutorial-menu-title {
+      display: block;
+      padding: 0 5px 5px 10px;
+    }
+  }
+}
+.tutorial-main-menu-title {
+  color: $dark;
+  text-align: center;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
 .mobile {
   display: none;
 }
@@ -122,7 +154,7 @@
     }
     &__editor {
       padding: 10px;
-      font-family: 'Space Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       display: block;
       width: 100%;
       height: 55vh;
@@ -161,8 +193,8 @@
   margin-bottom: 5px;
 }
 .console-output {
-  font-size: 0.9em;
-  font-family: 'Space Mono', monospace;
+  font-size: 1em;
+  font-family: 'JetBrains Mono', monospace;
   display: block;
   margin-bottom: 5px;
   .output-index {
