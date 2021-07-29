@@ -41,18 +41,20 @@ const tutorialsPage = () => {
         <textarea
           class="tutorial-page-wrapper__right__editor"
           id="editor"
-          placeholder="Write your JavaScript code here..."
+          placeholder="Under development"
           spellcheck="false"
+          disabled
         ></textarea
         >
         <div class="tutorial-page-wrapper__right__button-wrapper">
           <button class="btn-change-episode">Check Code</button>
         </div>
+        <!--
         <div class="message">
-          <!-- <div class="message-success">
+          <div class="message-success">
             Your code has no any errors. Congrats!
-          </div> -->
-          <!-- <div class="message-failed">
+          </div>
+          <div class="message-failed">
             <span class="error-message">
               Error Message: <br />
               Syntax Error
@@ -62,7 +64,7 @@ const tutorialsPage = () => {
               Syntax Error
             </span>
           </div>
-        </div> -->
+        </div>
         <div class="tutorial-page-wrapper__right__output">
           <h4 class="output-title">Output Console</h4>
           <div class="output_body" id="output">
@@ -76,6 +78,7 @@ const tutorialsPage = () => {
             >
           </div>
         </div>
+        -->
       </div>
     </div>
   </div>

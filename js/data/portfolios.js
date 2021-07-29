@@ -15,6 +15,20 @@ const portfolios = [
   },
   {
     id: 1,
+    title: 'ETN News',
+    role: 'Full-stack Developer',
+    type: 'Web Application / News/Blog',
+    description:
+      'ETN News is web application that allows users to write their own post which can be read by anyone who visits the application. ',
+    technology: 'Mongo DB, Express JS, Next.js, Node JS, SASS',
+    image:
+      'http://esto.my.id/files/images/portfolios-mockup/original-size/etn-news.png',
+    thumb:
+      'http://esto.my.id/files/images/portfolios-mockup/thumbnail/etn-news.png',
+    link: 'https://etn-news-frontend.vercel.app/',
+  },
+  {
+    id: 2,
     title: 'EJ BOOKS Website',
     role: 'Full-stack Developer',
     type: 'Web Application / Book Catalogue',
@@ -27,7 +41,7 @@ const portfolios = [
     link: 'https://penerbit-ejbooks.my.id/',
   },
   {
-    id: 2,
+    id: 3,
     title: 'SMAN 1 Dayeuhkolot Landing Page',
     role: 'Front-end Developer and UI Designer',
     type: 'Web Application / Landing Page',
@@ -40,7 +54,7 @@ const portfolios = [
     link: 'https://smanday-landing.netlify.app/',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Simulasi Pembelajaran Matematika (SIPEMA)',
     role: 'Front-end Developer and UI Designer',
     type: 'Web Application / E-Learning',
@@ -53,7 +67,7 @@ const portfolios = [
     link: 'https://sipemarpl.000webhostapp.com/',
   },
   {
-    id: 4,
+    id: 5,
     title: 'WalttMe',
     role: 'UI Designer',
     type: 'UI Design / Mobile',
@@ -66,7 +80,7 @@ const portfolios = [
     link: '#',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Simulasi Pembelajaran Matematika (SIPEMA)',
     role: 'Front-end Developer and UI Designer',
     type: 'Web Application',
@@ -79,7 +93,7 @@ const portfolios = [
     link: 'https://sipemarpl.000webhostapp.com/',
   },
   {
-    id: 6,
+    id: 7,
     title: 'EJ BOOKS Ruang Penulis',
     role: 'Full-stack Developer',
     type: 'Web Application',
@@ -92,7 +106,21 @@ const portfolios = [
     link: 'http://penerbit-ejbooks.my.id/ruangpenulis',
   },
   {
-    id: 7,
+    id: 8,
+    title: 'Login System With Plain JS',
+    role: 'Full-stack Developer',
+    type: 'Web Application / Authentication',
+    description: `This login system was built with plain JavaSript for client-side scripting and Pure CSS to style the whole pages. 
+    This website has registration page, form validation (with JS), and, of course, login page. If someone make an account on this website, the informations (username and password) will be stored on its browser localStorage. Then if he/she log in to website, the information will be stored on browser's sessionStorage. I didn't use any frameworks or external packages to built made this login system. I know this website (this auth system) is not the best one because there are so many tools that I can be embedded into this website to make its auth system more powerful. I made this (plain) website just to make sure that my logics are right when building login system with its form validation system.`,
+    technology: 'Pure CSS, Vanilla JavaScript',
+    image:
+      'http://esto.my.id/files/images/portfolios-mockup/original-size/login-system.jpg',
+    thumb:
+      'http://esto.my.id/files/images/portfolios-mockup/thumbnail/login-system.jpg',
+    link: 'http://esto.my.id/system-login-with-plain-javascript/',
+  },
+  {
+    id: 9,
     title: 'My Porfolios v3',
     role: 'All-in-One Developer',
     type: 'Web Application / Personal Website',
@@ -105,7 +133,7 @@ const portfolios = [
     link: '#',
   },
   {
-    id: 8,
+    id: 10,
     title: 'Shayna Ecommerce',
     role: 'Full-stack Developer',
     type: 'Web Application / E-commerce',
@@ -116,20 +144,6 @@ const portfolios = [
     thumb:
       'http://esto.my.id/files/images/portfolios-mockup/thumbnail/shayna.jpg',
     link: 'https://shayna-esto.netlify.app/',
-  },
-  {
-    id: 9,
-    title: 'Login System With Plain JS',
-    role: 'Full-stack Developer',
-    type: 'Web Application / Authentication',
-    description: `This login system was built with plain JavaSript for client-side scripting and Pure CSS to style the whole pages. 
-    This website has registration page, form validation (with JS), and, of course, login page. If someone make an account on this website, the informations (username and password) will be stored on its browser localStorage. Then if he/she log in to website, the information will be stored on browser's sessionStorage. I didn't use any frameworks or external packages to built made this login system. I know this website (this auth system) is not the best one because there are so many tools that I can be embedded into this website to make its auth system more powerful. I made this (plain) website just to make sure that my logics are right when building login system with its form validation system.`,
-    technology: 'Pure CSS, Vanilla JavaScript',
-    image:
-      'http://esto.my.id/files/images/portfolios-mockup/original-size/login-system.jpg',
-    thumb:
-      'http://esto.my.id/files/images/portfolios-mockup/thumbnail/login-system.jpg',
-    link: 'http://esto.my.id/system-login-with-plain-javascript/',
   },
 ];
 
