@@ -2,3 +2,5 @@ untuk membuat pagination/load more, pakai for untuk looping datanya. Di awal mas
   item += item, kemudian muat ulang lagi.
 
 TODO: Membuat home page untuk tutorials
+
+ubah catatan
