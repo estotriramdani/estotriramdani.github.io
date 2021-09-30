@@ -1,12 +1,18 @@
 const itemsCardPortfolios = (card) => {
-  return `<div class="items-card" id="${card.id}">
+  return `<div class="items-card" id="${
+    card.id
+  }" onclick="return scrollTo(top)">
   <div class="thumbnail" id="${card.id}">
-    <img class="lazyload" src="img/placeholder.jpg" data-src="${card.thumb}" alt="${card.title}" id="${card.id}" />
+    <img class="lazyload" src="img/placeholder.jpg" data-src="${
+      card.thumb
+    }" alt="${card.title}" id="${card.id}" />
   </div>
   <div class="detail" id="${card.id}">
-    <p class="title" id="${card.id}">${card.title.length > 19 ? card.title.substr(0, 20) + "..." : card.title}</p>
+    <p class="title" id="${card.id}">${
+    card.title.length > 19 ? card.title.substr(0, 20) + '...' : card.title
+  }</p>
     <p class="short-desc" id="${card.id}">
-      ${card.role.length > 19 ? card.role.substr(0, 20) + "..." : card.role}
+      ${card.role.length > 19 ? card.role.substr(0, 20) + '...' : card.role}
     </p>
     <p class="type" id="${card.id}">${card.type}</p>
   </div>
@@ -14,14 +20,24 @@ const itemsCardPortfolios = (card) => {
 };
 
 const itemsCardCompletions = (card) => {
-  return `<div class="items-card" id="${card.id}">
+  return `<div class="items-card" id="${
+    card.id
+  }" onclick="return scrollTo(top)">
   <div class="thumbnail" id="${card.id}">
-    <img class="lazyload" src="img/placeholder.jpg" data-src="${card.thumb}" alt="${card.name}" id="${card.id}" />
+    <img class="lazyload" src="img/placeholder.jpg" data-src="${
+      card.thumb
+    }" alt="${card.name}" id="${card.id}" />
   </div>
   <div class="detail" id="${card.id}">
-    <p class="title" id="${card.id}">${card.name.length > 19 ? card.name.substr(0, 20) + "..." : card.name}</p>
+    <p class="title" id="${card.id}">${
+    card.name.length > 19 ? card.name.substr(0, 20) + '...' : card.name
+  }</p>
     <p class="short-desc" id="${card.id}">
-      ${card.institution.length > 19 ? card.institution + "..." : card.institution}
+      ${
+        card.institution.length > 19
+          ? card.institution + '...'
+          : card.institution
+      }
     </p>
     <p class="type" id="${card.id}">${card.date}</p>
   </div>
@@ -29,14 +45,20 @@ const itemsCardCompletions = (card) => {
 };
 
 const itemsCardExperiences = (card) => {
-  return `<div class="items-card" id="${card.id}">
+  return `<div class="items-card" id="${
+    card.id
+  }" onclick="return scrollTo(top)">
   <div class="thumbnail" id="${card.id}">
-    <img class="lazyload" src="img/placeholder.jpg" data-src="${card.thumb}" alt="${card.name}" id="${card.id}" />
+    <img class="lazyload" src="img/placeholder.jpg" data-src="${
+      card.thumb
+    }" alt="${card.name}" id="${card.id}" />
   </div>
   <div class="detail" id="${card.id}">
-    <p class="title" id="${card.id}">${card.name.length > 19 ? card.name.substr(0, 20) + "..." : card.name}</p>
+    <p class="title" id="${card.id}">${
+    card.name.length > 19 ? card.name.substr(0, 20) + '...' : card.name
+  }</p>
     <p class="short-desc" id="${card.id}">
-      ${card.role.length > 19 ? card.role.substr(0, 20) + "..." : card.role}
+      ${card.role.length > 19 ? card.role.substr(0, 20) + '...' : card.role}
     </p>
     <p class="type" id="${card.id}">${card.date}</p>
   </div>

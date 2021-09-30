@@ -346,6 +346,8 @@ body {
 
 .double-column .detail .cover-img img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .double-column .detail__body {

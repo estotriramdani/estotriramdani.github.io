@@ -59,8 +59,7 @@ const homeTemplate = `<div class="home-page">
   </div>
   <div class="programming-lang">
     <p>
-      <strong>JavaScript</strong> • <strong>PHP</strong> • Python •
-      Dart • <strong>SQL</strong>
+      <strong>JavaScript</strong> • <strong>PHP</strong> • TypeScript • <strong>SQL</strong>
     </p>
   </div>
   <div class="subtitle">
