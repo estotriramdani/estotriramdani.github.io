@@ -39,7 +39,7 @@ const homeTemplate = `<div class="home-page">
   <div class="education">
     <div class="education__detail">
       <h4 class="education__detail__institution">IPB University</h4>
-      <p class="education__detail__major">Computer Engineering</p>
+      <p class="education__detail__major">Computer Engineering (GPA 3.60)</p>
       <p class="education__detail__grade-and-year">
         Associate Degree (2018 - 2021)
       </p>
@@ -59,14 +59,14 @@ const homeTemplate = `<div class="home-page">
   </div>
   <div class="programming-lang">
     <p>
-      <strong>JavaScript</strong> • <strong>PHP</strong> • TypeScript • <strong>SQL</strong>
+      <strong>JavaScript</strong> • PHP • TypeScript
     </p>
   </div>
   <div class="subtitle">
     <h3>Frameworks / Libraries</h3>
   </div>
   <div class="frameworks">
-  React JS • React Native • Bootstrap CSS • Laravel • CodeIgniter • Vue JS • SASS • Angular • jQuery • Node JS • Express JS • MySQL/MariaDB/PostgreSQL 
+  React JS • Next.js • Tailwind CSS • Bootstrap CSS • Laravel • CodeIgniter • Vue JS • SASS • jQuery • Node JS • Express JS • MySQL/MariaDB/PostgreSQL • MongoDB 
   </div>
   <div class="subtitle">
     <h3>Design Tools</h3>
