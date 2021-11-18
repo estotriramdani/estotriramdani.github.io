@@ -1,20 +1,20 @@
 const expreiences = [
-  // {
-  //   id: 0,
-  //   name: 'PT Amerta Indah Otsuka (AIO)',
-  //   role: 'Web/System Developer <br> Engineering Departement',
-  //   date: 'April 2021 - Present',
-  //   type: 'Internship',
-  //   image: 'http://esto.my.id/files/images/experiences/original-size/aio.jpg',
-  //   thumb: 'http://esto.my.id/files/images/experiences/thumb/aio.jpg',
-  //   description: `My first project in AIO was built Healthy Asset Management (HAM) App. The application is written in PHP the most and JavaScript for asynchronous event. After the application was released, it still need to be maintained by me (like bug fixing, feature enhancement, etc).
-  //     <br>
-  //     <br> Now, I got new project to build an application that monitor, calculate, and visualize energy consumption (such as water, electric, gas, oil, etc.) in AIO Sukabumy Factory. This second project will use a lot of tools like SQL, JavaScript, and Grafana. I also will build REST API because the app is planned to be used in another platform. 
-  //     <br/> <br> 
-  //     (Update at July 15, 2021)`,
-  // },
   {
     id: 0,
+    name: 'PT Amerta Indah Otsuka (AIO)',
+    role: 'Web/System Developer <br> Engineering Departement',
+    date: 'April 2021 - December 2021',
+    type: 'Internship',
+    image: 'http://esto.my.id/files/images/experiences/original-size/aio.jpg',
+    thumb: 'http://esto.my.id/files/images/experiences/thumb/aio.jpg',
+    description: `My first project in AIO was built Healthy Asset Management (HAM) App. The application is written in PHP the most and JavaScript for asynchronous event. After the application was released, it still need to be maintained by me (like bug fixing, feature enhancement, etc).
+      <br>
+      <br> Now, I got new project to build an application that monitor, calculate, and visualize energy consumption (such as water, electric, gas, oil, etc.) in AIO Sukabumy Factory. This second project will use a lot of tools like SQL, JavaScript, and Grafana. I also will build REST API because the app is planned to be used in another platform. 
+      <br/> <br> 
+      (Update at July 15, 2021)`,
+  },
+  {
+    id: 1,
     name: 'CV Solusi Automasi Indonesia',
     role: 'Front-end Web Developer',
     date: 'February 2021 - May 2021',
