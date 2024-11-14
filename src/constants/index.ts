@@ -24,3 +24,5 @@ export const socials: Sosials[] = [
     url: '#'
   }
 ];
+
+export const START_WORKING_YEAR = 2021;

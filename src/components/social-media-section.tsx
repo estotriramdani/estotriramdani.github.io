@@ -3,7 +3,7 @@ import './social-media-section.scss';
 
 export const SocialMediaSection = () => {
   return (
-    <div className="">
+    <div className="" style={{ marginBottom: '1rem' }}>
       <div className="socialButtonContainer">
         {socials.map((social, index) => (
           <a key={index} href={social.url} className="paper-btn">
