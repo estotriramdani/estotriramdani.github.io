@@ -1,61 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Esto Triramdani N</title>
-    <meta
-      name="description"
-      content="Esto Triramdani N is a web developer. He speaks JavaScript, PHP, Python, and TypeScript."
-    />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esto Triramdani Nurlustiawan | Fullstack Developer</title>
+  <meta name="description" content="Fullstack Developer with 4 years of professional experience in developing scalable manufacturing and edtech applications. Proficient in the modern JavaScript ecosystem with extensive experience in TypeScript, React/Next.js, and backend integration. Highly adaptable learner with an expert-level ability to maximize development velocity and code quality using AI-driven workflows (Spec Driven Development, MCP, 9router). Committed to refactoring legacy code and implementing high-performance frontend architectures.">
+  <meta name="author" content="Esto Triramdani Nurlustiawan">
+  <link rel="canonical" href="https://estotriramdani.github.io">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://estotriramdani.github.io">
+  <meta property="og:title" content="Esto Triramdani Nurlustiawan | Fullstack Developer">
+  <meta property="og:description" content="Fullstack Developer with 4 years of professional experience in developing scalable manufacturing and edtech applications. Proficient in the modern JavaScript ecosystem with extensive experience in TypeScript, React/Next.js, and backend integration. Highly adaptable learner with an expert-level ability to maximize development velocity and code quality using AI-driven workflows (Spec Driven Development, MCP, 9router). Committed to refactoring legacy code and implementing high-performance frontend architectures.">
+  <meta property="og:image" content="https://estotriramdani.github.io/assets/profile-photo.jpeg">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://estotriramdani.github.io">
+  <meta name="twitter:title" content="Esto Triramdani Nurlustiawan | Fullstack Developer">
+  <meta name="twitter:description" content="Fullstack Developer with 4 years of professional experience in developing scalable manufacturing and edtech applications. Proficient in the modern JavaScript ecosystem with extensive experience in TypeScript, React/Next.js, and backend integration. Highly adaptable learner with an expert-level ability to maximize development velocity and code quality using AI-driven workflows (Spec Driven Development, MCP, 9router). Committed to refactoring legacy code and implementing high-performance frontend architectures.">
+  <meta name="twitter:image" content="https://estotriramdani.github.io/assets/profile-photo.jpeg">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Esto Triramdani Nurlustiawan","jobTitle":"Fullstack Developer","description":"Fullstack Developer with 4 years of professional experience in developing scalable manufacturing and edtech applications. Proficient in the modern JavaScript ecosystem with extensive experience in TypeScript, React/Next.js, and backend integration. Highly adaptable learner with an expert-level ability to maximize development velocity and code quality using AI-driven workflows (Spec Driven Development, MCP, 9router). Committed to refactoring legacy code and implementing high-performance frontend architectures.","email":"estotriramdani@gmail.com","telephone":"+6289657285153","url":"https://estotriramdani.github.io","image":"https://estotriramdani.github.io/assets/profile-photo.jpeg","sameAs":["https://www.linkedin.com/in/estotriramdani","https://github.com/estotriramdani"],"address":{"@type":"PostalAddress","addressLocality":"Sukabumi","addressRegion":"West Java","addressCountry":"ID"}}</script>
+  
+  <!-- Theme preference applied before render to prevent flash. Default is dark. -->
+  <script>
+    (function () {
+      const stored = localStorage.getItem('theme');
+      const theme = stored === 'light' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#" class="logo monospace">ESTO.</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#about" class="nav-link monospace">About</a></li><li><a href="#experience" class="nav-link monospace">Experience</a></li><li><a href="#projects" class="nav-link monospace">Projects</a></li><li><a href="#skills" class="nav-link monospace">Skills</a></li><li><a href="#education" class="nav-link monospace">Education</a></li><li><a href="#contact" class="nav-link monospace">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="about" class="hero section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow monospace">Fullstack Developer</p>
+        <h1 class="hero-title">Esto Triramdani Nurlustiawan</h1>
+        <p class="hero-tagline">Building scalable manufacturing &amp; edtech solutions with modern JavaScript, AI-driven workflows, and clean architecture.</p>
+        <p class="hero-location monospace">Sukabumi, West Java, Indonesia</p>
+        <div class="hero-actions">
+          <a href="assets/resume.pdf" class="btn btn-primary" download>
+            <span>Download Resume</span>
+          </a>
+          <a href="https://www.linkedin.com/in/estotriramdani" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/estotriramdani" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <img src="assets/profile-photo.jpeg" alt="Esto Triramdani Nurlustiawan profile photo" width="400" height="400" loading="eager">
+        </div>
+      </div>
+    </div>
+    <div class="container about-text">
+      <p>Fullstack Developer with 4 years of professional experience in developing scalable manufacturing and edtech applications. Proficient in the modern JavaScript ecosystem with extensive experience in TypeScript, React/Next.js, and backend integration. Highly adaptable learner with an expert-level ability to maximize development velocity and code quality using AI-driven workflows (Spec Driven Development, MCP, 9router). Committed to refactoring legacy code and implementing high-performance frontend architectures.</p>
+    </div>
+  </section>
+    <section id="experience" class="experience section">
     <div class="container">
-      <div class="nav">
-        <a href="#/" class="nav-item" id="home">
-          <i class="bi bi-house"></i> &nbsp; <span>HOME</span>
-        </a>
-        <a href="#/portfolios" class="nav-item" id="portfolios">
-          <i class="bi bi-braces"></i> &nbsp; <span>PORTFOLIOS</span>
-        </a>
-        <a href="#/completions" class="nav-item" id="completions">
-          <i class="bi bi-award"></i> &nbsp; <span>COMPLETIONS</span>
-        </a>
-        <a href="#/experiences" class="nav-item" id="experiences">
-          <i class="bi bi-briefcase"></i> &nbsp; <span>EXPERIENCES</span>
-        </a>
-        <a href="#/tutorials" class="nav-item" id="tutorials">
-          <i class="bi bi-collection-play"></i> &nbsp; <span>TUTORIALS</span>
-        </a>
+      <div class="section-header">
+    <span class="section-number monospace">01</span>
+    <h2 class="section-title">Experience</h2>
+  </div>
+      <div class="experience-list">
+        
+    <article class="experience-card" id="exp-0">
+      <div class="experience-header">
+        <div>
+          <h3 class="experience-company">PT Amerta Indah Otsuka</h3>
+          <p class="experience-role monospace">IT Apps Development Sr. Staff</p>
+        </div>
+        <div class="experience-meta monospace">
+          <span class="experience-period">Jan 2022 - Present</span>
+          <span class="experience-location">Sukabumi, West Java</span>
+        </div>
       </div>
-      <div class="content" style="overflow: hidden"></div>
-    </div>
-    <div class="history">
-      <!-- <div class="learn-history">
-        <button
-          class="btn-change-episode"
-          id="showHideHistory"
-          style="border-radius: 0; height: 100%"
-        >
-          Show/Hide Learn History
-        </button>
-      </div> -->
-      <div class="learn-history-box hide">
-        <button
-          class="btn-delete-history"
-          id="deleteHistory"
-          onclick="return confirm('Are you sure delete all histories?')"
-        >
-          Delete History
-        </button>
-        <ul
-          class="allEpisodesContainer"
-          id="historyList"
-          style="display: flex; flex-direction: column-reverse"
-        ></ul>
+      <p class="experience-description">FMCG-manufacturing company. The well-known products are Pocari Sweat, Soyjoy, etc.</p>
+      <ul class="experience-highlights">
+        <li>Engineered scalable full-stack solutions using Node.js, Express.js, Nest.js, and React/Next.js to digitize critical energy data (electricity, fuel, water, natural gas), successfully resolving data opacity and optimizing manufacturing efficiency.</li><li>Integrated solutions to the company&#039;s ERP through Business Application Programming Interface (BAPI).</li><li>Spearheaded the technical architecture and lifecycle of the Energy Management System, a high-impact initiative that secured the Diamond Tier Award at TKMPN XXVI and contributed directly to the company&#039;s National Lighthouse Industry 4.0 award.</li><li>Mentored the web developer internship program (2 cohorts/year) by designing a strategic syllabus and enforcing strict engineering standards (clean code, documentation) to mitigate technical debt and ensure seamless knowledge transfer despite high turnovers.</li>
+      </ul>
+      <div class="tech-list"><span class="tag monospace" aria-label="Technology: Node.js">Node.js</span><span class="tag monospace" aria-label="Technology: TypeScript">TypeScript</span><span class="tag monospace" aria-label="Technology: PHP">PHP</span><span class="tag monospace" aria-label="Technology: Nest.js">Nest.js</span><span class="tag monospace" aria-label="Technology: React">React</span><span class="tag monospace" aria-label="Technology: Next.js">Next.js</span><span class="tag monospace" aria-label="Technology: Laravel">Laravel</span><span class="tag monospace" aria-label="Technology: MySQL">MySQL</span><span class="tag monospace" aria-label="Technology: MongoDB">MongoDB</span><span class="tag monospace" aria-label="Technology: Jest">Jest</span><span class="tag monospace" aria-label="Technology: Cypress">Cypress</span></div>
+    </article>
+  
+    <article class="experience-card" id="exp-1">
+      <div class="experience-header">
+        <div>
+          <h3 class="experience-company">Benih Belajar</h3>
+          <p class="experience-role monospace">Fullstack Engineer</p>
+        </div>
+        <div class="experience-meta monospace">
+          <span class="experience-period">Nov 2021 - Feb 2024</span>
+          <span class="experience-location">Remote part-time</span>
+        </div>
+      </div>
+      <p class="experience-description">Early-stage education tech (edtech) startup that focuses on developing passion classes.</p>
+      <ul class="experience-highlights">
+        <li>Collaborated cross-functionally with the UI/UX team in an early-stage edtech startup environment to architect and build the Benih Belajar web application from the ground up.</li><li>Translated complex design mockups into robust, type-safe code utilizing Next.js, React, and TypeScript, leveraging Tailwind CSS to deliver a highly responsive and visually precise user interface.</li><li>Engineered the backend infrastructure using Express.js, MySQL, and Sequelize, and independently managed the application&#039;s deployment using AWS Cloud ecosystems.</li>
+      </ul>
+      <div class="tech-list"><span class="tag monospace" aria-label="Technology: React">React</span><span class="tag monospace" aria-label="Technology: Next.js">Next.js</span><span class="tag monospace" aria-label="Technology: TypeScript">TypeScript</span><span class="tag monospace" aria-label="Technology: Context API">Context API</span><span class="tag monospace" aria-label="Technology: Tailwind CSS">Tailwind CSS</span><span class="tag monospace" aria-label="Technology: Express.js">Express.js</span><span class="tag monospace" aria-label="Technology: MySQL">MySQL</span><span class="tag monospace" aria-label="Technology: Sequelize">Sequelize</span><span class="tag monospace" aria-label="Technology: NGINX">NGINX</span></div>
+    </article>
+  
+    <article class="experience-card" id="exp-2">
+      <div class="experience-header">
+        <div>
+          <h3 class="experience-company">Skilvul (Kampus Merdeka)</h3>
+          <p class="experience-role monospace">Fullstack Web Development Mentor</p>
+        </div>
+        <div class="experience-meta monospace">
+          <span class="experience-period">Sep 2023 - Dec 2023</span>
+          <span class="experience-location">Remote</span>
+        </div>
+      </div>
+      
+      <ul class="experience-highlights">
+        <li>Facilitated bi-weekly live and asynchronous mentoring sessions, guiding mentees through comprehensive full-stack JavaScript curricula (Node.js, React, databases).</li><li>Evaluated mentee projects and assignments, providing code reviews and technical feedback to ensure practical mastery of web development concepts.</li>
+      </ul>
+      <div class="tech-list"><span class="tag monospace" aria-label="Technology: Node.js">Node.js</span><span class="tag monospace" aria-label="Technology: React">React</span><span class="tag monospace" aria-label="Technology: MongoDB">MongoDB</span><span class="tag monospace" aria-label="Technology: MySQL">MySQL</span><span class="tag monospace" aria-label="Technology: Tailwind CSS">Tailwind CSS</span></div>
+    </article>
+  
+    <article class="experience-card" id="exp-3">
+      <div class="experience-header">
+        <div>
+          <h3 class="experience-company">Generasi GIGIH 2.0 (YABB &amp; GoTo)</h3>
+          <p class="experience-role monospace">Frontend Engineering Mentor</p>
+        </div>
+        <div class="experience-meta monospace">
+          <span class="experience-period">May 2022 - July 2022</span>
+          <span class="experience-location">Remote</span>
+        </div>
+      </div>
+      
+      <ul class="experience-highlights">
+        <li>Served as a technical panelist for the Frontend Engineering Capstone Showcase, evaluating final projects based on code quality, feature implementation, and adherence to industry best practices.</li><li>Mentored participants in the Kampus Merdeka program, providing strategic guidance on tech stack selection and conducting rigorous code reviews to improve implementation of React, Redux, and TypeScript.</li><li>Fostered engineering independence by teaching advanced debugging techniques and effective technical research strategies (e.g., maximizing search engine efficacy for error resolution).</li>
+      </ul>
+      <div class="tech-list"><span class="tag monospace" aria-label="Technology: React">React</span><span class="tag monospace" aria-label="Technology: Redux">Redux</span><span class="tag monospace" aria-label="Technology: TypeScript">TypeScript</span><span class="tag monospace" aria-label="Technology: Bootstrap CSS">Bootstrap CSS</span></div>
+    </article>
+  
       </div>
     </div>
-
-    <!-- scripts -->
-    <script src="js/index.js" type="module"></script>
-  </body>
+  </section>
+    <section id="projects" class="projects section">
+    <div class="container">
+      <div class="section-header">
+    <span class="section-number monospace">02</span>
+    <h2 class="section-title">Projects</h2>
+  </div>
+      <div class="project-grid">
+        
+    <article class="project-card">
+      <a href="https://jobfair.ipb.ac.id" class="project-link" target="_blank" rel="noopener noreferrer">
+        <span class="project-date monospace">September 2022</span>
+        <h3 class="project-title">IPB Online Job Fair Website</h3>
+        <p class="project-role monospace">Full-stack Developer</p>
+        <p class="project-description">A job fair platform for IPB University connecting students and recruiters.</p>
+        <div class="tech-list"><span class="tag monospace" aria-label="Technology: React">React</span><span class="tag monospace" aria-label="Technology: React Context API">React Context API</span><span class="tag monospace" aria-label="Technology: TypeScript">TypeScript</span><span class="tag monospace" aria-label="Technology: Tailwind CSS">Tailwind CSS</span></div>
+        <span class="project-arrow" aria-hidden="true">→</span>
+      </a>
+    </article>
+  
+    <article class="project-card">
+      <a href="https://entrehub.ipb.ac.id" class="project-link" target="_blank" rel="noopener noreferrer">
+        <span class="project-date monospace">December 2023</span>
+        <h3 class="project-title">Entrepreneurship Hub</h3>
+        <p class="project-role monospace">Full-stack Developer</p>
+        <p class="project-description">A hub platform supporting entrepreneurship programs and community activities.</p>
+        <div class="tech-list"><span class="tag monospace" aria-label="Technology: Next.js">Next.js</span><span class="tag monospace" aria-label="Technology: TypeScript">TypeScript</span><span class="tag monospace" aria-label="Technology: Tailwind CSS">Tailwind CSS</span><span class="tag monospace" aria-label="Technology: PostgreSQL">PostgreSQL</span><span class="tag monospace" aria-label="Technology: Prisma ORM">Prisma ORM</span><span class="tag monospace" aria-label="Technology: Docker">Docker</span></div>
+        <span class="project-arrow" aria-hidden="true">→</span>
+      </a>
+    </article>
+  
+    <article class="project-card">
+      <a href="https://ewanjaya.com" class="project-link" target="_blank" rel="noopener noreferrer">
+        <span class="project-date monospace">February 2026 - March 2026</span>
+        <h3 class="project-title">EJ Medical</h3>
+        <p class="project-role monospace">Full-stack Developer</p>
+        <p class="project-description">Company profile and landing page for Ewan Jaya Kastara&#039;s medical division.</p>
+        <div class="tech-list"><span class="tag monospace" aria-label="Technology: Next.js">Next.js</span><span class="tag monospace" aria-label="Technology: TypeScript">TypeScript</span><span class="tag monospace" aria-label="Technology: Tailwind CSS">Tailwind CSS</span><span class="tag monospace" aria-label="Technology: MySQL">MySQL</span><span class="tag monospace" aria-label="Technology: Native PHP">Native PHP</span></div>
+        <span class="project-arrow" aria-hidden="true">→</span>
+      </a>
+    </article>
+  
+    <article class="project-card">
+      <a href="https://books.ewanjaya.com" class="project-link" target="_blank" rel="noopener noreferrer">
+        <span class="project-date monospace">February 2026 - March 2026</span>
+        <h3 class="project-title">EJ Books</h3>
+        <p class="project-role monospace">Full-stack Developer</p>
+        <p class="project-description">Web application for managing books under Ewan Jaya Kastara.</p>
+        <div class="tech-list"><span class="tag monospace" aria-label="Technology: Next.js">Next.js</span><span class="tag monospace" aria-label="Technology: TypeScript">TypeScript</span><span class="tag monospace" aria-label="Technology: Tailwind CSS">Tailwind CSS</span><span class="tag monospace" aria-label="Technology: MySQL">MySQL</span><span class="tag monospace" aria-label="Technology: Native PHP">Native PHP</span></div>
+        <span class="project-arrow" aria-hidden="true">→</span>
+      </a>
+    </article>
+  
+      </div>
+    </div>
+  </section>
+    <section id="skills" class="skills section">
+    <div class="container">
+      <div class="section-header">
+    <span class="section-number monospace">03</span>
+    <h2 class="section-title">Skills</h2>
+  </div>
+      <div class="skills-grid">
+        
+    <div class="skill-group">
+      <h3 class="skill-category monospace">Languages &amp; Frameworks</h3>
+      <div class="tech-list"><span class="tag monospace" aria-label="Technology: JavaScript">JavaScript</span><span class="tag monospace" aria-label="Technology: TypeScript">TypeScript</span><span class="tag monospace" aria-label="Technology: Node.js">Node.js</span><span class="tag monospace" aria-label="Technology: PHP">PHP</span><span class="tag monospace" aria-label="Technology: Laravel">Laravel</span><span class="tag monospace" aria-label="Technology: CodeIgniter">CodeIgniter</span><span class="tag monospace" aria-label="Technology: React.js">React.js</span><span class="tag monospace" aria-label="Technology: Next.js">Next.js</span><span class="tag monospace" aria-label="Technology: React Native">React Native</span><span class="tag monospace" aria-label="Technology: Redux Toolkit">Redux Toolkit</span><span class="tag monospace" aria-label="Technology: Tailwind CSS">Tailwind CSS</span></div>
+    </div>
+  
+    <div class="skill-group">
+      <h3 class="skill-category monospace">Frontend &amp; UI/UX</h3>
+      <div class="tech-list"><span class="tag monospace" aria-label="Technology: Responsive Web Development">Responsive Web Development</span><span class="tag monospace" aria-label="Technology: Component Design">Component Design</span><span class="tag monospace" aria-label="Technology: Tailwind CSS">Tailwind CSS</span><span class="tag monospace" aria-label="Technology: Performance Optimization">Performance Optimization</span></div>
+    </div>
+  
+    <div class="skill-group">
+      <h3 class="skill-category monospace">Backend &amp; Database</h3>
+      <div class="tech-list"><span class="tag monospace" aria-label="Technology: Nest.js">Nest.js</span><span class="tag monospace" aria-label="Technology: Sequelize ORM">Sequelize ORM</span><span class="tag monospace" aria-label="Technology: MySQL">MySQL</span><span class="tag monospace" aria-label="Technology: MongoDB">MongoDB</span><span class="tag monospace" aria-label="Technology: WebSocket">WebSocket</span><span class="tag monospace" aria-label="Technology: Socket.io">Socket.io</span></div>
+    </div>
+  
+    <div class="skill-group">
+      <h3 class="skill-category monospace">Infrastructure &amp; Emerging Tech</h3>
+      <div class="tech-list"><span class="tag monospace" aria-label="Technology: AWS Infrastructure">AWS Infrastructure</span><span class="tag monospace" aria-label="Technology: Generative AI">Generative AI</span><span class="tag monospace" aria-label="Technology: RAG implementations">RAG implementations</span><span class="tag monospace" aria-label="Technology: Spec Driven Development">Spec Driven Development</span><span class="tag monospace" aria-label="Technology: MCP (Model Context Protocol)">MCP (Model Context Protocol)</span><span class="tag monospace" aria-label="Technology: 9router">9router</span><span class="tag monospace" aria-label="Technology: AI-assisted debugging">AI-assisted debugging</span><span class="tag monospace" aria-label="Technology: Rapid prototyping">Rapid prototyping</span></div>
+    </div>
+  
+      </div>
+    </div>
+  </section>
+    <section id="education" class="education section">
+    <div class="container">
+      <div class="section-header">
+    <span class="section-number monospace">04</span>
+    <h2 class="section-title">Education</h2>
+  </div>
+      <div class="education-list">
+        
+    <article class="education-card">
+      <div class="education-header">
+        <h3 class="education-institution">BINUS University</h3>
+        <span class="education-period monospace">2022 - 2024</span>
+      </div>
+      <p class="education-degree">Bachelor Degree (S1) - Information Systems Extension Class</p>
+      <p class="education-gpa monospace">GPA 3.77/4.00</p>
+      <p class="education-thesis">Web-Based Intelligent Technology for Diagnosing Rice Plant Diseases to Enhance Food Security in South Kalimantan.</p>
+    </article>
+  
+    <article class="education-card">
+      <div class="education-header">
+        <h3 class="education-institution">IPB University</h3>
+        <span class="education-period monospace">2018 - 2021</span>
+      </div>
+      <p class="education-degree">Associate Degree (D3) - Computer Engineering</p>
+      <p class="education-gpa monospace">GPA 3.60/4.00</p>
+      <p class="education-thesis">Development of a Web-Based Network Infrastructure for Poverty Data Collection Services at the Langonsari Village Office, Bandung Regency.</p>
+    </article>
+  
+      </div>
+    </div>
+  </section>
+    <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header">
+    <span class="section-number monospace">05</span>
+    <h2 class="section-title">Contact</h2>
+  </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <p class="contact-lead">Let's build something meaningful.</p>
+          <p class="contact-email">
+            <a href="mailto:estotriramdani@gmail.com" class="monospace">estotriramdani@gmail.com</a>
+          </p>
+          <p class="contact-phone monospace">+62 896-5728-5153</p>
+        </div>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/estotriramdani" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-url monospace">https://www.linkedin.com/in/estotriramdani</span>
+          </a>
+          <a href="https://github.com/estotriramdani" class="contact-link" target="_blank" rel="noopener noreferrer">
+            <span class="contact-link-label">GitHub</span>
+            <span class="contact-link-url monospace">https://github.com/estotriramdani</span>
+          </a>
+          <a href="assets/resume.pdf" class="contact-link" download>
+            <span class="contact-link-label">Resume</span>
+            <span class="contact-link-url monospace">Download PDF</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p class="monospace">© 2026 Esto Triramdani Nurlustiawan</p>
+      <button class="theme-toggle" aria-label="Toggle theme" aria-pressed="false" type="button">
+        <svg class="theme-icon theme-icon-sun" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+        </svg>
+        <svg class="theme-icon theme-icon-moon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <span class="theme-label monospace">Theme</span>
+      </button>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
 </html>
