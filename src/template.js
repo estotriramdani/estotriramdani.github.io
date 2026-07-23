@@ -167,20 +167,55 @@ function renderExperience({ experiences }) {
       <div class="experience-header">
         <div>
           <h3 class="experience-company">${escapeHtml(exp.company)}</h3>
-          <p class="experience-role monospace">${escapeHtml(exp.role)}</p>
-        </div>
-        <div class="experience-meta monospace">
-          <span class="experience-period">${escapeHtml(exp.period)}</span>
-          <span class="experience-location">${escapeHtml(exp.location)}</span>
+          <p class="experience-summary monospace">${escapeHtml(
+            exp.location
+          )} · ${escapeHtml(exp.period)}${
+            exp.duration ? ` · ${escapeHtml(exp.duration)}` : ""
+          }</p>
         </div>
       </div>
-      ${exp.description ? `<p class="experience-description">${escapeHtml(exp.description)}</p>` : ""}
-      <ul class="experience-highlights">
-        ${exp.highlights
-          .map((h) => `<li>${escapeHtml(h)}</li>`)
+      ${
+        exp.description
+          ? `<p class="experience-description">${escapeHtml(exp.description)}</p>`
+          : ""
+      }
+      ${
+        exp.highlights
+          ? `<ul class="experience-highlights">${exp.highlights
+              .map((h) => `<li>${escapeHtml(h)}</li>`)
+              .join("")}</ul>`
+          : ""
+      }
+      <div class="experience-roles">
+        ${exp.roles
+          .map(
+            (role, roleIndex) => `
+          <div class="experience-role-item" id="exp-${index}-role-${roleIndex}">
+            <div class="role-header">
+              <div>
+                <h4 class="role-title">${escapeHtml(role.title)}</h4>
+                <p class="role-type monospace">${escapeHtml(role.type)}</p>
+              </div>
+              <div class="role-meta monospace">
+                <span class="role-period">${escapeHtml(role.period)}</span>
+                ${
+                  role.duration
+                    ? `<span class="role-duration">${escapeHtml(role.duration)}</span>`
+                    : ""
+                }
+              </div>
+            </div>
+            ${
+              role.description
+                ? `<p class="role-description">${escapeHtml(role.description)}</p>`
+                : ""
+            }
+            ${techList(role.techStack)}
+          </div>
+        `
+          )
           .join("")}
-      </ul>
-      ${techList(exp.techStack)}
+      </div>
     </article>
   `
     )

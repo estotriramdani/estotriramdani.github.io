@@ -374,11 +374,6 @@ a {
 }
 
 .experience-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 24px;
-  flex-wrap: wrap;
   margin-bottom: 16px;
   padding-bottom: 16px;
   border-bottom: 2px solid var(--border-subtle);
@@ -387,26 +382,17 @@ a {
 .experience-company {
   font-size: 1.5rem;
   font-weight: 800;
-  margin: 0 0 6px;
+  margin: 0 0 8px;
   letter-spacing: -0.02em;
 }
 
-.experience-role {
-  font-size: 0.95rem;
+.experience-summary {
+  font-size: 0.85rem;
   font-weight: 700;
-  color: var(--accent-text);
+  color: var(--fg-muted);
   margin: 0;
   text-transform: uppercase;
-}
-
-.experience-meta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-  font-size: 0.85rem;
-  color: var(--fg-muted);
-  text-align: right;
+  letter-spacing: 0.05em;
 }
 
 .experience-description {
@@ -416,13 +402,70 @@ a {
 }
 
 .experience-highlights {
-  margin: 0 0 20px;
+  margin: 0 0 24px;
   padding-left: 20px;
 }
 
 .experience-highlights li {
   margin-bottom: 10px;
   color: var(--fg);
+}
+
+.experience-roles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience-role-item {
+  padding: 24px;
+  border: 2px solid var(--border-subtle);
+  background-color: var(--bg);
+  transition: border-color 0.15s ease;
+}
+
+.experience-role-item:hover {
+  border-color: var(--accent);
+}
+
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.role-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+
+.role-type {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-text);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.role-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+  text-align: right;
+}
+
+.role-description {
+  font-size: 0.95rem;
+  color: var(--fg-muted);
+  margin: 0 0 16px;
 }
 
 /* Projects */
@@ -751,13 +794,17 @@ a {
     border-bottom: none;
   }
 
-  .experience-header,
   .education-header {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .experience-meta {
+  .role-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .role-meta {
     align-items: flex-start;
     text-align: left;
   }

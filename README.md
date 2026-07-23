@@ -149,6 +149,21 @@ The accent is defined in `css/style.css`:
 
 Edit `profile.siteUrl` in `src/content.js` if the domain changes, then regenerate.
 
+### Update experience durations
+
+Durations are calculated automatically from `startDate` and `endDate` in each role. Set `endDate` to `null` for current positions — the duration will be calculated up to today's date whenever you run `node src/generate.js`.
+
+```javascript
+{
+  title: "Software Engineer",
+  period: "Jan 2025 - Present",
+  startDate: "2025-01-01",
+  endDate: null, // current role
+}
+```
+
+Company-level duration is calculated from the earliest role start date to the latest role end date (or today).
+
 ## Important Notes
 
 - **Do not edit `index.html`, `sitemap.xml`, or `robots.txt` directly.** They are overwritten every time `node src/generate.js` runs.
