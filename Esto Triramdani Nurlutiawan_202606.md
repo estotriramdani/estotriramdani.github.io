@@ -53,19 +53,13 @@ Frontend Engineering Mentor | Remote | May 2022 - July 2022
 
 ## PUBLISHED PROJECTS
 
-## IPB Online Job Fair Website <https://jobfair.ipb.ac.id>
+## FINJRNL — Financial Journal <https://github.com/estotriramdani/financial-journal>
+- Mobile Version (Flutter): <https://github.com/estotriramdani/financial-journal-mobile>
 
-September 2022
-
-- Role: Full-stack Developer
-- Tech stacks: React, React Context API, TypeScript, Tailwind CSS
-
-## Entrepreneurship Hub <https://entrehub.ipb.ac.id>
-
-December 2023
+October 2026
 
 - Role: Full-stack Developer
-- Tech stacks: Next.js, TypeScript, Tailwind CSS, PosgreSQL, Prisma ORM, Docker
+- Tech stacks: Next.js, Flutter, Dart, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, PWA
 
 ## Ewan Jaya Kastara Websites
 
@@ -78,13 +72,19 @@ February 2026 - March 2026
 - Role: Full-stack Developer
 - Tech stacks: Next.js, TypeScript, Tailwind CSS, MySQL, Native PHP
 
-## FINJRNL — Financial Journal <https://github.com/estotriramdani/financial-journal>
-- Mobile Version (Flutter): <https://github.com/estotriramdani/financial-journal-mobile>
+## Entrepreneurship Hub <https://entrehub.ipb.ac.id>
 
-October 2026
+December 2023
 
 - Role: Full-stack Developer
-- Tech stacks: Next.js, Flutter, Dart, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, PWA
+- Tech stacks: Next.js, TypeScript, Tailwind CSS, PosgreSQL, Prisma ORM, Docker
+
+## IPB Online Job Fair Website <https://jobfair.ipb.ac.id>
+
+September 2022
+
+- Role: Full-stack Developer
+- Tech stacks: React, React Context API, TypeScript, Tailwind CSS
 
 ## SKILLS
 

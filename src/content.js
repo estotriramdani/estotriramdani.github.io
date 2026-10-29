@@ -212,28 +212,22 @@ const experiences = withCalculatedDurations([
 
 const projects = [
   {
-    title: "IPB Online Job Fair Website",
-    url: "https://jobfair.ipb.ac.id",
-    date: "September 2022",
+    title: "FINJRNL — Financial Journal",
+    url: "https://github.com/estotriramdani/financial-journal",
+    date: "October 2026",
     role: "Full-stack Developer",
     description:
-      "A job fair platform for IPB University connecting students and recruiters.",
-    techStack: ["React", "React Context API", "TypeScript", "Tailwind CSS"],
-  },
-  {
-    title: "Entrepreneurship Hub",
-    url: "https://entrehub.ipb.ac.id",
-    date: "December 2023",
-    role: "Full-stack Developer",
-    description:
-      "A hub platform supporting entrepreneurship programs and community activities.",
+      "A collaborative, offline-first financial journaling ecosystem featuring a Next.js PWA web application and a companion mobile app built with Flutter (Dart), with multi-group budgeting, instant numeric keypad, and automated cloud sync.",
     techStack: [
       "Next.js",
+      "Flutter",
+      "Dart",
+      "React",
       "TypeScript",
       "Tailwind CSS",
+      "Supabase",
       "PostgreSQL",
-      "Prisma ORM",
-      "Docker",
+      "PWA",
     ],
   },
   {
@@ -267,23 +261,29 @@ const projects = [
     ],
   },
   {
-    title: "FINJRNL — Financial Journal",
-    url: "https://github.com/estotriramdani/financial-journal",
-    date: "October 2026",
+    title: "Entrepreneurship Hub",
+    url: "https://entrehub.ipb.ac.id",
+    date: "December 2023",
     role: "Full-stack Developer",
     description:
-      "A collaborative, offline-first financial journaling ecosystem featuring a Next.js PWA web application and a companion mobile app built with Flutter (Dart), with multi-group budgeting, instant numeric keypad, and automated cloud sync.",
+      "A hub platform supporting entrepreneurship programs and community activities.",
     techStack: [
       "Next.js",
-      "Flutter",
-      "Dart",
-      "React",
       "TypeScript",
       "Tailwind CSS",
-      "Supabase",
       "PostgreSQL",
-      "PWA",
+      "Prisma ORM",
+      "Docker",
     ],
+  },
+  {
+    title: "IPB Online Job Fair Website",
+    url: "https://jobfair.ipb.ac.id",
+    date: "September 2022",
+    role: "Full-stack Developer",
+    description:
+      "A job fair platform for IPB University connecting students and recruiters.",
+    techStack: ["React", "React Context API", "TypeScript", "Tailwind CSS"],
   },
 ];
 
