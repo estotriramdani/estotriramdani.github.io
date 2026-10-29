@@ -79,17 +79,18 @@ February 2026 - March 2026
 - Tech stacks: Next.js, TypeScript, Tailwind CSS, MySQL, Native PHP
 
 ## FINJRNL — Financial Journal <https://github.com/estotriramdani/financial-journal>
+- Mobile Version (Flutter): <https://github.com/estotriramdani/financial-journal-mobile>
 
 October 2026
 
 - Role: Full-stack Developer
-- Tech stacks: Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, PWA
+- Tech stacks: Next.js, Flutter, Dart, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, PWA
 
 ## SKILLS
 
-- **Languages & Frameworks**: JavaScript, TypeScript, Node.js, PHP (Laravel, CodeIgniter), React.js, Next.js, React Native, Redux Toolkit, Tailwind CSS.
-- **Frontend & UI/UX**: Responsive Web Development, Component Design, Tailwind CSS, Performance Optimization.
-- **Backend & Database**: Nest.js, Sequelize ORM, MySQL, MongoDB, WebSocket (Socket.io).
+- **Languages & Frameworks**: JavaScript, TypeScript, Dart, Node.js, PHP (Laravel, CodeIgniter), React.js, Next.js, Flutter, React Native, Redux Toolkit, Tailwind CSS.
+- **Frontend & UI/UX**: Responsive Web Development, Mobile App Development, Component Design, Tailwind CSS, Performance Optimization.
+- **Backend & Database**: Nest.js, Sequelize ORM, MySQL, PostgreSQL, MicrosoftSQL Server, MongoDB, WebSocket (Socket.io).
 - **Infrastructure & Emerging Tech**: AWS Infrastructure, Generative AI, RAG implementations, Spec Driven Development, MCP (Model Context Protocol), 9router, AI-assisted debugging & rapid prototyping.
 
 ## EDUCATIONS
