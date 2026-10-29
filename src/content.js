@@ -266,6 +266,23 @@ const projects = [
       "Native PHP",
     ],
   },
+  {
+    title: "FINJRNL — Financial Journal",
+    url: "https://github.com/estotriramdani/financial-journal",
+    date: "October 2026",
+    role: "Full-stack Developer",
+    description:
+      "A collaborative, offline-first financial journaling progressive web app (PWA) with multi-group budgeting, instant numeric keypad, and automated cloud sync.",
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "PostgreSQL",
+      "PWA",
+    ],
+  },
 ];
 
 const skills = {
@@ -292,6 +309,8 @@ const skills = {
     "Nest.js",
     "Sequelize ORM",
     "MySQL",
+    "PostgreSQL",
+    "MicrosoftSQL Server",
     "MongoDB",
     "WebSocket",
     "Socket.io",

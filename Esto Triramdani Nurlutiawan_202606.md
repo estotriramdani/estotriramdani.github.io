@@ -78,6 +78,13 @@ February 2026 - March 2026
 - Role: Full-stack Developer
 - Tech stacks: Next.js, TypeScript, Tailwind CSS, MySQL, Native PHP
 
+## FINJRNL — Financial Journal <https://github.com/estotriramdani/financial-journal>
+
+October 2026
+
+- Role: Full-stack Developer
+- Tech stacks: Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, PWA
+
 ## SKILLS
 
 - **Languages & Frameworks**: JavaScript, TypeScript, Node.js, PHP (Laravel, CodeIgniter), React.js, Next.js, React Native, Redux Toolkit, Tailwind CSS.
