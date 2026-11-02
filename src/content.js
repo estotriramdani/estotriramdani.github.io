@@ -305,7 +305,7 @@ const skills = {
   ],
   "Frontend & UI/UX": [
     "Responsive Web Development",
-    "Mobile App Development",
+    "Mobile App Development (Flutter)",
     "Component Design",
     "Tailwind CSS",
     "Performance Optimization",
