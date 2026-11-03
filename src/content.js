@@ -65,7 +65,7 @@ const profile = {
   photo: "assets/profile-photo.jpeg",
   resume: "assets/resume.pdf",
   about:
-    "Fullstack Developer with 4 years of professional experience in developing scalable manufacturing and edtech applications. Proficient in the modern JavaScript ecosystem with extensive experience in TypeScript, React/Next.js, and backend integration. Highly adaptable learner with an expert-level ability to maximize development velocity and code quality using AI-driven workflows (Spec Driven Development, MCP, 9router). Committed to refactoring legacy code and implementing high-performance frontend architectures.",
+    "Fullstack Developer with 5 years of professional experience in developing scalable manufacturing and edtech applications. Proficient in the modern JavaScript ecosystem with extensive experience in TypeScript, React/Next.js, and backend integration. Highly adaptable learner with an expert-level ability to maximize development velocity and code quality using AI-driven workflows (Spec Driven Development, MCP, 9router). Committed to refactoring legacy code and implementing high-performance frontend architectures.",
   location: "Bandung, West Java, Indonesia",
   siteUrl: "https://estotriramdani.github.io",
 };
