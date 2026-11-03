@@ -1,6 +1,6 @@
 # Esto Triramdani Portfolio
 
-A brutalist-professional portfolio website built with plain HTML, CSS, and JavaScript. Content is managed in JavaScript variables and prerendered into static files using a small Node.js generator.
+A sunlit-greenhouse editorial portfolio built with plain HTML, CSS, and JavaScript. Content is managed in JavaScript variables and prerendered into static files using a small Node.js generator.
 
 - **Live site**: [https://estotriramdani.github.io](https://estotriramdani.github.io)
 - **Branch**: `v-2026`
@@ -25,9 +25,9 @@ A brutalist-professional portfolio website built with plain HTML, CSS, and JavaS
 │   ├── template.js           # HTML, sitemap, and robots templates
 │   └── generate.js           # Static site generator
 ├── css/
-│   └── style.css             # Brutalist design system
+│   └── style.css             # Editorial design system
 ├── js/
-│   └── main.js               # Mobile menu, active nav, theme toggle
+│   └── main.js               # Mobile menu, active nav
 ├── index.html                # Generated (do not edit directly)
 ├── sitemap.xml               # Generated
 ├── robots.txt                # Generated
@@ -105,43 +105,45 @@ git push origin v-2026
 
 3. GitHub Pages serves the site from the root of the `v-2026` branch (or `main`, depending on your Pages settings).
 
-## Theme Toggle
+## Design System
 
-The site supports light and dark themes:
+The visual language is documented in [`DESIGN.md`](DESIGN.md) — a "sunlit greenhouse" editorial system: a pale sage canvas, deep forest text, one chartreuse accent, and flat surfaces with no shadows. The site is light-only; there is no theme toggle.
 
-- Default theme is **dark**, even if the device is set to light.
-- Preference is saved to `localStorage`.
-- Toggle button is in the footer.
-
-Theme styles are controlled via the `data-theme` attribute on the `<html>` element in `css/style.css`.
-
-## Customization
-
-### Change accent color
-
-The accent is defined in `css/style.css`:
+All tokens live in `css/style.css`:
 
 ```css
 :root {
-  --accent: #f7e017;      /* dark mode yellow */
-  --accent-dark: #e3cd00;
-}
-
-[data-theme="light"] {
-  --accent: #f7e017;      /* light mode yellow */
+  --sage: #eef2e3;    /* page canvas */
+  --paper: #fcfcfc;   /* elevated cards, nav, footer */
+  --forest: #043f2e;  /* primary text, dark sections */
+  --lime: #c8f169;    /* the only chromatic accent */
+  --forest-mid: #2a6f2b; /* hover state */
 }
 ```
 
-### Update colors for light theme
+- Display type: Fraunces (serif, weight 400, tight negative tracking) at 36px and above.
+- UI and body type: Inter, weight 400–600, uppercase 12px labels with 0.06em tracking.
+- Radii: `4px` for buttons/inputs, `16px` for cards and large surfaces, pill for tags.
+- Section bands alternate sage → paper → sage, with the contact section inverted on deep forest.
+
+## Customization
+
+### Change the accent color
 
 ```css
-[data-theme="light"] {
-  --bg: #f5f5f5;
-  --bg-elevated: #ffffff;
-  --fg: #0a0a0a;
-  --fg-muted: #525252;
-  --border: #0a0a0a;
-  --border-subtle: #d4d4d4;
+:root {
+  --lime: #c8f169;       /* chartreuse accent */
+  --forest-mid: #2a6f2b; /* its hover state */
+}
+```
+
+### Change the canvas or text color
+
+```css
+:root {
+  --sage: #eef2e3;
+  --paper: #fcfcfc;
+  --forest: #043f2e;
 }
 ```
 
