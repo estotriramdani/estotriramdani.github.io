@@ -27,7 +27,7 @@ A sunlit-greenhouse editorial portfolio built with plain HTML, CSS, and JavaScri
 ├── css/
 │   └── style.css             # Editorial design system
 ├── js/
-│   └── main.js               # Mobile menu, active nav
+│   └── main.js               # Mobile menu, active nav, scroll effects
 ├── index.html                # Generated (do not edit directly)
 ├── sitemap.xml               # Generated
 ├── robots.txt                # Generated
@@ -125,6 +125,17 @@ All tokens live in `css/style.css`:
 - UI and body type: Inter, weight 400–600, uppercase 12px labels with 0.06em tracking.
 - Radii: `4px` for buttons/inputs, `16px` for cards and large surfaces, pill for tags.
 - Section bands alternate sage → paper → sage, with the contact section inverted on deep forest.
+
+## Motion
+
+Motion is progressive enhancement — the page renders fully without JavaScript, because `js/main.js` is what tags elements with `data-reveal` before hiding them.
+
+- **Scroll reveal** — an `IntersectionObserver` reveals sections and cards once, with an 80ms stagger (max 4 steps).
+- **Parallax** — any element with `data-parallax` drifts against the scroll. The hero photo uses `0.08`, the about card `0.04`. Positions are measured once, then re-measured on resize, font load and page load so the animation never reads its own transform.
+- **Reading progress** — a 2px chartreuse line under the header, driven by `scaleX()`.
+- **Hover lift** — cards translate 3px, pointer devices only.
+
+All of it is disabled under `prefers-reduced-motion: reduce`, and scroll work runs in a single `requestAnimationFrame` loop.
 
 ## Customization
 

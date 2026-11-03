@@ -114,6 +114,9 @@ function renderHeader({ profile }) {
           .join("")}
       </ul>
     </nav>
+    <div class="scroll-progress" aria-hidden="true">
+      <span class="scroll-progress-bar"></span>
+    </div>
   </header>`;
 }
 
@@ -137,7 +140,7 @@ function renderHero({ profile }) {
           </a>
         </div>
       </div>
-      <div class="hero-photo">
+      <div class="hero-photo" data-parallax="0.08">
         <div class="photo-frame">
           <img src="${escapeHtml(profile.photo)}" alt="${escapeHtml(
     profile.name
@@ -145,7 +148,7 @@ function renderHero({ profile }) {
         </div>
       </div>
     </div>
-    <div class="container about-text">
+    <div class="container about-text" data-parallax="0.04">
       <p>${escapeHtml(profile.about)}</p>
     </div>
   </section>`;

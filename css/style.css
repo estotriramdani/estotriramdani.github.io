@@ -44,6 +44,11 @@
   /* Layout */
   --container: 1200px;
   --section-gap: 88px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --reveal-distance: 18px;
+  --reveal-delay: 0ms;
 }
 
 *,
@@ -188,6 +193,25 @@ h4 {
   margin: 0 auto;
   background-color: var(--forest);
   transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.scroll-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  overflow: hidden;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  display: block;
+  height: 100%;
+  background-color: var(--lime);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
 }
 
 /* --------------------------------------------------------------------------
@@ -933,6 +957,47 @@ h4 {
 }
 
 /* --------------------------------------------------------------------------
+   Motion
+   -------------------------------------------------------------------------- */
+
+[data-parallax] {
+  will-change: transform;
+}
+
+/* JS marks elements with [data-reveal] before observing them, so the page
+   stays fully visible when scripts never run. */
+[data-reveal] {
+  opacity: 0;
+  translate: 0 var(--reveal-distance);
+  transition: opacity 700ms var(--ease-out) var(--reveal-delay),
+    translate 700ms var(--ease-out) var(--reveal-delay);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.experience-card,
+.project-card,
+.skill-group,
+.education-card,
+.contact-link {
+  transition: transform 300ms var(--ease-out),
+    background-color 300ms var(--ease-out), border-color 300ms var(--ease-out);
+}
+
+@media (hover: hover) {
+  .experience-card:hover,
+  .project-card:hover,
+  .skill-group:hover,
+  .education-card:hover,
+  .contact-link:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* --------------------------------------------------------------------------
    Accessibility
    -------------------------------------------------------------------------- */
 
@@ -958,5 +1023,10 @@ button:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    translate: none;
   }
 }
