@@ -39,7 +39,8 @@ function renderHead({ profile }) {
   <link rel="canonical" href="${escapeHtml(canonicalUrl)}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#eef2e3">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   
   <!-- Open Graph -->
@@ -59,15 +60,6 @@ function renderHead({ profile }) {
   
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">${renderJsonLd(profile)}</script>
-  
-  <!-- Theme preference applied before render to prevent flash. Default is dark. -->
-  <script>
-    (function () {
-      const stored = localStorage.getItem('theme');
-      const theme = stored === 'light' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
 </head>`;
 }
 
@@ -122,6 +114,9 @@ function renderHeader({ profile }) {
           .join("")}
       </ul>
     </nav>
+    <div class="scroll-progress" aria-hidden="true">
+      <span class="scroll-progress-bar"></span>
+    </div>
   </header>`;
 }
 
@@ -145,7 +140,7 @@ function renderHero({ profile }) {
           </a>
         </div>
       </div>
-      <div class="hero-photo">
+      <div class="hero-photo" data-parallax="0.08">
         <div class="photo-frame">
           <img src="${escapeHtml(profile.photo)}" alt="${escapeHtml(
     profile.name
@@ -153,7 +148,7 @@ function renderHero({ profile }) {
         </div>
       </div>
     </div>
-    <div class="container about-text">
+    <div class="container about-text" data-parallax="0.04">
       <p>${escapeHtml(profile.about)}</p>
     </div>
   </section>`;
@@ -221,7 +216,7 @@ function renderExperience({ experiences }) {
     )
     .join("");
 
-  return `<section id="experience" class="experience section">
+  return `<section id="experience" class="experience section section--paper">
     <div class="container">
       ${sectionHeader("01", "Experience")}
       <div class="experience-list">
@@ -271,7 +266,7 @@ function renderSkills({ skills }) {
     )
     .join("");
 
-  return `<section id="skills" class="skills section">
+  return `<section id="skills" class="skills section section--paper">
     <div class="container">
       ${sectionHeader("03", "Skills")}
       <div class="skills-grid">
@@ -309,7 +304,7 @@ function renderEducation({ educations }) {
 }
 
 function renderContact({ profile }) {
-  return `<section id="contact" class="contact section">
+  return `<section id="contact" class="contact section section--forest">
     <div class="container">
       ${sectionHeader("05", "Contact")}
       <div class="contact-grid">
@@ -346,16 +341,7 @@ function renderFooter({ profile }) {
   return `<footer class="site-footer">
     <div class="container footer-grid">
       <p class="monospace">© ${year} ${escapeHtml(profile.name)}</p>
-      <button class="theme-toggle" aria-label="Toggle theme" aria-pressed="false" type="button">
-        <svg class="theme-icon theme-icon-sun" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="5"></circle>
-          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
-        </svg>
-        <svg class="theme-icon theme-icon-moon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-        <span class="theme-label monospace">Theme</span>
-      </button>
+      <p class="monospace">${escapeHtml(profile.location)}</p>
     </div>
   </footer>`;
 }
