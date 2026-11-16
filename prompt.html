@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompt & Caption Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --accent: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      padding: 32px;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    .header {
+      margin-bottom: 24px;
+    }
+
+    .header .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .header p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .counter {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 180px;
+      max-height: 400px;
+      resize: vertical;
+      background: #0b1120;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      color: var(--text-main);
+      padding: 14px 16px;
+      font-size: 14px;
+      line-height: 1.6;
+      transition: all 0.2s ease;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    }
+
+    textarea::placeholder {
+      color: #475569;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      flex: 1;
+      padding: 14px 20px;
+      background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+      color: #0f172a;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+    }
+
+    .btn-secondary {
+      padding: 14px 18px;
+      background: #334155;
+      color: #cbd5e1;
+    }
+
+    .btn-secondary:hover {
+      background: #475569;
+      color: #ffffff;
+    }
+
+    /* Modal / Popup */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 100;
+      animation: fadeIn 0.2s ease-out;
+    }
+
+    .modal-backdrop.show {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 720px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      transform: scale(0.96);
+      animation: popIn 0.2s ease-out forwards;
+    }
+
+    .modal-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .close-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 20px;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .close-btn:hover {
+      background: #334155;
+      color: #fff;
+    }
+
+    .modal-body {
+      padding: 20px 24px;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .prompt-preview {
+      background: #090d16;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 18px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 13px;
+      line-height: 1.65;
+      color: #e2e8f0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      user-select: text;
+    }
+
+    .modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      background: #172033;
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #10b981;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 200;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <span class="badge">Google AI Studio & Video Short</span>
+      <h1>Generator Prompt Edukasi</h1>
+      <p>Masukkan materi atau topik bahasan video. Generator ini akan menyusun prompt standar naskah audio TTS dan caption media sosial.</p>
+    </div>
+
+    <div class="form-group">
+      <label for="materiInput">
+        <span>Materi / Topik Pembahasan</span>
+        <span class="counter" id="charCount">0 karakter</span>
+      </label>
+      <textarea 
+        id="materiInput" 
+        placeholder="Contoh: Proses pembuatan jalan aspal dimulai dari pemadatan tanah dasar (subgrade), penghamparan agregat batu pondasi, hingga pengaspalan panas hotmix menggunakan finisher dan tandem roller..." 
+        autofocus
+      ></textarea>
+    </div>
+
+    <div class="btn-row">
+      <button type="button" class="btn-secondary" id="btnClear">Reset</button>
+      <button type="button" class="btn-primary" id="btnGenerate">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        Generate Prompt
+      </button>
+    </div>
+  </div>
+
+  <!-- Popup Modal -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <h2>
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#38bdf8" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Prompt Siap Digunakan
+        </h2>
+        <button class="close-btn" id="btnCloseModal" title="Tutup">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="prompt-preview" id="promptResult"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary" id="btnCloseFooter">Tutup</button>
+        <button type="button" class="btn-primary" id="btnCopyPrompt" style="flex: initial; padding: 12px 24px;">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+          Salin Prompt
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feedback Toast -->
+  <div class="toast" id="toast">Prompt berhasil disalin ke clipboard! 🎉</div>
+
+  <script>
+    const templateBefore = `Buatkan naskah (script) narasi video edukasi pendek (Instagram Reels / YouTube Shorts) berdurasi sekitar 45-60 detik (± 120-150 kata) dalam Bahasa Indonesia yang santai, hangat, mengalir, dan mudah dipahami tentang topik berikut: \n\n`;
+
+    const templateAfter = `\n\nGunakan struktur berikut:
+1. Hook (1–2 kalimat pembuka yang memicu rasa penasaran). Di akhir hook, tambahkan "Mari kita jelaskan!" yang merupakan tagline.
+2. Isi / Penjelasan (alur proses atau fakta runtut dalam kalimat-kalimat pendek).
+3. Call-to-Action / Penutup (pertanyaan interaktif singkat di akhir).
+
+Aturan Penulisan & Format TTS (Google AI Studio):
+- Tulis dalam bentuk paragraf pendek per 1–2 kalimat agar mudah dipotong untuk animasi visual.
+- JANGAN menulis instruksi gaya atau arahan nada di dalam naskah (seperti [nada ceria] atau [tempo sedang]).
+- Sisipkan inline expression tags dengan format kurung sudut < > secara natural di sela-sela kalimat untuk mengatur ritme bicara dan emosi narator. Gunakan variasi tag berikut secukupnya:
+  * <pause> untuk jeda antar frasa/poin penting.
+  * <breath> untuk tarikan napas alami sebelum kalimat tanya atau pergantian paragraf.
+  * <gasp> untuk ekspresi kagum/terkejut ringan pada fakta menarik.
+  * <sigh> untuk helaan napas lega/santai di akhir penjelasan.
+  * <chuckle> atau <giggle> untuk tawa kecil ramah saat menyapa audiens di bagian penutup.
+- Berikan output naskah akhir di dalam blok kode (\`\`\`text) agar tag < > tidak tersembunyi dan bisa langsung di-copy ke Google AI Studio.
+- Berikan juga dalam blok kode terpisah, caption untuk media sosial.`;
+
+    const materiInput = document.getElementById('materiInput');
+    const charCount = document.getElementById('charCount');
+    const btnGenerate = document.getElementById('btnGenerate');
+    const btnClear = document.getElementById('btnClear');
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const btnCloseModal = document.getElementById('btnCloseModal');
+    const btnCloseFooter = document.getElementById('btnCloseFooter');
+    const btnCopyPrompt = document.getElementById('btnCopyPrompt');
+    const promptResult = document.getElementById('promptResult');
+    const toast = document.getElementById('toast');
+
+    let generatedFullPrompt = '';
+
+    // Update karakter count
+    materiInput.addEventListener('input', () => {
+      charCount.textContent = `${materiInput.value.length} karakter`;
+    });
+
+    // Reset button
+    btnClear.addEventListener('click', () => {
+      materiInput.value = '';
+      charCount.textContent = '0 karakter';
+      materiInput.focus();
+    });
+
+    // Open Modal
+    function showModal(content) {
+      generatedFullPrompt = content;
+      promptResult.textContent = content;
+      modalBackdrop.classList.add('show');
+    }
+
+    // Close Modal
+    function hideModal() {
+      modalBackdrop.classList.remove('show');
+    }
+
+    // Show Toast
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    // Generate Clicked
+    btnGenerate.addEventListener('click', () => {
+      const materiText = materiInput.value.trim();
+      if (!materiText) {
+        alert('Mohon isi materi atau topik terlebih dahulu sebelum generate prompt.');
+        materiInput.focus();
+        return;
+      }
+
+      const fullPrompt = `${templateBefore}${materiText}${templateAfter}`;
+      showModal(fullPrompt);
+    });
+
+    // Copy Action
+    btnCopyPrompt.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(generatedFullPrompt);
+        showToast('Prompt berhasil disalin ke clipboard! 📋');
+        btnCopyPrompt.innerHTML = `
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          Tersalin!
+        `;
+        setTimeout(() => {
+          btnCopyPrompt.innerHTML = `
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            Salin Prompt
+          `;
+        }, 2000);
+      } catch (err) {
+        // Fallback jika permission clipboard API dibatasi
+        const textarea = document.createElement('textarea');
+        textarea.value = generatedFullPrompt;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showToast('Prompt berhasil disalin ke clipboard! 📋');
+      }
+    });
+
+    // Event listeners for close
+    btnCloseModal.addEventListener('click', hideModal);
+    btnCloseFooter.addEventListener('click', hideModal);
+    modalBackdrop.addEventListener('click', (e) => {
+      if (e.target === modalBackdrop) {
+        hideModal();
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modalBackdrop.classList.contains('show')) {
+        hideModal();
+      }
+    });
+  </script>
+</body>
+</html>
