@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(node -e \"const fs=require('fs');const s=fs.readFileSync('prompt.html','utf8');const m=s.match(/<script>([\\s\\S]*?)<\\/script>/);fs.writeFileSync(process.env.TEMP+'/prompt-check.js',m[1]);\" && node --check \"%TEMP%/prompt-check.js\" && echo \"SYNTAX OK\")",
+      "Shell(node -e \"const fs=require('fs');const s=fs.readFileSync('prompt.html','utf8');const m=s.match(/const VARIANTS = (\\{[\\s\\S]*?\\n \\});/);const V=eval('('+m[1]+')');const p=V.versus.before+'Efisien vs Efektif'+V.versus.after;console.log(p);\")"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

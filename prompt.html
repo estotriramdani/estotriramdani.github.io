@@ -168,6 +168,38 @@
       color: #ffffff;
     }
 
+    .variant-tabs {
+      display: flex;
+      gap: 6px;
+      padding: 5px;
+      margin-bottom: 22px;
+      background: #0b1120;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+    }
+
+    .variant-tab {
+      flex: 1;
+      padding: 10px 14px;
+      background: transparent;
+      color: var(--text-muted);
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .variant-tab:hover {
+      background: #1e293b;
+      color: var(--text-main);
+    }
+
+    .variant-tab.active {
+      background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+      color: #0f172a;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+    }
+
     /* Modal / Popup */
     .modal-backdrop {
       position: fixed;
@@ -305,13 +337,18 @@
   <div class="container">
     <div class="header">
       <span class="badge">Google AI Studio & Video Short</span>
-      <h1>Generator Prompt Edukasi</h1>
-      <p>Masukkan materi atau topik bahasan video. Generator ini akan menyusun prompt standar naskah audio TTS dan caption media sosial.</p>
+      <h1 id="headerTitle">Generator Prompt Edukasi</h1>
+      <p id="headerDesc">Masukkan materi atau topik bahasan video. Generator ini akan menyusun prompt standar naskah audio TTS dan caption media sosial.</p>
+    </div>
+
+    <div class="variant-tabs" role="tablist" aria-label="Jenis konten">
+      <button type="button" class="variant-tab active" role="tab" aria-selected="true" data-variant="explainer">Explainer</button>
+      <button type="button" class="variant-tab" role="tab" aria-selected="false" data-variant="versus">Kata Versus</button>
     </div>
 
     <div class="form-group">
       <label for="materiInput">
-        <span>Materi / Topik Pembahasan</span>
+        <span id="inputLabel">Materi / Topik Pembahasan</span>
         <span class="counter" id="charCount">0 karakter</span>
       </label>
       <textarea 
@@ -363,9 +400,14 @@
   <div class="toast" id="toast">Prompt berhasil disalin ke clipboard! 🎉</div>
 
   <script>
-    const templateBefore = `Buatkan naskah (script) narasi video edukasi pendek (Instagram Reels / YouTube Shorts) berdurasi sekitar 45-60 detik (± 120-150 kata) dalam Bahasa Indonesia yang santai, hangat, mengalir, dan mudah dipahami tentang topik berikut: \n\n`;
-
-    const templateAfter = `\n\nGunakan struktur berikut:
+    const VARIANTS = {
+      explainer: {
+        title: 'Generator Prompt Edukasi',
+        desc: 'Masukkan materi atau topik bahasan video. Generator ini akan menyusun prompt standar naskah audio TTS dan caption media sosial.',
+        inputLabel: 'Materi / Topik Pembahasan',
+        placeholder: 'Contoh: Proses pembuatan jalan aspal dimulai dari pemadatan tanah dasar (subgrade), penghamparan agregat batu pondasi, hingga pengaspalan panas hotmix menggunakan finisher dan tandem roller...',
+        before: `Buatkan naskah (script) narasi video edukasi pendek (Instagram Reels / YouTube Shorts) berdurasi sekitar 45-60 detik (± 120-150 kata) dalam Bahasa Indonesia yang santai, hangat, mengalir, dan mudah dipahami tentang topik berikut: \n\n`,
+        after: `\n\nGunakan struktur berikut:
 1. Hook (1–2 kalimat pembuka yang memicu rasa penasaran). Di akhir hook, tambahkan "Mari kita jelaskan!" yang merupakan tagline.
 2. Isi / Penjelasan (alur proses atau fakta runtut dalam kalimat-kalimat pendek).
 3. Call-to-Action / Penutup (pertanyaan interaktif singkat di akhir).
@@ -380,8 +422,45 @@ Aturan Penulisan & Format TTS (Google AI Studio):
   * <sigh> untuk helaan napas lega/santai di akhir penjelasan.
   * <chuckle> atau <giggle> untuk tawa kecil ramah saat menyapa audiens di bagian penutup.
 - Berikan output naskah akhir di dalam blok kode (\`\`\`text) agar tag < > tidak tersembunyi dan bisa langsung di-copy ke Google AI Studio.
-- Berikan juga dalam blok kode terpisah, caption untuk media sosial.`;
+- Berikan juga dalam blok kode terpisah, caption untuk media sosial.`
+      },
+      versus: {
+        title: 'Generator Prompt Kata Versus',
+        desc: 'Masukkan dua kata yang ingin dibandingkan beserta penjelasan atau konteksnya. Generator ini akan menyusun prompt naskah TTS singkat dan konsep visualisasi side-by-side.',
+        inputLabel: 'Perbandingan Kata & Penjelasan',
+        placeholder: 'Contoh: Bandingkan kata "efisien" dan "efektif". Efisien berarti hemat sumber daya (waktu, tenaga, biaya), sedangkan efektif berarti tepat sasaran mencapai tujuan. Fokuskan perbedaan pada satu contoh penggunaan sehari-hari.',
+        before: `Buatkan naskah (script) narasi dan konsep visualisasi untuk video edukasi pendek format "Versus Kata" (Instagram Reels / YouTube Shorts) berdurasi di bawah 30 detik (50–65 kata) dalam Bahasa Indonesia yang santai, padat, hangat, dan mudah dipahami untuk perbandingan kata berikut: \n\n`,
+        after: `\n\nGunakan struktur naskah berikut:
+1. Hook (1 kalimat pembuka yang langsung mempertemukan kedua kata dan memicu rasa penasaran). Akhiri dengan tagline "Mari kita jelaskan!"
+2. Penjelasan Inti (Jelaskan Kata A dalam 1 kalimat singkat, lalu Kata B dalam 1 kalimat singkat. Fokus pada satu variabel pembeda paling kontras).
+3. Kesimpulan & Micro-CTA (1 kalimat rangkuman cepat + pertanyaan singkat untuk memancing komentar).
 
+Aturan Penulisan & Format TTS (Google AI Studio):
+- Tulis dalam bentuk paragraf pendek per 1 kalimat agar mudah dipotong per *scene* animasi.
+- JANGAN menulis instruksi gaya atau arahan nada di dalam naskah (seperti [nada ceria] atau [tempo cepat]).
+- Sisipkan inline expression tags dengan format kurung sudut < > secara natural dan hemat (maksimal 3–4 tag karena durasi singkat) untuk mengatur ritme bicara. Gunakan variasi tag berikut secukupnya:
+  - Pause & Breathing: <long pause>, <short pause>, <breath>, <heavy breath>, <exhales>, <pant>, <sigh>, <sighs>, <yawn>, <phew>
+  - Laughter & Amusement: <laugh>, <laughter>, <chuckle>, <chuckles>, <giggle>, <cackle>, <snicker>, <snort>
+  - Surprise & Emotional Reactions: <gasp>, <scream>, <shriek>, <shout>, <cry>, <sob>, <whimper>, <moan>, <groan>, <argh>, <pff>, <tsk>
+  - Vocal Effects & Physical Expressions: <cough>, <throat-clearing>, <sneeze>, <grunt>, <growl>, <grr>, <hiss>
+  - Whispering & Speaking Style: <whispering>, <whispers>
+
+Aturan Konsep Visualisasi (2D Flat Vector / Remotion):
+- Rancang konsep visual dengan tata letak **side-by-side** (layar terbelah dua secara vertikal atau horizontal, dengan Kata A di satu sisi dan Kata B di sisi lainnya) dalam rasio vertikal 9:16 (1080x1920).
+- Deskripsikan secara singkat gerakan animasi vektor 2D untuk setiap bagian naskah (Hook, Penjelasan Kata A, Penjelasan Kata B, Kesimpulan) yang menonjolkan kontras visual antara kedua sisi tanpa elemen statis atau dekorasi berlebihan.
+
+Format Output Wajib:
+1. Tulis Konsep Visualisasi Side-by-Side (poin per bagian naskah) dan Naskah TTS akhir dalam SATU blok kode (\`\`\`text) yang sama: konsep visualisasi di bagian atas, lalu pemisah "-----", kemudian naskah TTS di bawahnya. Tag < > harus tetap terlihat agar bisa langsung di-copy ke Google AI Studio.
+2. Caption singkat dan *engaging* untuk media sosial di dalam blok kode terpisah (\`\`\`text).`
+      }
+    };
+
+    let activeVariant = 'explainer';
+
+    const headerTitle = document.getElementById('headerTitle');
+    const headerDesc = document.getElementById('headerDesc');
+    const inputLabel = document.getElementById('inputLabel');
+    const variantTabs = document.querySelectorAll('.variant-tab');
     const materiInput = document.getElementById('materiInput');
     const charCount = document.getElementById('charCount');
     const btnGenerate = document.getElementById('btnGenerate');
@@ -398,6 +477,28 @@ Aturan Penulisan & Format TTS (Google AI Studio):
     // Update karakter count
     materiInput.addEventListener('input', () => {
       charCount.textContent = `${materiInput.value.length} karakter`;
+    });
+
+    // Switch variant
+    function setVariant(name) {
+      const variant = VARIANTS[name];
+      if (!variant) return;
+
+      activeVariant = name;
+      variantTabs.forEach((tab) => {
+        const isActive = tab.dataset.variant === name;
+        tab.classList.toggle('active', isActive);
+        tab.setAttribute('aria-selected', String(isActive));
+      });
+
+      headerTitle.textContent = variant.title;
+      headerDesc.textContent = variant.desc;
+      inputLabel.textContent = variant.inputLabel;
+      materiInput.placeholder = variant.placeholder;
+    }
+
+    variantTabs.forEach((tab) => {
+      tab.addEventListener('click', () => setVariant(tab.dataset.variant));
     });
 
     // Reset button
@@ -437,7 +538,8 @@ Aturan Penulisan & Format TTS (Google AI Studio):
         return;
       }
 
-      const fullPrompt = `${templateBefore}${materiText}${templateAfter}`;
+      const variant = VARIANTS[activeVariant];
+      const fullPrompt = `${variant.before}${materiText}${variant.after}`;
       showModal(fullPrompt);
     });
 
